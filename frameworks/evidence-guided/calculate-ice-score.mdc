@@ -2,39 +2,39 @@
 alwaysApply: false
 ---
 
-# 규칙: ICE 기반 아이디어 우선순위화 (Evidence-Guided)
+# Rule: ICE-based Idea Prioritization (Evidence-Guided)
 
-## 목표
-아이디어 설명과 현재 상태를 입력받아 **Impact, Confidence, Ease**로 점수를 매기고, **ICE Score = Impact × Confidence × Ease**를 계산하여 실행 우선순위를 제안합니다. 모든 평가는 명시적 기준을 따라야 하며 명시된 증거에만 의존해야 합니다—추론이나 추측 금지.
-
----
-
-## 사용 시점
-- 아이디어 백로그를 빠르게 정렬하고 탐색 및 실험 항목을 선택하기 위해
-- 최소한 일부 명시적 증거(인터뷰/데이터/테스트)와 대략적인 팀 노력 추정치가 있을 때
-- Opportunity-Solution Tree의 리프 기회에 대한 실험 계획을 작성하기 전
+## Goal
+Ingest an idea description and current state, score it on **Impact, Confidence, and Ease**, and compute the **ICE Score = Impact × Confidence × Ease** to propose an execution priority. All evaluations must follow explicit criteria and rely only on stated evidence—no inference or guesswork.
 
 ---
 
-## 입력
-- **아이디어 제목 및 설명**: 목표, 타겟 메트릭, 범위, 작업 가설
-- **아이디어 분석 및 현재 상태**: 데이터/사용자/시장/테스트 증거, 실행 가설, 리스크, 노력 추정치
-- 선택사항:
-  - 타겟 메트릭 및 예상 변화율 (%) 또는 범위
-  - 추정 노력 (person-weeks)
+## When to Use
+- To quickly order an idea backlog and select items for exploration and experiments
+- When you have at least some explicit evidence (interviews/data/tests) and a rough team effort estimate
+- Before drafting experiment plans for a leaf opportunity in an Opportunity-Solution Tree
 
 ---
 
-## 산출물
-- **형식:** Markdown (`.md`)
-- **위치:** `initiatives/[initiative]/solutions/`
-- **파일명:** `ice-[YYYY-MM-DD]-[slugified-idea-title].md`
+## Input
+- **Idea title and description**: goal, target metric, scope, and working hypothesis
+- **Idea analysis and current state**: data/user/market/test evidence, execution hypothesis, risks, and effort estimate
+- Optional:
+  - Target metric and expected change rate (%) or range
+  - Estimated effort (person-weeks)
 
 ---
 
-## 점수 모델
+## Output
+- **Format:** Markdown (`.md`)
+- **Location:** `initiatives/[initiative]/solutions/`
+- **Filename:** `ice-[YYYY-MM-DD]-[slugified-idea-title].md`
 
-### 1) Impact 매핑
+---
+
+## Scoring Model
+
+### 1) Impact Mapping
 | Target Metric Change (%) | Impact |
 |--------------------------|--------|
 | > 50%                    | 10     |
@@ -51,7 +51,7 @@ alwaysApply: false
 
 - Automatic fallback: If no explicit percentage is provided, assume a default +1.5% improvement → Impact 2.
 
-### 2) Ease 매핑 (추정 노력: person-weeks)
+### 2) Ease Mapping (Estimated Effort: person-weeks)
 | Duration | Ease |
 |---------|------|
 | < 1 week | 10 |
@@ -65,7 +65,7 @@ alwaysApply: false
 | 17–25 weeks | 2 |
 | ≥ 26 weeks | 1 |
 
-### 3) 증거 유형 (Impact에 직접 연결된 증거만 계산)
+### 3) Evidence Types (Count only evidence directly tied to Impact)
 | Evidence Type | Description |
 |---|---|
 | Test Results | A/B tests, longitudinal user studies, beta experiments, large MVPs with quantitative validation |
@@ -81,7 +81,7 @@ alwaysApply: false
 - Statements like “intuitively”, “personally I think”, “my gut says” → classify as Self-belief.
 - Without explicit quantitative backing, do not accept as Market Data or Estimates & Plans.
 
-### 4) Confidence 계산
+### 4) Confidence Calculation
 - Principle: Include only evidence that directly supports Impact.
 - Per-type contribution = MIN(Weight × count, Max)
 - Group caps (sum upper bounds):
@@ -102,7 +102,7 @@ alwaysApply: false
 
 - Keyword hints (examples): “test/experiment/AB”, “user request/behavioral data”, “market/competitor/table stakes”, “estimate/modeling”, “intuition/gut/personally”.
 
-### 5) ICE Score 및 우선순위 해석
+### 5) ICE Score and Priority Interpretation
 - Formula: ICE = Impact × Confidence × Ease
 - Interpretation:
   - ≥ 250: Consider immediate execution (high expected ROI)
@@ -112,7 +112,7 @@ alwaysApply: false
 
 ---
 
-## 프로세스
+## Process
 
 1) Input validation
 - Verify target metric, expected change (%), evidence text, and estimated effort (person-weeks)
@@ -139,7 +139,7 @@ alwaysApply: false
 
 ---
 
-## 산출물 형식
+## Output Format
 
 ```markdown
 # ICE Evaluation — [Idea Title]
@@ -195,7 +195,7 @@ alwaysApply: false
 
 ---
 
-## 예시
+## Example
 - Idea: “AI-based revenue anomaly detection dashboard”
 - Expected change: 26% → Impact 8  
 - Effort: 5 weeks → Ease 7  

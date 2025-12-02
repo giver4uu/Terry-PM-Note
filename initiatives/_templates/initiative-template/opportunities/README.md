@@ -1,51 +1,51 @@
 # Opportunities
 
-이 폴더는 이 initiative에 대한 식별된 opportunities, pain points, 잠재적 솔루션을 포함합니다.
+This folder contains identified opportunities, pain points, and potential solutions for this initiative.
 
-## 📝 권장 파일
+## 📝 Recommended Files
 
 ### opportunity-map.md
-Research를 통해 발견된 모든 opportunities의 종합 목록
+Comprehensive list of all opportunities discovered through research.
 
-**구조:**
+**Structure:**
 ```markdown
 # Opportunity Map
 
 ## High Impact Opportunities
-- [Opportunity 1]: [설명 및 증거]
-- [Opportunity 2]: [설명 및 증거]
+- [Opportunity 1]: [Description and evidence]
+- [Opportunity 2]: [Description and evidence]
 
 ## Medium Impact Opportunities
-- [Opportunity 3]: [설명 및 증거]
+- [Opportunity 3]: [Description and evidence]
 
 ## Future Considerations
-- [Opportunity 4]: [설명 및 증거]
+- [Opportunity 4]: [Description and evidence]
 ```
 
 ### prioritized-opportunities.md
-우선순위가 매겨진 opportunities와 우선순위 근거
+Ranked opportunities with rationale for prioritization.
 
-**포함:**
-- Impact vs. Effort 평가
-- 각 opportunity를 지원하는 사용자 증거
-- 비즈니스 가치 추정
-- 기술적 타당성 노트
+**Include:**
+- Impact vs. Effort assessment
+- User evidence supporting each opportunity
+- Business value estimation
+- Technical feasibility notes
 
 ### solution-experiments.md
-Opportunities를 검증하기 위한 잠재적 솔루션 및 실험
+Potential solutions and experiments to validate opportunities.
 
-**추적:**
-- 가설 진술
-- 실험 설계
-- 성공 기준
-- 결과 및 학습사항
+**Track:**
+- Hypothesis statements
+- Experiment designs
+- Success criteria
+- Results and learnings
 
-## 🎯 Opportunity 식별 프로세스
-1. 사용자 인터뷰 snapshots에서 opportunities 추출
-2. 유사한 opportunities를 함께 그룹화
-3. Impact와 타당성 평가
-4. 전략적 정렬에 기반하여 우선순위 지정
-5. 검증 실험 설계
+## 🎯 Opportunity Identification Process
+1. Extract opportunities from user interview snapshots
+2. Group similar opportunities together
+3. Assess impact and feasibility
+4. Prioritize based on strategic alignment
+5. Design validation experiments
 
 ---
 *Base opportunities on actual user research, not assumptions.*

@@ -1,20 +1,20 @@
 ---
-description: 누군가와의 1:1에서 노트를 공유할 때 이 프로세스를 따르세요
+description: Follow this process when I'm sharing notes from a 1:1 with someone
 alwaysApply: false
 ---
-# 프로세스
-1. `/1-1 notes/` 안에 사람 이름으로 된 Markdown 파일에 노트를 저장합니다 (예: `JohnDoe.md`).
-2. 파일이 이미 존재하는 경우, 새 미팅 노트를 **파일 상단에** 추가하여 가장 최근 미팅이 항상 먼저 오도록 합니다.
-3. 각 미팅에 다음 형식을 사용합니다:
+# Process
+1. Save notes in a Markdown file named after the person (e.g., `JohnDoe.md`) inside `/1-1 notes/`.
+2. If the file already exists, append the new meeting notes **at the top of the file**, so that the most recent meeting is always first.
+3. Use the following format for each meeting:
 
    ## [YYYY-MM-DD]
    ### Notes
-   - 여기에 주요 토론 포인트
+   - Key discussion points here
    ### Action Items
-   - [ ] Task 1 (나에게 할당됨)
-   - [ ] Task 2 (나에게 할당됨)
+   - [ ] Task 1 (assigned to me)  
+   - [ ] Task 2 (assigned to me)
 
-4. 다른 사람에게 속한 action items는 추가하지 **마세요**.
+4. Do **not** add action items that belong to others.  
 
-# 함께 일하는 사람들:
+# People I work with:
 

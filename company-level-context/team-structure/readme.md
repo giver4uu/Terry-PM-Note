@@ -1,120 +1,120 @@
-# 📂 팀 구조
+# 📂 Team Structure
 
-## 목적
+## Purpose
 
-이 폴더는 **팀 구조 관련 문서(조직도, 역할 정의, 운영 모델 등)** 를 저장합니다.
-Cursor IDE의 규칙과 워크플로우는 **조직적 맥락**을 이해할 때 더욱 강력해지므로,
-여기에 팀 구조 자료를 업로드하면 **자동화된 검토, 의사결정 지원, 전략적 피드백**이 가능해집니다.
-
----
-
-## 업로드를 권장하는 문서
-
-* 회사/팀 **조직도**
-* 팀별 역할 정의 (PM, 디자이너, 엔지니어, 데이터, 리서치 등)
-* 조직 개편 계획 및 회고 자료
-* 팀 미션 및 원칙 정의 문서
+This folder stores **team structure-related documents (org charts, role definitions, operating models, etc.)**.
+Cursor IDE's rules and workflows become more powerful when they understand **organizational context**,
+so uploading team structure materials here enables **automated reviews, decision support, and strategic feedback**.
 
 ---
 
-## 이 폴더 활용 방법
+## Recommended Documents to Upload
 
-1. org-chart.png / org-structure.md 같은 조직 구조 문서를 여기에 업로드
-2. Cursor 규칙 실행 시 team-structure 폴더 문서를 참조하여 **팀 책임/역할 기반 피드백** 제공
-3. 조직 개편 논의 전후 회고 문서를 저장하여 **역사적 맥락 추적**
-4. 주요 문서(제품 전략, OKR) 검토 시 관련 팀 구조 문서와 함께 참조
-
----
-
-## 주요 팀 구조 설계 모델
-
-### 1. 기능별 조직 (Functional Organization)
-
-* **개요**: 엔지니어링, 디자인, 마케팅 등 기능별로 조직화. 전문성과 효율성 극대화.
-* **사례**:
-  * 스타벅스: 부서별 운영 (HR/재무/마케팅)
-  * 애플: 기능별 분리 (디자인/하드웨어/소프트웨어)
-* **핵심 이해관계자**: 기능별 리더
-* **핵심 지표**: 기능별 효율성, 비용 절감 (예: 리드당 비용)
-* **장점**: 전문성 강화, 명확한 책임 소재
-* **단점**: 사일로 형성, 고객 중심성 약화, 비즈니스 성과 책임 부재
+* Company/team **org charts**
+* Role definitions by team (PM, Designer, Engineer, Data, Research, etc.)
+* Re-org plans and retrospective materials
+* Team mission and principles definition documents
 
 ---
 
-### 2. 매트릭스 조직 (Matrix Organization)
+## How to Use This Folder
 
-* **개요**: 구성원이 기능별 리더와 제품 리더 모두에게 보고하는 이중 구조.
-* **사례**:
-  * 필립스 소비자 건강: 기능별 조직 + 제품 팀
-  * 구글: 제품/프로젝트 레벨에서 수렴하는 기능별 조직
-* **핵심 이해관계자**: 기능별 리더(주), 제품 리더(부)
-* **핵심 지표**: 기능별 성과(주), 제품 성과(부)
-* **장점**: 기능 간 협업 강화, 제품 집중도 유지
-* **단점**: 리더 간 우선순위 충돌, 의사결정 지연, 중복 업무
+1. Upload organizational structure documents such as org-chart.png / org-structure.md here
+2. When running Cursor rules, reference team-structure folder documents to provide **team responsibility/role-based feedback**
+3. Store retrospective documents before and after re-org discussions for **historical context tracking**
+4. When reviewing key documents (Product strategy, OKR), reference them together with related team structure documents
 
 ---
 
-### 3. 가치 흐름 중심 조직 (Value Stream Organization)
+## Key Team Structure Design Models
 
-* **개요**: 고객 여정/비즈니스 성과별로 팀을 구성하여 기능 간 자율 팀을 운영.
-* **사례**:
-  * 스포티파이: 스쿼드/챕터/길드 모델
-  * 허브스팟: 제품 라인별 운영 (마케팅 허브, 콘텐츠 허브 등)
-* **핵심 이해관계자**: 제품/기능 간 리더(주), 기능별 리더(부)
-* **핵심 지표**: 제품 성과 (사용자 참여도, 전환율)
-* **장점**: 실행 속도 증가, 협업 최적화, 명확한 성과 책임
-* **단점**: 팀 중복, 일관성 리스크, 관리 복잡도 증가
+### 1. Functional (Function-centered Organization)
 
----
-
-### 4. 사업부별 조직 (Divisional Organization)
-
-* **개요**: 제품 라인/사업부별 독립 운영. 각 사업부가 손익 책임 보유.
-* **사례**:
-  * 제너럴 일렉트릭: 사업부별 (항공우주, 전력, 디지털 등)
-  * 아마존: 리테일, AWS, 프라임 비디오, 디바이스 등
-* **핵심 이해관계자**: 사업부 리더 (GM, VP)
-* **핵심 지표**: 사업부 수준 재무 성과 (손익, ROI)
-* **장점**: 시장 집중도 향상, 자율성 극대화, 명확한 성과 책임
-* **단점**: 사업부 간 경쟁, 고객 경험 파편화, 관리 오버헤드 증가
+* **Overview**: Organized by functions such as engineering, design, marketing, etc. Maximizes expertise and efficiency.
+* **Examples**:
+  * Starbucks: Department-based operations (HR/Finance/Marketing)
+  * Apple: Function separation (Design/Hardware/Software)
+* **Key Stakeholders**: Functional leaders
+* **Core Metrics**: Functional efficiency, cost reduction (e.g., cost per lead)
+* **Advantages**: Enhanced expertise, clear responsibilities
+* **Disadvantages**: Silos formation, weakened customer focus, lack of business performance accountability
 
 ---
 
-## 조직 개편 시 고려사항
+### 2. Matrix (Matrix Organization)
 
-조직 개편은 **전략과 조직의 불일치**가 있을 때만 신중하게 실행해야 합니다.
-* **필요한 경우**: 전략이 변경되었거나 현재 전략과 조직이 불일치할 때
-* **피해야 할 경우**: 단순히 새 리더 합류 시, 또는 과시용 구조조정
-
----
-
-## 자주 사용되는 팀 구조 패턴
-
-* **스쿼드/팟 모델**: 특정 문제 영역을 책임지는 소규모 기능 간 팀 (스포티파이 모델)
-* **트라이애드**: PM-디자이너-테크리드 3인조가 핵심 의사결정 단위
-* **피처 팀**: 제품 기능별로 조직화
-* **성과 팀**: 비즈니스 지표 책임 (예: 리텐션, 온보딩 성공률)
-* **매트릭스 구조**: 기능별 리더와 제품 리더에게 이중 보고
-* **가치 흐름 팀**: 고객 여정이나 비즈니스 흐름별 팀 구성 (예: 허브스팟, 스포티파이)
-* **사업부별**: 사업 단위별 분리 (예: 아마존, GE)
+* **Overview**: Dual structure where employees report to both functional leaders and product leaders.
+* **Examples**:
+  * Philips Consumer Health: Cross-functional + product teams
+  * Google: Functional organizations converging at product/project level
+* **Key Stakeholders**: Functional leaders (primary), Product leaders (secondary)
+* **Core Metrics**: Functional performance (primary), Product performance (secondary)
+* **Advantages**: Enhanced cross-functional collaboration, maintained product focus
+* **Disadvantages**: Priority conflicts between leaders, decision delays, duplicate work
 
 ---
 
-## 팀 구조 설계 원칙
+### 3. Value Stream (Value Stream-centered Organization)
 
-1. **전략과 구조의 정렬**
-   * 조직도는 제품 전략을 반영해야 합니다. (전략이 바뀌면 구조도 바뀌어야 함)
-
-2. **역할과 책임의 명확화**
-   * R&R(역할과 책임) 혼란 방지가 필수이며, 특히 매트릭스나 하이브리드 구조에서 중요합니다.
-
-3. **속도와 일관성의 균형**
-   * 빠른 실행이 필요할 때는 분산형 (스쿼드/팟),
-   * 사용자 경험 일관성이 중요할 때는 중앙 집중형 (기능별, 중앙화).
-
-4. **사람과 문화의 중요성**
-   * 마티 케이건은 "훌륭한 리더, 팀 역량, 문화가 구조보다 중요하다"고 강조합니다.
+* **Overview**: Teams organized by customer journey/business outcomes, operating cross-functional autonomous teams.
+* **Examples**:
+  * Spotify: Squad/Chapter/Guild model
+  * HubSpot: Product line-based operations (Marketing Hub, Content Hub, etc.)
+* **Key Stakeholders**: Product/Cross-functional leaders (primary), Functional leaders (secondary)
+* **Core Metrics**: Product performance (user engagement, conversion rates)
+* **Advantages**: Increased execution speed, optimized collaboration, clear performance accountability
+* **Disadvantages**: Team duplication, inconsistency risks, increased management complexity
 
 ---
 
-**팁:** 조직 문서에 "현재 구조"뿐만 아니라 **이 구조를 선택한 이유(전략적 맥락)** 를 포함하면 Cursor가 더욱 정교한 피드백을 제공할 수 있습니다.
+### 4. Divisional (Division-centered Organization)
+
+* **Overview**: Independent operations by product line/division. Each division holds P&L responsibility.
+* **Examples**:
+  * General Electric: Divisions (Aerospace, Power, Digital, etc.)
+  * Amazon: Retail, AWS, Prime Video, Devices, etc.
+* **Key Stakeholders**: Division leaders (GM, VP)
+* **Core Metrics**: Division-level financial performance (Profit & Loss, ROI)
+* **Advantages**: Enhanced market focus, maximized autonomy, clear performance accountability
+* **Disadvantages**: Inter-division competition, customer experience fragmentation, increased management overhead
+
+---
+
+## Re-org Considerations
+
+Re-org should only be executed carefully when there is a **strategy and organization misalignment**.
+* **When needed**: When strategy has changed or current strategy and organization are misaligned
+* **When to avoid**: Simply when a new leader joins, or for show-off restructuring
+
+---
+
+## Commonly Used Team Structure Patterns
+
+* **Squad/Pod Model**: Small cross-functional teams responsible for specific problem spaces (Spotify model)
+* **Triad**: PM-Designer-Tech Lead trio as core decision-making unit
+* **Feature Teams**: Organized by product features
+* **Outcome Teams**: Responsible for business metrics (e.g., retention, onboarding success rate)
+* **Matrix Structure**: Dual reporting to functional and product leadership
+* **Value Stream Teams**: Teams organized by customer journey or business flow (e.g., HubSpot, Spotify)
+* **Divisional**: Separated by business units (e.g., Amazon, GE)
+
+---
+
+## **Team Structure Design Principles**
+
+1. **Strategy and Structure Alignment**
+   * Organization charts must reflect product strategy. (Structure must change when strategy changes)
+
+2. **Clarification of Roles and Responsibilities**
+   * R&R confusion prevention is essential, especially in Matrix or Hybrid structures.
+
+3. **Balance of Speed and Consistency**
+   * Decentralized (Squad/Pod) when fast execution is needed,
+   * Centralized (Functional, Centralized) when user experience consistency is important.
+
+4. **Importance of People and Culture**
+   * Marty Cagan emphasizes that "good leaders, team skills, and culture are more important than structure"
+   
+---
+
+**Tip:** Including not just "current structure" but also **why this structure was chosen (strategic context)** in organizational documents enables Cursor to provide more sophisticated feedback.

@@ -1,44 +1,44 @@
 ---
 alwaysApply: false
 ---
-# 규칙: 새로운 Initiative 구조 생성
+# Rule: Create New Initiative Structure
 
-## 목표
-표준화된 구조로 새로운 initiative 폴더를 생성하고 initiative 템플릿에서 커스터마이징된 템플릿으로 채웁니다.
+## Goal
+Create a new initiative folder with standardized structure and populate with customized templates from the initiative template.
 
-## 프로세스
-1. **Initiative 세부 정보 수집**
-   - Initiative 이름 (kebab-case 사용: 예: 'mobile-app-redesign')
-   - Owner/Product Manager 이름
-   - Initiative 목표에 대한 간단한 설명
-   - 타겟 타임라인 (선택)
-   - 주요 stakeholders (선택)
+## Process
+1. **Gather Initiative Details**
+   - Initiative name (use kebab-case: e.g., 'mobile-app-redesign')
+   - Owner/Product Manager name
+   - Brief description of the initiative goal
+   - Target timeline (optional)
+   - Key stakeholders (optional)
 
-2. **Initiative 폴더 구조 생성**
-   - `initiatives/[initiative-name]/` 폴더 생성
-   - `initiatives/_templates/initiative-template/`에서 전체 구조 복사
-   - 모든 하위 폴더와 README 파일 보존
+2. **Create Initiative Folder Structure**
+   - Create `initiatives/[initiative-name]/` folder
+   - Copy entire structure from `initiatives/_templates/initiative-template/`
+   - Preserve all subfolders and README files
 
-3. **README.md 커스터마이징**
-   - `[Initiative Name]`을 실제 initiative 이름으로 교체
-   - `[Product Manager Name]`을 owner 이름으로 교체
-   - 목표 설명 업데이트
-   - 제공된 경우 타임라인 추가
-   - 제공된 경우 stakeholders 추가
-   - 나머지 템플릿 콘텐츠는 그대로 유지
+3. **Customize README.md**
+   - Replace `[Initiative Name]` with the actual initiative name
+   - Replace `[Product Manager Name]` with the owner's name
+   - Update the goal description
+   - Add timeline if provided
+   - Add stakeholders if provided
+   - Keep all other template content intact
 
-4. **Placeholder 파일 초기화**
-   - 빈 폴더에 `.gitkeep` 파일 생성하여 구조 보존
-   - 모든 하위 폴더 README 파일이 제대로 복사되었는지 확인
-   - 파일 권한과 구조 유지
-   - **중요:** 빈 폴더 구조를 유지하기 위해 템플릿의 모든 `.gitkeep` 파일 보존
+4. **Initialize Placeholder Files**
+   - Create `.gitkeep` files in empty folders to preserve structure
+   - Ensure all subfolder README files are properly copied
+   - Maintain file permissions and structure
+   - **Critical:** Preserve all `.gitkeep` files from template to maintain empty folder structure
 
-## 명명 규칙
-- **Initiative 폴더:** kebab-case 사용 (예: `mobile-app-redesign`, `checkout-optimization`)
-- **분기 포함:** 관련이 있는 경우 분기 접두사 추가 (예: `2024q1-mobile-redesign`)
-- **설명적으로 유지:** Initiative를 설명하는 명확하고 의미있는 이름 사용
+## Naming Conventions
+- **Initiative Folder:** Use kebab-case (e.g., `mobile-app-redesign`, `checkout-optimization`)
+- **Include Quarter:** If relevant, add quarter prefix (e.g., `2024q1-mobile-redesign`)
+- **Keep Descriptive:** Use clear, meaningful names that describe the initiative
 
-## 산출물 구조
+## Output Structure
 ```
 initiatives/[initiative-name]/
 ├── README.md                      # Customized with initiative details
@@ -61,32 +61,32 @@ initiatives/[initiative-name]/
     └── README.md
 ```
 
-## 통합 포인트
-Initiative 구조 생성 후 사용자에게 다음 워크플로우 통합에 대해 알려줍니다:
+## Integration Points
+After creating the initiative structure, remind the user about these workflow integrations:
 
-- **User Research:** `user-interviews/snapshots/`에서 `@create-interview-snapshots.mdc` 사용
-- **PRD 생성:** `prd/` 폴더에서 `@create-prd.mdc` 사용
-- **Task 생성:** PRD와 함께 `@generate-tasks.mdc`를 사용하여 `tasks/` 폴더에 task 생성
-- **Task 처리:** `@process-task-list.mdc`를 사용하여 체계적으로 task 진행
-- **Assumption 식별:** `@indentify-and-test-assumptions.mdc` 사용; 산출물은 `assumptions/`에 저장
-- **Solution 생성:** `@generate-solutions.mdc` 사용; 산출물은 `solutions/`에 저장
+- **User Research:** Use `@create-interview-snapshots.mdc` in `user-interviews/snapshots/`
+- **PRD Creation:** Use `@create-prd.mdc` in `prd/` folder
+- **Task Generation:** Use `@generate-tasks.mdc` with the PRD to create tasks in `tasks/` folder
+- **Task Processing:** Use `@process-task-list.mdc` to systematically work through tasks
+- **Assumption Identification:** Use `@indentify-and-test-assumptions.mdc`; outputs saved to `assumptions/`
+- **Solution Generation:** Use `@generate-solutions.mdc`; outputs saved to `solutions/`
 
-## 검증
-생성 후 다음 사항을 확인합니다:
-- [ ] 템플릿의 모든 폴더가 복사됨
-- [ ] README.md가 적절히 커스터마이징됨
-- [ ] 모든 하위 폴더 README 파일이 존재함
-- [ ] 폴더 구조가 템플릿과 정확히 일치함
-- [ ] Initiative 이름이 명명 규칙을 따름
+## Validation
+Ensure the following after creation:
+- [ ] All folders from template are copied
+- [ ] README.md is properly customized
+- [ ] All subfolder README files are present
+- [ ] Folder structure matches the template exactly
+- [ ] Initiative name follows naming conventions
 
-## 성공 메시지
-성공적으로 생성된 후 다음을 제공합니다:
-- 새로운 initiative 폴더 위치 확인
-- 다음 단계를 위한 빠른 시작 가이드
-- 관련 워크플로우 도구 링크
-- 폴더 구조 및 통합 포인트에 대한 알림
+## Success Message
+After successful creation, provide:
+- Confirmation of the new initiative folder location
+- Quick start guide for next steps
+- Links to relevant workflow tools
+- Reminder about folder structure and integration points
 
-## 사용 예시
+## Example Usage
 ```
 User: "Create a new initiative for mobile app redesign, owned by Sarah Kim"
 
