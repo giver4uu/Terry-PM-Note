@@ -2,5 +2,5 @@
 .cursor/
 .DS_Store
 
-# Hold prefix - work in progress or paused items
-\[hold\]*
+# 아카이브 폴더
+99.archive/*

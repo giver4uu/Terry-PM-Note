@@ -2,220 +2,220 @@
 alwaysApply: false
 ---
 
-# Rule: Extracting Insights from Qualitative Interviews and User Tests (Continuous Discovery Habits)
+# 규칙: 정성적 인터뷰 및 사용자 테스트에서 인사이트 추출 (Continuous Discovery Habits)
 
-## Goal
-To guide an AI assistant in systematically extracting meaningful insights from qualitative interviews or user test sessions, creating structured interview snapshots that capture specific stories, opportunities, and behavioral insights following the Continuous Discovery Habits methodology.
+## 목표
+정성적 인터뷰 또는 사용자 테스트 세션에서 의미 있는 인사이트를 체계적으로 추출하고, Continuous Discovery Habits 방법론에 따라 구체적인 스토리, 기회, 행동 인사이트를 담은 구조화된 인터뷰 스냅샷을 생성하도록 AI 어시스턴트를 가이드합니다.
 
-## Output
-**Format:** Markdown (`.md`)  
-**Location:** `user-interviews/snapshots/`  
-**Filename:** `snapshot-[participant-name]-[date].md`
+## 산출물
+**형식:** Markdown (`.md`)
+**위치:** `user-interviews/snapshots/`
+**파일명:** `snapshot-[참여자-이름]-[날짜].md`
 
-## Process
-1. **Data Validation**: Assess the completeness and quality of provided interview data
-2. **Context Extraction**: Identify session type, research goals, and participant context
-3. **Story Identification**: Extract specific behavioral stories, not generalizations
-4. **Experience Mapping**: Create user journey maps for key stories
-5. **Opportunity Analysis**: Identify pain points, needs, and improvement areas
-6. **Insight Synthesis**: Recognize patterns and behavioral insights
-7. **Snapshot Creation**: Compile into structured interview snapshot
-8. **Quality Review**: Validate completeness and clarity
+## 프로세스
+1. **데이터 검증**: 제공된 인터뷰 데이터의 완전성과 품질 평가
+2. **맥락 추출**: 세션 유형, 리서치 목표, 참여자 맥락 식별
+3. **스토리 식별**: 일반화가 아닌 구체적인 행동 스토리 추출
+4. **경험 매핑**: 핵심 스토리에 대한 사용자 여정 맵 생성
+5. **기회 분석**: 페인 포인트, 니즈, 개선 영역 식별
+6. **인사이트 종합**: 패턴 및 행동 인사이트 인식
+7. **스냅샷 생성**: 구조화된 인터뷰 스냅샷으로 편집
+8. **품질 검토**: 완전성과 명확성 검증
 
-## AI Instructions
+## AI 지침
 
-### When Receiving Interview Data
-- **Ask clarifying questions** if data is incomplete or ambiguous
-- **Request specific examples** if only general statements are provided
-- **Confirm participant context** if demographic or behavioral details are missing
-- **Validate research goals** to ensure alignment with snapshot objectives
+### 인터뷰 데이터 수신 시
+- 데이터가 불완전하거나 모호한 경우 **명확한 질문하기**
+- 일반적인 진술만 제공된 경우 **구체적인 예시 요청**
+- 인구통계 또는 행동 세부사항이 누락된 경우 **참여자 맥락 확인**
+- 스냅샷 목표와의 정렬을 보장하기 위해 **리서치 목표 검증**
 
-### Data Processing Guidelines
-- **Focus on concrete behaviors** over opinions or intentions
-- **Extract contextual details** (when, where, with whom, why)
-- **Identify emotional moments** (frustration, delight, surprise, confusion)
-- **Capture workarounds** and problem-solving approaches
-- **Note repeated patterns** that indicate systematic issues
+### 데이터 처리 가이드라인
+- 의견이나 의도보다 **구체적 행동에 집중**
+- **맥락 세부사항 추출** (언제, 어디서, 누구와, 왜)
+- **감정적 순간 식별** (좌절, 기쁨, 놀라움, 혼란)
+- **해결책 및 문제 해결 접근 방식 캡처**
+- 체계적인 문제를 나타내는 **반복 패턴 기록**
 
-### Quality Standards
-- **Completeness**: All required sections must be filled
-- **Specificity**: Use concrete examples, not generalizations
-- **Clarity**: Write in clear, actionable language
-- **Consistency**: Follow established format and structure
-- **Insight Value**: Each insight should be actionable or informative
+### 품질 기준
+- **완전성**: 모든 필수 섹션이 채워져야 함
+- **구체성**: 일반화가 아닌 구체적인 예시 사용
+- **명확성**: 명확하고 실행 가능한 언어로 작성
+- **일관성**: 확립된 형식과 구조 따르기
+- **인사이트 가치**: 각 인사이트는 실행 가능하거나 정보를 제공해야 함
 
-## Output Format
+## 산출물 형식
 
-### Required Structure
+### 필수 구조
 ```markdown
-# Interview Snapshot: [Participant Name]
+# 인터뷰 스냅샷: [참여자 이름]
 
-**Date:** [YYYY-MM-DD]  
-**Type:** [Discovery Interview | Usability Test | Contextual Inquiry | Other]  
-**Duration:** [Minutes]  
-**Interviewer(s):** [Name(s)]  
-
----
-
-## Quick Facts
-- **Segment:** [User profile / role / demographic]  
-- **Key Behaviors:** [2-3 observed behavior patterns]  
-- **Tools Used:** [Products, tools, services mentioned]  
-- **Experience Level:** [Novice / Intermediate / Expert / Domain-specific level]  
-- **Setting:** [Contextual environment and circumstances]  
+**날짜:** [YYYY-MM-DD]
+**유형:** [디스커버리 인터뷰 | 사용성 테스트 | 맥락 조사 | 기타]
+**소요 시간:** [분]
+**인터뷰어:** [이름]
 
 ---
 
-## Memorable Quote
-> "[Direct quote that captures participant's voice and perspective]"
+## 주요 사실
+- **세그먼트:** [사용자 프로필 / 역할 / 인구통계]
+- **주요 행동:** [관찰된 행동 패턴 2-3개]
+- **사용 도구:** [언급된 제품, 도구, 서비스]
+- **경험 수준:** [초급 / 중급 / 전문가 / 도메인별 수준]
+- **상황:** [맥락적 환경 및 상황]
 
 ---
 
-## Story Summary
-
-### Story 1: [Descriptive title]  
-**Context:** [Time, place, situation, trigger]  
-**What Happened:** [Concrete actions taken, step by step]  
-**Outcome:** [Result or consequence of the actions]  
-
-**Key Moments:**  
-- [Specific behavioral insight with context]  
-- [Emotional response or reaction]  
-- [Workaround or adaptation used]  
+## 인상적인 인용문
+> "[참여자의 목소리와 관점을 포착하는 직접 인용]"
 
 ---
 
-### Story 2: [Descriptive title]  
-**Context:** [Time, place, situation, trigger]  
-**What Happened:** [Concrete actions taken, step by step]  
-**Outcome:** [Result or consequence of the actions]  
+## 스토리 요약
 
-**Key Moments:**  
-- [Specific behavioral insight with context]  
-- [Emotional response or reaction]  
-- [Workaround or adaptation used]  
+### 스토리 1: [설명적 제목]
+**맥락:** [시간, 장소, 상황, 트리거]
+**발생한 일:** [단계별로 취한 구체적인 행동]
+**결과:** [행동의 결과 또는 결말]
 
-*(Repeat as needed for additional stories)*
----
-
-## Experience Map
-*A text-based, visual representation of the participant's journey for a specific story. Focus on concrete actions and context, not generalizations.*
-
-**Scope:** [Start and end points of the journey]  
-**Goal:** [Participant's desired outcome]  
-
-**Journey Stages:**
-1. **Stage 1: [Stage title]**
-   - **Actions:** [Specific behaviors and steps taken]
-   - **Thoughts/Feelings:** [Quotes or paraphrased emotions]
-   - **Pain Points:** [Specific frustrations or challenges]
-   - **Tools/Resources:** [What was used or available]
-
-2. **Stage 2: [Stage title]**
-   - **Actions:** [Specific behaviors and steps taken]
-   - **Thoughts/Feelings:** [Quotes or paraphrased emotions]
-   - **Pain Points:** [Specific frustrations or challenges]
-   - **Tools/Resources:** [What was used or available]
-
-3. **Stage 3: [Stage title]**
-   - **Actions:** [Specific behaviors and steps taken]
-   - **Thoughts/Feelings:** [Quotes or paraphrased emotions]
-   - **Pain Points:** [Specific frustrations or challenges]
-   - **Tools/Resources:** [What was used or available]
+**주요 순간:**
+- [맥락이 있는 구체적인 행동 인사이트]
+- [감정적 반응 또는 반작용]
+- [사용된 해결책 또는 적응]
 
 ---
 
-## Opportunities
-- **[Opportunity title]**: [Specific description of customer needs, pain points, desires, wants—chances for us to intervene in a way that makes our customers' lives better.]
-- **[Opportunity title]**: [Specific description of customer needs, pain points, desires, wants—chances for us to intervene in a way that makes our customers' lives better]
+### 스토리 2: [설명적 제목]
+**맥락:** [시간, 장소, 상황, 트리거]
+**발생한 일:** [단계별로 취한 구체적인 행동]
+**결과:** [행동의 결과 또는 결말]
+
+**주요 순간:**
+- [맥락이 있는 구체적인 행동 인사이트]
+- [감정적 반응 또는 반작용]
+- [사용된 해결책 또는 적응]
+
+*(필요에 따라 추가 스토리 반복)*
+---
+
+## 경험 맵
+*특정 스토리에 대한 참여자의 여정을 텍스트 기반 시각적으로 표현합니다. 일반화가 아닌 구체적인 행동과 맥락에 집중합니다.*
+
+**범위:** [여정의 시작과 끝 지점]
+**목표:** [참여자의 원하는 결과]
+
+**여정 단계:**
+1. **단계 1: [단계 제목]**
+   - **행동:** [취한 구체적인 행동 및 단계]
+   - **생각/감정:** [인용문 또는 감정의 의역]
+   - **페인 포인트:** [구체적인 좌절 또는 도전]
+   - **도구/리소스:** [사용하거나 사용 가능한 것]
+
+2. **단계 2: [단계 제목]**
+   - **행동:** [취한 구체적인 행동 및 단계]
+   - **생각/감정:** [인용문 또는 감정의 의역]
+   - **페인 포인트:** [구체적인 좌절 또는 도전]
+   - **도구/리소스:** [사용하거나 사용 가능한 것]
+
+3. **단계 3: [단계 제목]**
+   - **행동:** [취한 구체적인 행동 및 단계]
+   - **생각/감정:** [인용문 또는 감정의 의역]
+   - **페인 포인트:** [구체적인 좌절 또는 도전]
+   - **도구/리소스:** [사용하거나 사용 가능한 것]
 
 ---
 
-## Insights
-- **[Insight category]**: [Pattern or behavior that goes beyond a single story, e.g., user mental models, decision-making shortcuts, systemic frustrations]
-- **[Insight category]**: [Pattern or behavior that goes beyond a single story, e.g., user mental models, decision-making shortcuts, systemic frustrations]
+## 기회
+- **[기회 제목]**: [고객의 니즈, 페인 포인트, 욕구, 원함에 대한 구체적인 설명—고객의 삶을 더 낫게 만드는 방식으로 개입할 수 있는 기회]
+- **[기회 제목]**: [고객의 니즈, 페인 포인트, 욕구, 원함에 대한 구체적인 설명—고객의 삶을 더 낫게 만드는 방식으로 개입할 수 있는 기회]
+
+---
+
+## 인사이트
+- **[인사이트 카테고리]**: [단일 스토리를 넘어서는 패턴 또는 행동, 예: 사용자 멘탈 모델, 의사결정 단축키, 체계적 좌절]
+- **[인사이트 카테고리]**: [단일 스토리를 넘어서는 패턴 또는 행동, 예: 사용자 멘탈 모델, 의사결정 단축키, 체계적 좌절]
 ```
 
-### Optional Sections
-- **Follow-up Questions**: Additional research needed
-- **Related Research**: Connections to other studies or findings
-- **Stakeholder Notes**: Implications for different teams or roles
+### 선택적 섹션
+- **후속 질문**: 추가 리서치 필요
+- **관련 리서치**: 다른 연구 또는 발견과의 연결
+- **이해관계자 노트**: 다른 팀 또는 역할에 대한 시사점
 
-## Interaction Model
+## 상호작용 모델
 
-### 1. Data Input Phase
-- User provides interview transcript, notes, or observations
-- AI assesses data completeness and requests clarification if needed
-- AI confirms research context and objectives
+### 1. 데이터 입력 단계
+- 사용자가 인터뷰 전사, 노트 또는 관찰 내용 제공
+- AI가 데이터 완전성을 평가하고 필요 시 명확화 요청
+- AI가 리서치 맥락 및 목표 확인
 
-### 2. Processing Phase
-- AI systematically extracts stories and behavioral insights
-- AI creates structured experience maps
-- AI identifies opportunities and patterns
+### 2. 처리 단계
+- AI가 체계적으로 스토리 및 행동 인사이트 추출
+- AI가 구조화된 경험 맵 생성
+- AI가 기회 및 패턴 식별
 
-### 3. Review Phase
-- AI presents draft snapshot for user review
-- User provides feedback and requests modifications
-- AI iterates and improves based on feedback
+### 3. 검토 단계
+- AI가 사용자 검토를 위한 스냅샷 초안 제시
+- 사용자가 피드백 제공 및 수정 요청
+- AI가 피드백에 따라 반복 및 개선
 
-### 4. Finalization Phase
-- AI saves completed snapshot to specified location
-- AI confirms file creation and provides summary
+### 4. 최종화 단계
+- AI가 완성된 스냅샷을 지정된 위치에 저장
+- AI가 파일 생성 확인 및 요약 제공
 
-## Error Handling
+## 오류 처리
 
-### Incomplete Data
-- **Missing Context**: Ask for session type, participant background, or research goals
-- **Vague Responses**: Request specific examples or concrete details
-- **Limited Stories**: Probe for additional behavioral examples
+### 불완전한 데이터
+- **맥락 누락**: 세션 유형, 참여자 배경 또는 리서치 목표 질문
+- **모호한 응답**: 구체적인 예시 또는 구체적인 세부사항 요청
+- **제한된 스토리**: 추가 행동 예시 탐색
 
-### Ambiguous Information
-- **Multiple Interpretations**: Present alternatives and ask for clarification
-- **Unclear Relationships**: Request additional context or examples
-- **Conflicting Data**: Highlight inconsistencies and ask for resolution
+### 모호한 정보
+- **다중 해석**: 대안 제시 및 명확화 요청
+- **불명확한 관계**: 추가 맥락 또는 예시 요청
+- **상충하는 데이터**: 불일치 강조 및 해결 요청
 
-### Quality Issues
-- **Generalizations**: Push for specific behavioral examples
-- **Opinions vs. Behaviors**: Distinguish between what people say vs. what they do
-- **Missing Emotions**: Probe for emotional responses and reactions
+### 품질 문제
+- **일반화**: 구체적인 행동 예시 요구
+- **의견 vs 행동**: 사람들이 말하는 것과 실제로 하는 것 구분
+- **감정 누락**: 감정적 반응 및 반작용 탐색
 
-## Quality Assurance Checklist
+## 품질 보증 체크리스트
 
-### Before Finalizing
-- [ ] All required sections are complete
-- [ ] Stories contain concrete behavioral details
-- [ ] Experience map follows logical flow
-- [ ] Opportunities are specific and actionable
-- [ ] Insights go beyond individual stories
-- [ ] Quotes are accurate and representative
-- [ ] Context is clear and complete
+### 최종화 전
+- [ ] 모든 필수 섹션이 완료됨
+- [ ] 스토리에 구체적인 행동 세부사항 포함
+- [ ] 경험 맵이 논리적 흐름을 따름
+- [ ] 기회가 구체적이고 실행 가능함
+- [ ] 인사이트가 개별 스토리를 넘어섬
+- [ ] 인용문이 정확하고 대표적임
+- [ ] 맥락이 명확하고 완전함
 
-### Validation Questions
-- Would a product team member understand this insight?
-- Is there enough detail to take action?
-- Does this capture the participant's actual behavior?
-- Are the opportunities specific enough to prioritize?
+### 검증 질문
+- 제품 팀원이 이 인사이트를 이해할 수 있는가?
+- 행동을 취할 수 있는 충분한 세부사항이 있는가?
+- 이것이 참여자의 실제 행동을 포착하는가?
+- 기회가 우선순위를 정할 만큼 구체적인가?
 
-## Best Practices
+## 모범 사례
 
-### Story Extraction
-- Ask "Tell me about the last time you..." to get specific instances
-- Focus on recent experiences for accuracy
-- Capture the sequence of actions, not just outcomes
-- Note what participants actually did vs. what they intended
+### 스토리 추출
+- "마지막으로 ...했을 때를 말씀해주세요"로 구체적인 사례 질문
+- 정확성을 위해 최근 경험에 집중
+- 결과만이 아닌 행동의 순서 캡처
+- 참여자가 의도한 것이 아니라 실제로 한 것을 기록
 
-### Experience Mapping
-- Start with clear boundaries (what triggers the journey, what defines success)
-- Focus on concrete actions and decisions
-- Include emotional states and pain points
-- Map the complete journey, not just the happy path
+### 경험 매핑
+- 명확한 경계로 시작 (무엇이 여정을 트리거하는지, 무엇이 성공을 정의하는지)
+- 구체적인 행동 및 결정에 집중
+- 감정적 상태 및 페인 포인트 포함
+- 해피 패스만이 아닌 전체 여정 매핑
 
-### Opportunity Identification
-- Connect opportunities to specific stories and behaviors
-- Consider both explicit needs and implicit frustrations
-- Evaluate impact and feasibility
-- Prioritize based on frequency and severity
+### 기회 식별
+- 기회를 구체적인 스토리 및 행동과 연결
+- 명시적인 니즈와 암묵적인 좌절 모두 고려
+- 빈도와 심각도에 따라 영향력 평가
+- 빈도와 심각도에 따라 우선순위화
 
 ---
 
-*This framework ensures consistent, actionable interview snapshots that drive product decisions and user experience improvements.*
+*이 프레임워크는 제품 의사결정 및 사용자 경험 개선을 주도하는 일관되고 실행 가능한 인터뷰 스냅샷을 보장합니다.*

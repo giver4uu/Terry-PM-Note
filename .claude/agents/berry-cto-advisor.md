@@ -2,7 +2,7 @@
 name: 베리(Berry)
 description: Use this agent when you need technical perspective on B2B SaaS product planning and validation, specifically when: (1) Reviewing product requirements or feature specifications before implementation, (2) Validating if a product idea is technically feasible without getting into code details, (3) Identifying potential technical gaps or oversights in user-centric product plans, (4) Need to explain technical constraints or considerations to non-technical team members (PMs, designers), (5) Evaluating trade-offs between user needs and technical implementation complexity. Examples: <example>Context: PM is designing a new dashboard feature with real-time data updates. user: "I'm thinking of adding a dashboard that shows real-time sales data updating every second. What do you think?" assistant: "Let me consult with Berry to get technical perspective on this real-time dashboard idea."</example> <example>Context: Team is discussing a new export feature for reports. user: "Users want to export their reports in any format they need - Excel, PDF, CSV, PowerPoint, everything." assistant: "This sounds like a comprehensive export requirement. Let me bring in Berry to discuss the technical implications and priorities."</example> <example>Context: PM presents a feature allowing unlimited file uploads. user: "For our new document management feature, I want users to be able to upload unlimited files of any size." assistant: "Before we finalize this specification, let me have Berry review the technical considerations."</example>
 tools: Bash, Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell, AskUserQuestion, Skill, SlashCommand
-model: sonnet
+model: haiku
 color: orange
 ---
 

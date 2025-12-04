@@ -3,358 +3,358 @@
 alwaysApply: false
 ---
 
-# Rule: Identify and Test Assumptions (Continuous Discovery Habits)
+# 규칙: 가정 식별 및 테스트 (Continuous Discovery Habits)
 
-## Goal
-To extract explicit assumptions from insights and opportunities, categorize and prioritize them to identify "leap-of-faith" assumptions, and design a lightweight, iteratively-scaled testing plan that reduces risk across desirability, usability, feasibility, viability, and ethical dimensions.
-
----
-
-## When to Use
-- After creating opportunities using [Create Opportunities](./create-opportunities.mdc)
-- After synthesizing interviews using [Synthesize Interview Snapshots](./synthesize-interview-snapshots.mdc)
-- When preparing to generate or downselect solutions with [Generate Solutions](./generate-solutions.mdc)
-- Whenever a new idea is proposed and you need to surface and derisk its underlying assumptions
+## 목표
+인사이트와 기회로부터 명시적 가정을 추출하고, 이를 분류 및 우선순위화하여 "핵심 믿음 가정(Leap-of-Faith Assumptions)"을 식별하며, 바람직성, 사용성, 실현 가능성, 실행 가능성, 윤리성 차원에서 리스크를 줄이는 경량의 반복적으로 확장 가능한 테스트 계획을 설계합니다.
 
 ---
 
-## Input
-- **Primary Sources:**
-  - Prioritized opportunities from `opportunities/`
-  - Early solution sketches from `solutions/`
-  - Interview snapshots from `user-interviews/snapshots/`
-  - Synthesis documents from `user-interviews/synthesis/`
-- **Optional Sources:**
-  - Product analytics or behavioral data
-- **Minimum Requirements:**
-  - 1 target opportunity with supporting evidence, and
-  - 2–3 candidate solution ideas OR a single idea with key user journeys
+## 사용 시점
+- [기회 생성](./create-opportunities.mdc)을 사용하여 기회를 생성한 후
+- [인터뷰 스냅샷 종합](./synthesize-interview-snapshots.mdc)을 사용하여 인터뷰를 종합한 후
+- [솔루션 생성](./generate-solutions.mdc)으로 솔루션을 생성하거나 선택하기 전에 준비할 때
+- 새로운 아이디어가 제안되고 그 기저의 가정을 드러내고 리스크를 줄여야 할 때
 
 ---
 
-## Output
-**Format:** Markdown (`.md`)
-**Location:** `assumptions/[topic]/`
-**Filename:** `assumptions-[opportunity-name]-v[version].md`
-
-**Semantic Naming Guidelines:**
-- opportunity-name: kebab-case opportunity name from opportunity document (e.g., newsletter-creation, user-onboarding)
-- version: auto-incrementing version number (v1, v2, v3...)
-- Example: assumptions-newsletter-creation-v1.md
-
-**Version Management:**
-- Check existing files with same opportunity-name pattern before creating new assumptions
-- Auto-increment version number (v1 → v2 → v3...)
-- Never overwrite existing assumption files
-- Preserve all assumption versions for comparison
-- No date dependency required
+## 입력
+- **주요 소스:**
+  - `opportunities/`의 우선순위가 지정된 기회
+  - `solutions/`의 초기 솔루션 스케치
+  - `user-interviews/snapshots/`의 인터뷰 스냅샷
+  - `user-interviews/synthesis/`의 종합 문서
+- **선택적 소스:**
+  - 제품 분석 또는 행동 데이터
+- **최소 요구사항:**
+  - 증거를 뒷받침하는 타겟 기회 1개, 그리고
+  - 2-3개의 후보 솔루션 아이디어 또는 주요 사용자 여정이 있는 단일 아이디어
 
 ---
 
-## AI Instructions for Assumption Identification
+## 산출물
+**형식:** Markdown (`.md`)
+**위치:** `assumptions/[topic]/`
+**파일명:** `assumptions-[opportunity-name]-v[version].md`
 
-### When Receiving Research and Opportunity Data
-- **Validate Inputs:** Confirm target opportunity, evidence strength, and affected segments.
-- **Clarify Scope:** Define which ideas/journeys will be story-mapped.
-- **Note Constraints:** Technical, legal, GTM, success metrics, time/resource limits.
-- **Topic Extraction:** Analyze opportunity content to extract main topic for semantic filename.
-- **File Existence Check:** MANDATORY - Check for existing files with pattern `assumptions-[topic]-v*.md` before creating new file.
-- **Version Management:** MANDATORY - Auto-increment version number based on existing files. Never overwrite existing files.
+**의미론적 네이밍 가이드라인:**
+- opportunity-name: 기회 문서의 kebab-case 기회 이름 (예: newsletter-creation, user-onboarding)
+- version: 자동 증가하는 버전 번호 (v1, v2, v3...)
+- 예시: assumptions-newsletter-creation-v1.md
 
-### Assumption Generation Guidelines
-- **Use Five Categories:** Desirability, Usability, Feasibility, Viability, Ethical.
-- **Phrase Positively and Specifically:** State what must be true, in concrete, testable language.
-- **Tie to Behavior:** Prefer assumptions about what users will do over what they say.
-- **Attach Evidence:** Link each assumption to quotes, behaviors, or data when available.
-- **Normalize Granularity:** Split vague, compound assumptions into specific, testable statements.
-
-### Evidence Classification (Binary)
-- **Strong Evidence:** 
-  - Direct user quotes or behaviors supporting assumption
-  - Quantitative data from multiple sources
-  - Previous successful tests of similar assumptions
-- **Weak Evidence:** 
-  - No direct evidence
-  - Single source or anecdotal evidence
-  - Theoretical or assumed knowledge only
-
-### Importance Evaluation (Binary)
-- **More Important:** 
-  - Core value proposition depends on this assumption
-  - Assumption failure would kill the solution
-  - Blocking other critical assumptions
-- **Less Important:** 
-  - Nice-to-have features or optimizations
-  - Minor impact on solution success
-  - Non-blocking assumptions
-
-### Prioritization Guidelines (Assumption Mapping)
-- Place each assumption on a 2D grid:
-  - X-axis: Evidence known (left = strong evidence, right = weak evidence)
-  - Y-axis: Importance to idea success (bottom = less important, top = more important)
-- **Leap of Faith (LoFA):** Select ONLY assumptions in the top-right quadrant:
-  - **Weak Evidence** (right side of X-axis)
-  - **More Important** (top half of Y-axis)
-  - **Maximum 3 LoFA** per assumption document
-  - **Visual indicator**: Mark with circle or highlight
-
-### Testing Guidelines
-- **Simulate an Experience, Evaluate Behavior:** Design minimal simulations that let users behave in line with or against the assumption.
-- **Define Success Upfront:** Use numbers (e.g., "≥ 3 of 10 participants choose X"), not percentages.
-- **Recruit the Right Audience:** Screen by target opportunity and segment; select for variation.
-- **Start Small, Then Scale:** Begin with quick signals; escalate to larger tests only if warranted.
-- **Triangulate:** Combine small, different methods to reduce false positives/negatives.
-
-### Semantic File Naming Guidelines
-- **Topic Extraction:** Analyze opportunity content to identify main topic/theme
-- **Filename Format:** Use semantic naming pattern `assumptions-[opportunity-name]-v[version].md`
-- **Version Management:** Auto-increment version number based on existing files
-- **Folder Organization:** Create topic-specific subfolders for better organization
-- **No Date Dependency:** Remove all date-based filename requirements
-
-**Topic Extraction Process:**
-1. Analyze opportunity document for main theme and keywords
-2. Identify the most relevant topic/theme from opportunity content
-3. Convert to kebab-case format (e.g., "Newsletter Creation" → "newsletter-creation")
-4. Ensure topic uniqueness across different assumption files
-5. Use topic as primary identifier instead of date
-
-**Version Management Process:**
-1. **MANDATORY STEP 1:** Check existing files with pattern `assumptions-[opportunity-name]-v*.md`
-2. **MANDATORY STEP 2:** Find the highest version number for the same opportunity
-3. **MANDATORY STEP 3:** Auto-increment version number (v1 → v2 → v3...)
-4. **MANDATORY STEP 4:** Generate new filename with incremented version
-5. **MANDATORY STEP 5:** Verify no file with new filename exists before creation
-6. **CRITICAL:** Never overwrite existing files - always create new version
-7. No manual version tracking required
-
-**Smart Topic Detection:**
-- **Content Analysis:** Extract main themes from opportunity document
-- **Keyword Frequency:** Use most frequent relevant keywords as topic
-- **Kebab-Case Format:** Convert spaces to hyphens, lowercase (e.g., "User Onboarding" → "user-onboarding")
-- **Uniqueness Check:** Ensure topic doesn't conflict with existing files
-- **Fallback:** Use generic topic name if extraction fails
+**버전 관리:**
+- 새 가정을 생성하기 전에 동일한 opportunity-name 패턴의 기존 파일 확인
+- 버전 번호 자동 증가 (v1 → v2 → v3...)
+- 기존 가정 파일을 절대 덮어쓰지 않음
+- 비교를 위해 모든 가정 버전 보존
+- 날짜 의존성 불필요
 
 ---
 
-## Process
+## 가정 식별을 위한 AI 지침
 
-### 0) File Management (MANDATORY PRE-STEP)
-1. **Extract topic** from opportunity document content
-2. **Check existing files** with pattern `assumptions-[topic]-v*.md` in target directory
-3. **Find highest version** number for same topic (e.g., if v1, v2 exist, next is v3)
-4. **Generate new filename** with incremented version: `assumptions-[topic]-v[version].md`
-5. **Verify no file exists** with new filename before proceeding
-6. **CRITICAL**: Never overwrite existing files - always create new version
+### 리서치 및 기회 데이터 수신 시
+- **입력 검증:** 타겟 기회, 증거 강도, 영향을 받는 세그먼트 확인.
+- **범위 명확화:** 어떤 아이디어/여정이 스토리 맵으로 작성될지 정의.
+- **제약 사항 확인:** 기술적, 법적, GTM, 성공 지표, 시간/리소스 제한.
+- **토픽 추출:** 의미론적 파일명을 위해 기회 콘텐츠 분석.
+- **파일 존재 확인:** 필수 - 새 파일을 생성하기 전에 `assumptions-[topic]-v*.md` 패턴의 기존 파일 확인.
+- **버전 관리:** 필수 - 기존 파일을 기반으로 버전 번호 자동 증가. 기존 파일을 절대 덮어쓰지 않음.
 
-### 1) Prepare Context and Actors
-1. Confirm target opportunity and desired outcome(s).
-2. Identify key actors (end-user types, internal systems, third parties).
+### 가정 생성 가이드라인
+- **다섯 가지 카테고리 사용:** 바람직성, 사용성, 실현 가능성, 실행 가능성, 윤리성.
+- **긍정적이고 구체적으로 표현:** 무엇이 참이어야 하는지 구체적이고 테스트 가능한 언어로 진술.
+- **행동과 연결:** 사용자가 말하는 것보다 실제로 할 것에 대한 가정 선호.
+- **증거 첨부:** 사용 가능한 경우 각 가정에 인용문, 행동 또는 데이터 연결.
+- **세분성 정규화:** 모호하고 복합적인 가정을 구체적이고 테스트 가능한 진술로 분할.
 
-### 2) Story Map Candidate Ideas (or Key Journeys)
-1. Assume the solution exists; map what users do to get value.
-2. Sequence steps by actor; highlight moments critical to success.
+### 증거 분류 (이진)
+- **강한 증거:**
+  - 가정을 뒷받침하는 직접적인 사용자 인용문 또는 행동
+  - 여러 소스의 정량적 데이터
+  - 유사한 가정의 이전 성공적인 테스트
+- **약한 증거:**
+  - 직접적인 증거 없음
+  - 단일 소스 또는 일화적 증거
+  - 이론적이거나 가정된 지식만 있음
 
-### 3) Generate Assumptions (Five Categories)
-For each pivotal step, enumerate assumptions across: Desirability, Usability, Feasibility, Viability, Ethical.
+### 중요도 평가 (이진)
+- **더 중요함:**
+  - 핵심 가치 제안이 이 가정에 의존
+  - 가정 실패 시 솔루션이 실패
+  - 다른 중요한 가정을 차단
+- **덜 중요함:**
+  - 좋으면 좋은 기능 또는 최적화
+  - 솔루션 성공에 미치는 영향이 적음
+  - 차단하지 않는 가정
 
-### 4) Pre-Mortem (Prospective Hindsight)
-“It’s six months later; launch failed. What went wrong?” Convert reasons into specific assumptions that must be true.
+### 우선순위 지정 가이드라인 (가정 매핑)
+- 각 가정을 2D 그리드에 배치:
+  - X축: 증거 확보 (왼쪽 = 강한 증거, 오른쪽 = 약한 증거)
+  - Y축: 아이디어 성공에 대한 중요도 (아래 = 덜 중요함, 위 = 더 중요함)
+- **핵심 믿음 가정(LoFA):** 오른쪽 상단 사분면의 가정만 선택:
+  - **약한 증거** (X축의 오른쪽)
+  - **더 중요함** (Y축의 상단)
+  - **가정 문서당 최대 3개 LoFA**
+  - **시각적 표시**: 원 또는 강조 표시
 
-### 5) Walk OST Lines (Outcome ↔ Opportunity ↔ Solution)
-Write why the solution addresses the opportunity and drives the outcome. Extract each inference as a testable assumption (esp. viability).
+### 테스트 가이드라인
+- **경험 시뮬레이션, 행동 평가:** 사용자가 가정에 따라 또는 반대로 행동할 수 있는 최소한의 시뮬레이션 설계.
+- **사전에 성공 정의:** 백분율이 아닌 숫자 사용 (예: "10명 중 ≥ 3명이 X를 선택").
+- **올바른 대상 모집:** 타겟 기회와 세그먼트로 스크리닝; 변동성을 위해 선택.
+- **작게 시작, 그 다음 확장:** 빠른 신호로 시작; 필요한 경우에만 더 큰 테스트로 확대.
+- **삼각 측량:** 거짓 긍정/부정을 줄이기 위해 작고 다른 방법 결합.
 
-### 6) Normalize, Deduplicate, and Attach Evidence
-Rewrite assumptions to be positive, specific, and single-concept. Link supporting quotes, behaviors, analytics.
+### 의미론적 파일 네이밍 가이드라인
+- **토픽 추출:** 기회 콘텐츠를 분석하여 주요 토픽/테마 식별
+- **파일명 형식:** 의미론적 네이밍 패턴 `assumptions-[opportunity-name]-v[version].md` 사용
+- **버전 관리:** 기존 파일을 기반으로 버전 번호 자동 증가
+- **폴더 구조:** 더 나은 구성을 위해 토픽별 하위 폴더 생성
+- **날짜 의존성 없음:** 모든 날짜 기반 파일명 요구사항 제거
 
-### 7) Map and Prioritize (Assumption Mapping)
-1. **Plot all assumptions** on 2D grid using binary classification
-2. **Identify top-right quadrant** (Weak Evidence + More Important)
-3. **Select maximum 3 assumptions** from this quadrant
-4. **If more than 3 in quadrant**: Prioritize by impact, test complexity, dependencies
-5. **Mark selected LoFA** with visual indicator
+**토픽 추출 프로세스:**
+1. 주요 테마와 키워드를 위해 기회 문서 분석
+2. 기회 콘텐츠에서 가장 관련성 높은 토픽/테마 식별
+3. kebab-case 형식으로 변환 (예: "Newsletter Creation" → "newsletter-creation")
+4. 다양한 가정 파일 간 토픽 고유성 보장
+5. 날짜 대신 토픽을 주요 식별자로 사용
 
-### 8) Define Test Cards for LoFA Assumptions
-For each of the 3 selected LoFA, design the smallest simulation with clear success criteria, sample size, method, audience, and time window.
+**버전 관리 프로세스:**
+1. **필수 1단계:** `assumptions-[opportunity-name]-v*.md` 패턴의 기존 파일 확인
+2. **필수 2단계:** 동일한 기회에 대한 가장 높은 버전 번호 찾기
+3. **필수 3단계:** 버전 번호 자동 증가 (v1 → v2 → v3...)
+4. **필수 4단계:** 증가된 버전으로 새 파일명 생성
+5. **필수 5단계:** 생성 전 새 파일명의 파일이 존재하지 않는지 확인
+6. **중요:** 기존 파일을 절대 덮어쓰지 않음 - 항상 새 버전 생성
+7. 수동 버전 추적 불필요
 
-### 9) Run Tests → Record Results → Update the Map
-Move assumptions leftward as evidence grows; iterate simulation quality or move to next riskiest item.
-
-### 10) Decide and Proceed
-Use accumulated evidence to: evolve the idea, change the opportunity focus, or scale the solution test.
+**스마트 토픽 감지:**
+- **콘텐츠 분석:** 기회 문서에서 주요 테마 추출
+- **키워드 빈도:** 가장 빈번한 관련 키워드를 토픽으로 사용
+- **Kebab-Case 형식:** 공백을 하이픈으로, 소문자로 변환 (예: "User Onboarding" → "user-onboarding")
+- **고유성 확인:** 토픽이 기존 파일과 충돌하지 않는지 확인
+- **대체:** 추출 실패 시 일반 토픽 이름 사용
 
 ---
 
-## Output Structure (assumptions-[opportunity-name]-v[version].md)
+## 프로세스
+
+### 0) 파일 관리 (필수 사전 단계)
+1. 기회 문서 콘텐츠에서 **토픽 추출**
+2. 대상 디렉토리에서 `assumptions-[topic]-v*.md` 패턴의 **기존 파일 확인**
+3. 동일한 토픽에 대한 **가장 높은 버전** 번호 찾기 (예: v1, v2가 존재하면 다음은 v3)
+4. 증가된 버전으로 **새 파일명 생성**: `assumptions-[topic]-v[version].md`
+5. 진행하기 전에 새 파일명의 **파일이 존재하지 않는지 확인**
+6. **중요**: 기존 파일을 절대 덮어쓰지 않음 - 항상 새 버전 생성
+
+### 1) 맥락 및 행위자 준비
+1. 타겟 기회와 원하는 결과 확인.
+2. 주요 행위자 식별 (최종 사용자 유형, 내부 시스템, 제3자).
+
+### 2) 후보 아이디어 스토리 맵 작성 (또는 주요 여정)
+1. 솔루션이 존재한다고 가정; 사용자가 가치를 얻기 위해 하는 일을 맵핑.
+2. 행위자별로 단계 순서 지정; 성공에 중요한 순간 강조.
+
+### 3) 가정 생성 (다섯 가지 카테고리)
+각 중요한 단계에 대해 바람직성, 사용성, 실현 가능성, 실행 가능성, 윤리성 전반에 걸쳐 가정을 나열합니다.
+
+### 4) 사전 부검 (전향적 통찰)
+"6개월 후; 출시가 실패했습니다. 무엇이 잘못되었나요?" 이유를 참이어야 하는 구체적인 가정으로 변환.
+
+### 5) OST 라인 따라가기 (결과 ↔ 기회 ↔ 솔루션)
+솔루션이 기회를 해결하고 결과를 주도하는 이유를 작성. 각 추론을 테스트 가능한 가정으로 추출 (특히 실행 가능성).
+
+### 6) 정규화, 중복 제거, 증거 첨부
+가정을 긍정적이고 구체적이며 단일 개념으로 재작성. 뒷받침하는 인용문, 행동, 분석 연결.
+
+### 7) 맵핑 및 우선순위 지정 (가정 매핑)
+1. 이진 분류를 사용하여 2D 그리드에 **모든 가정 배치**
+2. **오른쪽 상단 사분면 식별** (약한 증거 + 더 중요함)
+3. 이 사분면에서 **최대 3개 가정 선택**
+4. **사분면에 3개 이상인 경우**: 영향, 테스트 복잡성, 종속성으로 우선순위 지정
+5. 선택된 LoFA를 **시각적 표시로 마크**
+
+### 8) LoFA 가정에 대한 테스트 카드 정의
+선택된 3개의 LoFA 각각에 대해 명확한 성공 기준, 샘플 크기, 방법, 대상, 시간 창이 있는 최소 시뮬레이션 설계.
+
+### 9) 테스트 실행 → 결과 기록 → 맵 업데이트
+증거가 증가함에 따라 가정을 왼쪽으로 이동; 시뮬레이션 품질을 반복하거나 다음 가장 위험한 항목으로 이동.
+
+### 10) 결정 및 진행
+축적된 증거를 사용하여: 아이디어 발전, 기회 초점 변경 또는 솔루션 테스트 확장.
+
+---
+
+## 산출물 구조 (assumptions-[opportunity-name]-v[version].md)
 
 ```markdown
-# Assumptions — [Opportunity Name]
+# 가정 — [기회 이름]
 
-**Topic:** [Extracted topic name]  
-**Version:** [v1, v2, v3...]  
-**Target Opportunity:** [Opportunity statement]  
-**Related Documents:** [Snapshots/Synthesis/Opportunities/Solutions]
-
----
-
-## Story Map Snapshot
-- **Actors:** [End-user types, systems, partners]
-- **Key Steps:**
-  1. [Actor] — [Step]
-  2. [Actor] — [Step]
+**토픽:** [추출된 토픽 이름]
+**버전:** [v1, v2, v3...]
+**타겟 기회:** [기회 진술]
+**관련 문서:** [스냅샷/종합/기회/솔루션]
 
 ---
 
-## Assumption Log
-| ID | Category | Assumption (positive, specific) | Evidence (link/quote/data) | Importance | Evidence Known | LoFA |
-|----|----------|----------------------------------|-----------------------------|------------|----------------|------|
-| A-01 | Desirability | [What must be true] | [Quote/analytics/ref] | More/Less Important | Strong/Weak | Yes/No |
+## 스토리 맵 스냅샷
+- **행위자:** [최종 사용자 유형, 시스템, 파트너]
+- **주요 단계:**
+  1. [행위자] — [단계]
+  2. [행위자] — [단계]
 
 ---
 
-## Assumption Map (Summary)
-- **Top-right (LoFA):** [A-01, A-07, A-12] - Maximum 3 assumptions
-- **Notable clusters:** [e.g., viability assumptions lacking data]
-- **Visual Grid:** Use 2D grid with binary classification (Strong/Weak Evidence, More/Less Important)
+## 가정 로그
+| ID | 카테고리 | 가정 (긍정적, 구체적) | 증거 (링크/인용/데이터) | 중요도 | 증거 확보 | LoFA |
+|----|---------|---------------------|----------------------|--------|----------|------|
+| A-01 | 바람직성 | [무엇이 참이어야 하는가] | [인용/분석/참조] | 더/덜 중요함 | 강함/약함 | 예/아니오 |
 
 ---
 
-## Test Cards (LoFA)
-
-### Test Card: [A-01] — [Short name]
-- **Assumption:** [Assumption statement]
-- **Simulation:** [Prototype/mock experience/data query/concept test]
-- **Method:** [Unmoderated test | 1-question survey | Customer letter technique|  Data Analysis | Concierge Test | Wizard of Oz | Usability Test | Live-data prototype | Fake door test | Landing Page Demand Test | Ealry Adopters | Longitudinal User Study | Qualitative Value Testing | Dogfood | Fishfood | Smoke Tests]
-- **Audience:** [Screening criteria; segment]
-- **Sample Size & Window:** [e.g., n=10 over 2 days]
-- **Success Criteria:** [e.g., ≥ 3/10 do X]
-- **Risks & Biases:** [Key concerns and mitigations]
-- **Next Step if Pass/Fail:** [Scale test / iterate assumption / Experiment(e.g., Multivariate, A/B tests) / pivot idea]
-
-*(Repeat per LoFA assumption)*
+## 가정 맵 (요약)
+- **오른쪽 상단 (LoFA):** [A-01, A-07, A-12] - 최대 3개 가정
+- **주목할 만한 클러스터:** [예: 데이터가 부족한 실행 가능성 가정]
+- **시각적 그리드:** 이진 분류를 사용한 2D 그리드 (강함/약함 증거, 더/덜 중요함)
 
 ---
 
-## Results and Decisions
-- **Outcomes:** [Observed behaviors vs. criteria]
-- **Map Update:** [Assumptions moved left; new LoFA]
-- **Decisions:** [Proceed/iterate/stop; changes to opportunity or idea]
+## 테스트 카드 (LoFA)
+
+### 테스트 카드: [A-01] — [짧은 이름]
+- **가정:** [가정 진술]
+- **시뮬레이션:** [프로토타입/모의 경험/데이터 쿼리/개념 테스트]
+- **방법:** [무감독 테스트 | 1-질문 설문조사 | 고객 편지 기법 | 데이터 분석 | 컨시어지 테스트 | 오즈의 마법사 | 사용성 테스트 | 실시간 데이터 프로토타입 | 가짜 문 테스트 | 랜딩 페이지 수요 테스트 | 얼리 어답터 | 종단 사용자 연구 | 정성적 가치 테스트 | 독푸드 | 피시푸드 | 스모크 테스트]
+- **대상:** [스크리닝 기준; 세그먼트]
+- **샘플 크기 및 기간:** [예: 2일 동안 n=10]
+- **성공 기준:** [예: 10명 중 ≥ 3명이 X를 수행]
+- **리스크 및 편향:** [주요 우려사항 및 완화]
+- **통과/실패 시 다음 단계:** [테스트 확장 / 가정 반복 / 실험(예: 다변량, A/B 테스트) / 아이디어 피벗]
+
+*(LoFA 가정당 반복)*
 
 ---
 
-## Next Steps
-- [ ] Run next LoFA test
-- [ ] Evolve idea based on findings
-- [ ] Share summary with stakeholders
+## 결과 및 결정
+- **결과:** [기준 대비 관찰된 행동]
+- **맵 업데이트:** [왼쪽으로 이동한 가정; 새로운 LoFA]
+- **결정:** [진행/반복/중단; 기회 또는 아이디어 변경]
+
+---
+
+## 다음 단계
+- [ ] 다음 LoFA 테스트 실행
+- [ ] 결과를 기반으로 아이디어 발전
+- [ ] 이해관계자와 요약 공유
 ```
 
 ---
 
-## Templates
+## 템플릿
 
-### Assumption Statement Pattern
-- Actor + Action + Context + Outcome expected  
-Example: “Prospective subscribers will select a live game from our home screen when browsing evening entertainment options.”
+### 가정 진술 패턴
+- 행위자 + 행동 + 맥락 + 예상 결과
+예시: "예비 구독자는 저녁 엔터테인먼트 옵션을 탐색할 때 홈 화면에서 라이브 게임을 선택할 것입니다."
 
-### Pre-Mortem Prompt
-- “It’s six months after launch and this failed. What happened?”  
-Capture each reason → rewrite as a positive, specific assumption that must be true.
+### 사전 부검 프롬프트
+- "출시 6개월 후 실패했습니다. 무엇이 일어났나요?"
+각 이유를 캡처 → 참이어야 하는 긍정적이고 구체적인 가정으로 재작성.
 
-### Story Map (Quick)
+### 스토리 맵 (빠른)
 ```
-Actors: [User, Platform, Partner]
-1) [User] does …
-2) [Platform] shows …
-3) [Partner] provides …
-```
-
-### Assumption Mapping Template
-```
-                    Evidence Known
-                Strong              Weak
-More     [A-01]  [A-03]    [A-02]  [A-04] ← LoFA (3개)
-Important [A-09]  [A-10]    [A-05]  [A-06] ← LoFA (3개)
-
-Less     [A-15]  [A-14]    [A-18]  [A-17]
-Important [A-12]  [A-11]    [A-13]  [A-16]
+행위자: [사용자, 플랫폼, 파트너]
+1) [사용자]가 ... 합니다
+2) [플랫폼]이 ... 보여줍니다
+3) [파트너]가 ... 제공합니다
 ```
 
-### LoFA Selection Process
-1. **Plot all assumptions** on 2D grid using binary classification
-2. **Identify top-right quadrant** (Weak Evidence + More Important)
-3. **Select maximum 3 assumptions** from this quadrant
-4. **If more than 3 in quadrant**: Prioritize by:
-   - Impact on solution success
-   - Test complexity (easier first)
-   - Dependencies (blocking first)
-5. **Mark selected LoFA** with visual indicator (circle or highlight)
+### 가정 매핑 템플릿
+```
+                    증거 확보
+                강함              약함
+더      [A-01]  [A-03]    [A-02]  [A-04] ← LoFA (3개)
+중요함   [A-09]  [A-10]    [A-05]  [A-06] ← LoFA (3개)
 
-### Success Criteria Pattern
-- Define n participants and success threshold as an absolute number (not %).  
-Example: “≥ 4 of 10 choose sports content on the prototype home screen.”
+덜      [A-15]  [A-14]    [A-18]  [A-17]
+중요함   [A-12]  [A-11]    [A-13]  [A-16]
+```
+
+### LoFA 선택 프로세스
+1. 이진 분류를 사용하여 2D 그리드에 **모든 가정 배치**
+2. **오른쪽 상단 사분면 식별** (약한 증거 + 더 중요함)
+3. 이 사분면에서 **최대 3개 가정 선택**
+4. **사분면에 3개 이상인 경우**: 다음으로 우선순위 지정:
+   - 솔루션 성공에 대한 영향
+   - 테스트 복잡성 (더 쉬운 것 먼저)
+   - 종속성 (차단하는 것 먼저)
+5. 선택된 LoFA를 **시각적 표시로 마크** (원 또는 강조)
+
+### 성공 기준 패턴
+- n명의 참가자와 절대 수로 성공 임계값 정의 (% 아님).
+예시: "프로토타입 홈 화면에서 10명 중 ≥ 4명이 스포츠 콘텐츠를 선택합니다."
 
 ---
 
-## Quality Indicators
+## 품질 지표
 
-### Strong
-- **Specific & Positive:** Testable statements tied to concrete behavior
-- **Evidence-Linked:** Quotes, analytics, or prior tests attached
-- **Right LoFA:** Maximum 3 from top-right quadrant (Weak Evidence + More Important)
-- **Binary Classification:** Consistent Strong/Weak, More/Less Important evaluation
-- **Clear Criteria:** Absolute numbers, audience defined, timeboxed
-- **Iterative Cadence:** Start small; scale only with positive signals
+### 강력함
+- **구체적 및 긍정적:** 구체적인 행동과 연결된 테스트 가능한 진술
+- **증거 연결:** 인용문, 분석 또는 이전 테스트 첨부
+- **올바른 LoFA:** 오른쪽 상단 사분면에서 최대 3개 (약한 증거 + 더 중요함)
+- **이진 분류:** 일관된 강함/약함, 더/덜 중요함 평가
+- **명확한 기준:** 절대 숫자, 대상 정의, 시간 제한
+- **반복 케이던스:** 작게 시작; 긍정적 신호가 있을 때만 확장
 
-### Weak
-- **Too Many LoFA:** More than 3 assumptions selected
-- **Inconsistent Classification:** Mixed evaluation criteria
-- **Vague:** Generic or compound statements
-- **Opinion-Based:** Future-intent questions; no behavior
-- **Ambiguous Criteria:** Percentages, no audience, no time window
-- **Over-Building:** Large experiments before early signals
-
----
-
-## Common Anti-Patterns and Guardrails
-- **Too many LoFA** → Select maximum 3 from top-right quadrant only
-- **Inconsistent classification** → Use binary classification (Strong/Weak, More/Less Important)
-- **Not generating enough assumptions** → Use story map + pre-mortem + OST lines
-- **Negative phrasing** → Rewrite as what must be true (positive)
-- **Not specific enough** → Add actor, context, behavior, and outcome
-- **Favoring one category** → Cover all five: Desirability/Usability/Feasibility/Viability/Ethical
-- **Overly complex simulations** → Design smallest viable simulation first
-- **Using percentages for criteria** → Use absolute counts (e.g., 3 of 10)
-- **Missing evaluation details** → Define audience, n, window, and behavior
-- **Testing with wrong audience** → Screen for the target opportunity
-- **Designing for less than best-case** → Start where passing is most likely; increase difficulty later
+### 약함
+- **너무 많은 LoFA:** 3개 이상의 가정 선택
+- **일관성 없는 분류:** 혼합된 평가 기준
+- **모호함:** 일반적이거나 복합적인 진술
+- **의견 기반:** 미래 의도 질문; 행동 없음
+- **모호한 기준:** 백분율, 대상 없음, 시간 창 없음
+- **과잉 구축:** 초기 신호 전에 큰 실험
 
 ---
 
-## Error Handling
-- **Insufficient Data:** Request more snapshots/synthesis; reduce scope.
-- **Weak Evidence:** Mark evidence as "Weak" and prioritize accordingly.
-- **Conflicting Results:** Triangulate with another small method before decisions.
-- **Ethical Concerns:** Document potential harms; design mitigation and/or halt.
-
-### File Naming Issues
-- **Topic Extraction Failure:** Ensure clear topic identification from opportunity content
-- **Version Conflicts:** Always check existing files before creating new assumptions
-- **Incorrect Format:** Use kebab-case for opportunity-name, v[number] for version
-- **Missing Topic:** Extract main theme from opportunity document for filename
-- **Overwriting Prevention:** Never overwrite existing assumption files, always increment version
-- **File Existence Check Failure:** MANDATORY - Always verify file existence before creation
-- **Version Detection Error:** If version detection fails, start with v1 and add warning note
+## 일반적인 안티패턴 및 가드레일
+- **너무 많은 LoFA** → 오른쪽 상단 사분면에서만 최대 3개 선택
+- **일관성 없는 분류** → 이진 분류 사용 (강함/약함, 더/덜 중요함)
+- **충분한 가정을 생성하지 않음** → 스토리 맵 + 사전 부검 + OST 라인 사용
+- **부정적 표현** → 참이어야 하는 것으로 재작성 (긍정적)
+- **충분히 구체적이지 않음** → 행위자, 맥락, 행동, 결과 추가
+- **한 카테고리 선호** → 다섯 가지 모두 다룸: 바람직성/사용성/실현 가능성/실행 가능성/윤리성
+- **지나치게 복잡한 시뮬레이션** → 먼저 최소한의 실행 가능한 시뮬레이션 설계
+- **기준에 백분율 사용** → 절대 개수 사용 (예: 10명 중 3명)
+- **평가 세부사항 누락** → 대상, n, 창, 행동 정의
+- **잘못된 대상으로 테스트** → 타겟 기회에 대해 스크리닝
+- **최선의 경우보다 낮게 설계** → 통과가 가장 가능성 높은 곳에서 시작; 나중에 난이도 증가
 
 ---
 
-## Process Flow
+## 오류 처리
+- **불충분한 데이터:** 더 많은 스냅샷/종합 요청; 범위 축소.
+- **약한 증거:** 증거를 "약함"으로 표시하고 그에 따라 우선순위 지정.
+- **상충하는 결과:** 결정 전 다른 작은 방법으로 삼각 측량.
+- **윤리적 우려:** 잠재적 피해 문서화; 완화 설계 및/또는 중단.
+
+### 파일 네이밍 문제
+- **토픽 추출 실패:** 기회 콘텐츠에서 명확한 토픽 식별 보장
+- **버전 충돌:** 새 가정을 생성하기 전 항상 기존 파일 확인
+- **잘못된 형식:** opportunity-name에는 kebab-case, 버전에는 v[번호] 사용
+- **토픽 누락:** 파일명을 위해 기회 문서에서 주요 테마 추출
+- **덮어쓰기 방지:** 기존 가정 파일을 절대 덮어쓰지 않음, 항상 버전 증가
+- **파일 존재 확인 실패:** 필수 - 생성 전 항상 파일 존재 확인
+- **버전 감지 오류:** 버전 감지 실패 시 v1부터 시작하고 경고 메모 추가
+
+---
+
+## 프로세스 흐름
 ```
-Individual Interviews → Create Snapshots → Synthesize Patterns → Create Opportunities → Generate Solutions → Identify & Test Assumptions
-     ↓                    ↓                    ↓                    ↓                       ↓                        ↓
-[Raw Data]        [Structured Stories]   [Shared Patterns]    [Problem Statements]    [Product Ideas]      [Risks & Tests]
+개별 인터뷰 → 스냅샷 생성 → 패턴 종합 → 기회 생성 → 솔루션 생성 → 가정 식별 및 테스트
+     ↓             ↓              ↓            ↓             ↓                  ↓
+[원시 데이터]  [구조화된 스토리] [공유 패턴]   [문제 진술]   [제품 아이디어]    [리스크 및 테스트]
 ```
 
-### Recommended Folder Structure
+### 권장 폴더 구조
 ```
 assumptions/
 ├── newsletter-creation/
@@ -369,78 +369,78 @@ assumptions/
 
 ---
 
-## Quality Assurance Checklist
+## 품질 보증 체크리스트
 
-### Input Validation
-- [ ] Clear target opportunity statement with supporting evidence
-- [ ] Opportunity context and problem definition complete
-- [ ] Solution ideas or user journeys defined
-- [ ] Evidence strength assessed and documented
+### 입력 검증
+- [ ] 증거를 뒷받침하는 명확한 타겟 기회 진술
+- [ ] 기회 맥락 및 문제 정의 완료
+- [ ] 솔루션 아이디어 또는 사용자 여정 정의
+- [ ] 증거 강도 평가 및 문서화
 
-### Assumption Quality
-- [ ] Assumptions cover all five categories (Desirability, Usability, Feasibility, Viability, Ethical)
-- [ ] Assumptions are positive, specific, and testable
-- [ ] Evidence linked to each assumption where available
-- [ ] Assumption mapping completed with LoFA identified
+### 가정 품질
+- [ ] 가정이 다섯 가지 카테고리 모두 다룸 (바람직성, 사용성, 실현 가능성, 실행 가능성, 윤리성)
+- [ ] 가정이 긍정적이고 구체적이며 테스트 가능함
+- [ ] 사용 가능한 경우 각 가정에 증거 연결
+- [ ] LoFA가 식별된 가정 매핑 완료
 
-### Testing Quality
-- [ ] Test cards designed for LoFA assumptions
-- [ ] Success criteria defined with absolute numbers
-- [ ] Audience screening criteria specified
-- [ ] Sample size and time window defined
+### 테스트 품질
+- [ ] LoFA 가정에 대한 테스트 카드 설계
+- [ ] 절대 숫자로 성공 기준 정의
+- [ ] 대상 스크리닝 기준 지정
+- [ ] 샘플 크기 및 시간 창 정의
 
-### Process Completion
-- [ ] All assumptions evaluated and mapped
-- [ ] Test results documented and analyzed
-- [ ] Decisions made based on evidence
-- [ ] Next steps are clear and actionable
+### 프로세스 완료
+- [ ] 모든 가정 평가 및 맵핑
+- [ ] 테스트 결과 문서화 및 분석
+- [ ] 증거를 기반으로 결정
+- [ ] 다음 단계가 명확하고 실행 가능
 
-### File Naming Validation
-- [ ] **MANDATORY**: Extracted clear topic from opportunity content before creating filename
-- [ ] **MANDATORY**: Checked existing files with pattern `assumptions-[topic]-v*.md` before creation
-- [ ] **MANDATORY**: Verified no file with new filename exists before creation
-- [ ] Filename uses semantic naming format: assumptions-[opportunity-name]-v[version].md
-- [ ] Version number is correctly auto-incremented for same-opportunity assumptions
-- [ ] Opportunity name is descriptive and kebab-case formatted
-- [ ] **CRITICAL**: No overwriting of existing assumption files - always create new version
-- [ ] Topic extraction completed through content analysis before assumption creation
-- [ ] Version management process followed step-by-step
-
----
-
-## AI Implementation Checklist
-
-### Before Creating Any Assumption File:
-1. **Topic Extraction** ✅
-   - [ ] Analyze opportunity document for main theme
-   - [ ] Extract kebab-case topic name (e.g., "newsletter-creation")
-   - [ ] Verify topic is descriptive and unique
-
-2. **File Existence Check** ✅
-   - [ ] Search for existing files: `assumptions-[topic]-v*.md`
-   - [ ] List all found files with their version numbers
-   - [ ] Identify highest version number
-
-3. **Version Management** ✅
-   - [ ] Calculate next version number (highest + 1)
-   - [ ] Generate new filename: `assumptions-[topic]-v[version].md`
-   - [ ] Verify new filename doesn't already exist
-
-4. **File Creation** ✅
-   - [ ] Create file with new filename only
-   - [ ] Never overwrite existing files
-   - [ ] Add version number to document header
-
-### Error Handling:
-- **If topic extraction fails**: Use generic topic name and add warning
-- **If version detection fails**: Start with v1 and add warning note
-- **If file already exists**: Increment version and try again
-- **If multiple topics found**: Use most relevant one and document choice
+### 파일 네이밍 검증
+- [ ] **필수**: 파일명 생성 전 기회 콘텐츠에서 명확한 토픽 추출
+- [ ] **필수**: 생성 전 `assumptions-[topic]-v*.md` 패턴의 기존 파일 확인
+- [ ] **필수**: 생성 전 새 파일명의 파일이 존재하지 않는지 확인
+- [ ] 파일명이 의미론적 네이밍 형식 사용: assumptions-[opportunity-name]-v[version].md
+- [ ] 동일 기회 가정에 대해 버전 번호가 올바르게 자동 증가
+- [ ] 기회 이름이 설명적이고 kebab-case 형식
+- [ ] **중요**: 기존 가정 파일을 덮어쓰지 않음 - 항상 새 버전 생성
+- [ ] 가정 생성 전 콘텐츠 분석을 통한 토픽 추출 완료
+- [ ] 버전 관리 프로세스 단계별 진행
 
 ---
 
-## Related Frameworks
-- [Create Interview Snapshots](./create-interview-snapshots.mdc)
-- [Synthesize Interview Snapshots](./synthesize-interview-snapshots.mdc)
-- [Create Opportunities](./create-opportunities.mdc)
-- [Generate Solutions](./generate-solutions.mdc)
+## AI 구현 체크리스트
+
+### 가정 파일 생성 전:
+1. **토픽 추출** ✅
+   - [ ] 주요 테마를 위해 기회 문서 분석
+   - [ ] kebab-case 토픽 이름 추출 (예: "newsletter-creation")
+   - [ ] 토픽이 설명적이고 고유한지 확인
+
+2. **파일 존재 확인** ✅
+   - [ ] 기존 파일 검색: `assumptions-[topic]-v*.md`
+   - [ ] 버전 번호와 함께 찾은 모든 파일 나열
+   - [ ] 가장 높은 버전 번호 식별
+
+3. **버전 관리** ✅
+   - [ ] 다음 버전 번호 계산 (최고 + 1)
+   - [ ] 새 파일명 생성: `assumptions-[topic]-v[version].md`
+   - [ ] 새 파일명이 이미 존재하지 않는지 확인
+
+4. **파일 생성** ✅
+   - [ ] 새 파일명으로만 파일 생성
+   - [ ] 기존 파일을 절대 덮어쓰지 않음
+   - [ ] 문서 헤더에 버전 번호 추가
+
+### 오류 처리:
+- **토픽 추출 실패 시**: 일반 토픽 이름 사용 및 경고 추가
+- **버전 감지 실패 시**: v1부터 시작하고 경고 메모 추가
+- **파일이 이미 존재하는 경우**: 버전 증가 및 다시 시도
+- **여러 토픽 발견 시**: 가장 관련성 높은 것 사용 및 선택 문서화
+
+---
+
+## 관련 프레임워크
+- [인터뷰 스냅샷 생성](./create-interview-snapshots.mdc)
+- [인터뷰 스냅샷 종합](./synthesize-interview-snapshots.mdc)
+- [기회 생성](./create-opportunities.mdc)
+- [솔루션 생성](./generate-solutions.mdc)

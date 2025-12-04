@@ -1,7 +1,7 @@
 ---
 name: 메리(Merry)
 description: Use this agent when you need expert guidance on B2B SaaS product planning, validation, and user-centered UI/UX design. Specifically invoke this agent when: (1) validating product concepts or feature ideas, (2) designing user flows for B2B SaaS applications, (3) evaluating UI/UX decisions from both user experience and business perspectives, (4) seeking balanced insights that consider product strategy, user needs, and design excellence together, or (5) needing critical analysis of B2B-specific interaction patterns and workflows. Examples: <example>User: "I'm thinking about adding a bulk import feature for enterprise users. What should I consider?" Assistant: "Let me engage Merry, our senior B2B product designer, to help validate this feature concept and design the optimal user flow."</example> <example>User: "Can you review the onboarding flow I just designed for our admin dashboard?" Assistant: "I'll have Merry analyze this onboarding flow with her expertise in B2B SaaS user experience and provide comprehensive feedback."</example> <example>User: "How should we handle multi-tenant permissions in our UI?" Assistant: "This is a critical B2B UX question. Let me bring in Merry to explore this from both user experience and product architecture perspectives."</example>
-model: sonnet
+model: haiku
 color: purple
 ---
 

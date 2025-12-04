@@ -2,58 +2,58 @@
 alwaysApply: false
 ---
 
-# Rules: Synthesize Interview Snapshots
+# 규칙: 인터뷰 스냅샷 종합
 
-## Overview
-This framework guides you through analyzing multiple interview snapshots to identify common patterns, integrate individual experience maps, and create comprehensive insights that reveal shared user needs and opportunities. It transforms individual data points into actionable patterns that inform product decisions.
+## 개요
+이 프레임워크는 여러 인터뷰 스냅샷을 분석하여 공통 패턴을 식별하고, 개별 경험 맵을 통합하며, 공유된 사용자 니즈와 기회를 드러내는 포괄적인 인사이트를 생성하는 과정을 안내합니다. 개별 데이터 포인트를 제품 의사결정에 도움이 되는 실행 가능한 패턴으로 변환합니다.
 
-## When to Use
-- After completing multiple interviews on the same topic or user journey
-- When you need to identify shared patterns across different user segments
-- Before creating opportunities or generating solutions
-- When sharing research findings with stakeholders
-- When you have conflicting or unclear insights from individual interviews
+## 사용 시점
+- 동일한 토픽이나 사용자 여정에 대한 여러 인터뷰를 완료한 후
+- 다양한 사용자 세그먼트 간의 공유된 패턴을 식별해야 할 때
+- 기회를 생성하거나 솔루션을 생성하기 전
+- 이해관계자와 리서치 결과를 공유할 때
+- 개별 인터뷰에서 상충하거나 불명확한 인사이트가 있을 때
 
-## Output
-**Format:** Markdown (`.md`)  
-**Location:** `user-interviews/synthesis/[topic]/`  
-**Filename:** `synthesis-[topic]-v[version].md`
+## 산출물
+**형식:** Markdown (`.md`)
+**위치:** `user-interviews/synthesis/[topic]/`
+**파일명:** `synthesis-[topic]-v[version].md`
 
-**Semantic Naming Guidelines:**
-- topic: kebab-case topic name extracted from content analysis (e.g., newsletter-creation, user-onboarding)
-- version: auto-incrementing version number (v1, v2, v3...)
-- Example: synthesis-newsletter-creation-v1.md
+**의미론적 네이밍 가이드라인:**
+- topic: 콘텐츠 분석에서 추출한 kebab-case 토픽 이름 (예: newsletter-creation, user-onboarding)
+- version: 자동 증가하는 버전 번호 (v1, v2, v3...)
+- 예시: synthesis-newsletter-creation-v1.md
 
-**Version Management:**
-- Check existing files with same topic pattern before creating new synthesis
-- Auto-increment version number (v1 → v2 → v3...)
-- Never overwrite existing synthesis files
-- Preserve all synthesis versions for comparison
-- No date dependency required
-
----
-
-## Input Validation
-**Prerequisites:** 
-- [ ] Minimum 3-5 interview snapshots completed using [Create Interview Snapshots](./create-interview-snapshots.mdc)
-- [ ] All snapshots follow consistent format and structure
-- [ ] Snapshots cover similar topics or user journeys
-- [ ] Quality check passed for all individual snapshots
-
-**Data Quality Assessment:**
-- **Completeness Score:** [X]/100 based on required sections
-- **Behavioral Specificity:** [X]/100 based on concrete examples
-- **Quote Quality:** [X]/100 based on representative statements
+**버전 관리:**
+- 새 종합을 생성하기 전에 동일한 토픽 패턴의 기존 파일 확인
+- 버전 번호 자동 증가 (v1 → v2 → v3...)
+- 기존 종합 파일을 절대 덮어쓰지 않음
+- 비교를 위해 모든 종합 버전 보존
+- 날짜 의존성 불필요
 
 ---
 
-## AI Instructions for Synthesis
+## 입력 검증
+**전제 조건:**
+- [ ] [인터뷰 스냅샷 생성](./create-interview-snapshots.mdc)을 사용하여 최소 3-5개의 인터뷰 스냅샷 완료
+- [ ] 모든 스냅샷이 일관된 형식과 구조를 따름
+- [ ] 스냅샷이 유사한 토픽 또는 사용자 여정을 다룸
+- [ ] 모든 개별 스냅샷에 대한 품질 검사 통과
 
-### When Receiving Multiple Snapshots
-- **Validate Input Quality**: Check if snapshots meet minimum standards from create-interview-snapshots.mdc
-- **Identify Research Gaps**: Note missing information that could strengthen synthesis
-- **Request Additional Data**: Ask for missing snapshots if sample size is insufficient
-- **Topic Extraction**: Analyze content to extract main topic for semantic filename
+**데이터 품질 평가:**
+- **완전성 점수:** 필수 섹션 기준 [X]/100
+- **행동 구체성:** 구체적인 예시 기준 [X]/100
+- **인용 품질:** 대표적인 진술 기준 [X]/100
+
+---
+
+## 종합을 위한 AI 지침
+
+### 여러 스냅샷을 받을 때
+- **입력 품질 검증**: 스냅샷이 create-interview-snapshots.mdc의 최소 기준을 충족하는지 확인
+- **리서치 갭 식별**: 종합을 강화할 수 있는 누락된 정보 기록
+- **추가 데이터 요청**: 샘플 크기가 불충분한 경우 누락된 스냅샷 요청
+- **토픽 추출**: 의미론적 파일명을 위해 콘텐츠를 분석하여 주요 토픽 추출
 
 ### Incremental Synthesis Process (Efficiency Optimization)
 - **Check for Existing Synthesis**: Look for previous synthesis files in the same topic area
@@ -105,9 +105,9 @@ This framework guides you through analyzing multiple interview snapshots to iden
 
 ---
 
-## Framework Structure
+## 프레임워크 구조
 
-### 1. Data Preparation
+### 1. 데이터 준비
 - **Interview Collection**: Gather all relevant interview snapshots
 - **Existing Synthesis Check**: Look for previous synthesis files in the same topic area
 - **New Snapshot Identification**: Compare current snapshots with previously processed ones
@@ -121,7 +121,7 @@ This framework guides you through analyzing multiple interview snapshots to iden
 - **Pattern Comparison**: Compare new patterns with existing synthesis patterns
 - **Merge Strategy**: Determine how to integrate new insights with existing synthesis
 
-### 2. Pattern Analysis
+### 2. 패턴 분석
 - **Extract Common Elements**: Identify recurring themes, behaviors, and pain points
 - **Map Individual Journeys**: Review each snapshot's experience map
 - **Find Overlaps**: Discover where individual stories intersect
@@ -133,7 +133,7 @@ This framework guides you through analyzing multiple interview snapshots to iden
 - **Frequency Updates**: Update pattern frequency counts with new data
 - **Segment Variation Updates**: Add new segment variations discovered in new snapshots
 
-### 3. Pattern Integration
+### 3. 패턴 통합
 - **Group Similar Patterns**: Cluster related insights and behaviors
 - **Merge Experience Maps**: Combine individual journey stages into shared stages
 - **Preserve Unique Elements**: Maintain important segment-specific details
@@ -145,7 +145,7 @@ This framework guides you through analyzing multiple interview snapshots to iden
 - **Preserve Previous Insights**: Maintain valuable insights from previous synthesis
 - **Update Evidence Base**: Add new supporting quotes and observations to existing patterns
 
-### 4. Insight Development
+### 4. 인사이트 개발
 - **Common Patterns**: What patterns emerge across interviews?
 - **User Segments**: Are there distinct groups with different needs?
 - **Pain Point Clusters**: What problems appear most frequently?
@@ -153,9 +153,9 @@ This framework guides you through analyzing multiple interview snapshots to iden
 
 ---
 
-## Process Flow
+## 프로세스 흐름
 
-### Continuous Discovery Workflow
+### Continuous Discovery 워크플로우
 ```
 Individual Interviews → Create Snapshots → Synthesize Patterns → Generate Opportunities → Create Solutions
      ↓                    ↓                    ↓                    ↓                    ↓
@@ -205,9 +205,9 @@ user-interviews/
 
 ---
 
-## Synthesis Template
+## 종합 템플릿
 
-### Standard Synthesis Template
+### 표준 종합 템플릿
 ```markdown
 # What We Learned: [Research Topic] Discovery Research
 

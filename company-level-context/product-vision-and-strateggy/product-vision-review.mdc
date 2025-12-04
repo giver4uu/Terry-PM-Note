@@ -4,63 +4,63 @@ alwaysApply: false
 
 # Product Vision Review Rule
 
-## Purpose
-Review any attached or referenced Product Vision document. Evaluate its strength against proven principles (clarity, ambition, user-centeredness) and provide constructive feedback.
+## 목적
+첨부되거나 참조된 Product Vision 문서를 리뷰합니다. 검증된 원칙(명확성, 야망, 사용자 중심성)에 따라 강점을 평가하고 건설적인 피드백을 제공합니다.
 
-## Applies to
-All files tagged or named with `vision`, `product-vision`, or uploaded as product vision drafts.
+## 적용 대상
+`vision`, `product-vision`으로 태그되거나 이름이 지정된 모든 파일, 또는 제품 비전 초안으로 업로드된 파일.
 
-## How to Use
-When a user attaches or references a product vision:
-1. Parse the document.
-2. Run the Evidence Readiness Check.
-3. Score against the 4 Vision Criteria.
-4. Provide feedback using the Output Template.
+## 사용 방법
+사용자가 제품 비전을 첨부하거나 참조할 때:
+1. 문서를 파싱합니다.
+2. Evidence Readiness Check를 실행합니다.
+3. 4가지 비전 기준에 따라 점수를 매깁니다.
+4. Output Template을 사용하여 피드백을 제공합니다.
 
 ---
 
 ### Evidence Readiness Check
-Before reviewing, verify:
-- A vision statement is explicitly written (not confused with mission/strategy).
-- Clear user problem(s) are referenced or implied.
-- Time horizon (e.g., 3–5 years, long-term direction) is indicated.
+리뷰 전 확인사항:
+- 비전 선언문이 명시적으로 작성되어 있는지 (미션/전략과 혼동되지 않음).
+- 명확한 사용자 문제가 참조되거나 암시되어 있는지.
+- 시간 범위(예: 3~5년, 장기 방향)가 표시되어 있는지.
 
-If missing → **Status = HOLD**. Prompt the user to add missing pieces.
+누락된 경우 → **Status = HOLD**. 사용자에게 누락된 부분을 추가하도록 안내합니다.
 
 ---
 
-### Vision Criteria (Score 0–5 each)
+### Vision Criteria (각 항목 0–5점)
 
-1. **Lofty & Inspiring**  
-   - Does it paint a future that excites and motivates?  
-   - Score 0 = mundane, 5 = bold, energizing.
+1. **Lofty & Inspiring (원대하고 영감을 주는)**
+   - 흥미롭고 동기부여가 되는 미래를 그려내는가?
+   - 점수 0 = 평범함, 5 = 대담하고 활력을 주는.
 
-2. **Realistic & Attainable**  
-   - Is the future state believable within the company’s trajectory?  
-   - Score 0 = fantasy, 5 = ambitious yet plausible.
+2. **Realistic & Attainable (현실적이고 달성 가능한)**
+   - 회사의 궤적 내에서 미래 상태가 믿을 만한가?
+   - 점수 0 = 환상적, 5 = 야심적이지만 그럴듯한.
 
-3. **Constraint-Free**  
-   - Is it written without being anchored to today’s technology/org limits?  
-   - Score 0 = limited by today, 5 = unconstrained future vision.
+3. **Constraint-Free (제약 없는)**
+   - 오늘날의 기술/조직 한계에 얽매이지 않고 작성되었는가?
+   - 점수 0 = 오늘날에 제한됨, 5 = 제약 없는 미래 비전.
 
-4. **Grounded in User Problem**  
-   - Is it rooted in a clear, important user problem?  
-   - Score 0 = solution-driven only, 5 = crystal clear user pain.
+4. **Grounded in User Problem (사용자 문제에 기반한)**
+   - 명확하고 중요한 사용자 문제에 뿌리를 두고 있는가?
+   - 점수 0 = 솔루션 중심만, 5 = 매우 명확한 사용자 페인.
 
 ---
 
 ### Output Template
 
-**Vision Review Summary**
-- Strengths: [list strongest aspects]
-- Risks / Gaps: [list weaknesses, ambiguities, risks]
-- Recommendations: [concrete suggestions for sharpening vision]
+**비전 리뷰 요약**
+- 강점: [가장 강한 측면 나열]
+- 리스크 / 갭: [약점, 모호성, 리스크 나열]
+- 권장사항: [비전을 날카롭게 만들기 위한 구체적 제안]
 
-**Scores**
+**점수**
 - Lofty/Inspiring: X/5
 - Realistic/Attainable: X/5
 - Constraint-Free: X/5
 - Grounded in User Problem: X/5
 
-**Decision**
-- Proceed / Needs Revision / Hold (missing essentials)
+**결정**
+- Proceed / Needs Revision / Hold (필수 요소 누락)

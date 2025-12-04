@@ -2,185 +2,185 @@
 alwaysApply: false
 ---
 
-# Rule: Create and Prioritize Opportunities (Continuous Discovery Habits)
+# 규칙: 기회 생성 및 우선순위화 (Continuous Discovery Habits)
 
-## Goal
-To extract opportunities from interview snapshots and synthesis results based on customer **needs, pain points, and desires**,  
-organize, review, and prioritize them according to the **Opportunity Solution Tree** structure,  
-and ultimately **propose target opportunities for exploration**.
-
----
-
-## When to Use
-- After completing interview snapshots using [Create Interview Snapshots](./create-interview-snapshots.mdc)
-- After synthesizing multiple snapshots using [Synthesize Interview Snapshots](./synthesize-interview-snapshots.mdc)
-- When you need to identify and prioritize customer problems worth solving
-- Before generating solutions to ensure focus on the right opportunities
+## 목표
+인터뷰 스냅샷 및 통합 결과에서 고객의 **니즈, 페인 포인트, 욕구**를 기반으로 기회를 추출하고,
+**기회 솔루션 트리(Opportunity Solution Tree)** 구조에 따라 조직화, 검토 및 우선순위화하며,
+궁극적으로 **탐색할 타겟 기회를 제안**합니다.
 
 ---
 
-## Input
-- **Primary Source**: Interview snapshots from `user-interviews/snapshots/`
-- **Secondary Source**: Synthesis documents from `user-interviews/synthesis/`
-- **Minimum Requirements**: At least 3-5 interview snapshots or 1 synthesis document
+## 사용 시점
+- [인터뷰 스냅샷 생성](./create-interview-snapshots.mdc)을 사용하여 인터뷰 스냅샷 완료 후
+- [인터뷰 스냅샷 통합](./synthesize-interview-snapshots.mdc)을 사용하여 여러 스냅샷 통합 후
+- 해결할 가치가 있는 고객 문제를 식별하고 우선순위화해야 할 때
+- 솔루션 생성 전 올바른 기회에 집중하기 위해
 
 ---
 
-## Output
-**Format:** Markdown (`.md`)  
-**Location:** `opportunities/[topic]/`  
-**Filename:** `opportunities-[topic]-v[version].md`
-
-**Semantic Naming Guidelines:**
-- topic: kebab-case topic name extracted from content analysis (e.g., newsletter-creation, user-onboarding)
-- version: auto-incrementing version number (v1, v2, v3...)
-- Example: opportunities-newsletter-creation-v1.md
-
-**Version Management:**
-- Check existing files with same topic pattern before creating new opportunities
-- Auto-increment version number (v1 → v2 → v3...)
-- Never overwrite existing opportunity files
-- Preserve all opportunity versions for comparison
-- No date dependency required  
+## 입력
+- **주요 출처**: `user-interviews/snapshots/`의 인터뷰 스냅샷
+- **보조 출처**: `user-interviews/synthesis/`의 통합 문서
+- **최소 요구사항**: 최소 3-5개 인터뷰 스냅샷 또는 1개 통합 문서
 
 ---
 
-## AI Instructions for Opportunity Creation
+## 산출물
+**형식:** Markdown (`.md`)
+**위치:** `opportunities/[topic]/`
+**파일명:** `opportunities-[topic]-v[version].md`
 
-### When Receiving Interview Data
-- **Validate Input Quality**: Check if snapshots or synthesis meet minimum standards
-- **Identify Research Gaps**: Note missing information that could strengthen opportunity identification
-- **Request Additional Data**: Ask for more interviews if sample size is insufficient
-- **Topic Extraction**: Analyze content to extract main topic for semantic filename
-- **File Existence Check**: MANDATORY - Check for existing files with pattern `opportunities-[topic]-v*.md` before creating new file
-- **Version Management**: MANDATORY - Auto-increment version number based on existing files. Never overwrite existing files
+**시맨틱 명명 가이드라인:**
+- topic: 콘텐츠 분석에서 추출한 케밥 케이스 주제명 (예: newsletter-creation, user-onboarding)
+- version: 자동 증가 버전 번호 (v1, v2, v3...)
+- 예시: opportunities-newsletter-creation-v1.md
 
-### Opportunity Extraction Guidelines
-- **Focus on Behavioral Problems**: Look for concrete actions and pain points, not opinions
-- **Identify Root Causes**: Dig deeper than surface-level complaints
-- **Preserve Customer Language**: Use exact quotes and customer terminology
-- **Document Evidence**: Link each opportunity to specific stories and quotes
-
-### Quality Standards
-- **Problem Clarity**: Each opportunity clearly describes a customer problem
-- **Evidence Strength**: Multiple participants or strong behavioral evidence
-- **Actionable Scope**: Problems that can be addressed through product changes
-- **Customer-Centric**: Expressed in customer language, not company terms
-
-### Semantic File Naming Guidelines
-- **Topic Extraction**: Analyze interview content to identify main topic/theme
-- **Filename Format**: Use semantic naming pattern `opportunities-[topic]-v[version].md`
-- **Version Management**: Auto-increment version number based on existing files
-- **Folder Organization**: Create topic-specific subfolders for better organization
-- **No Date Dependency**: Remove all date-based filename requirements
-
-**Topic Extraction Process:**
-1. Analyze interview snapshots or synthesis for common themes and keywords
-2. Identify the most frequent and relevant topic/theme
-3. Convert to kebab-case format (e.g., "Newsletter Creation" → "newsletter-creation")
-4. Ensure topic uniqueness across different opportunity files
-5. Use topic as primary identifier instead of date
-
-**Version Management Process:**
-1. **MANDATORY STEP 1:** Check existing files with pattern `opportunities-[topic]-v*.md`
-2. **MANDATORY STEP 2:** Find the highest version number for the same topic
-3. **MANDATORY STEP 3:** Auto-increment version number (v1 → v2 → v3...)
-4. **MANDATORY STEP 4:** Generate new filename with incremented version
-5. **MANDATORY STEP 5:** Verify no file with new filename exists before creation
-6. **CRITICAL:** Never overwrite existing files - always create new version
-7. No manual version tracking required
-
-**Smart Topic Detection:**
-- **Content Analysis**: Extract main themes from interview snapshots or synthesis
-- **Keyword Frequency**: Use most frequent relevant keywords as topic
-- **Kebab-Case Format**: Convert spaces to hyphens, lowercase (e.g., "User Onboarding" → "user-onboarding")
-- **Uniqueness Check**: Ensure topic doesn't conflict with existing files
-- **Fallback**: Use generic topic name if extraction fails
+**버전 관리:**
+- 새 기회 생성 전 동일한 토픽 패턴의 기존 파일 확인
+- 버전 번호 자동 증가 (v1 → v2 → v3...)
+- 기존 기회 파일 덮어쓰기 금지
+- 비교를 위해 모든 기회 버전 보존
+- 날짜 의존성 불필요
 
 ---
 
-## Process
+## 기회 생성을 위한 AI 지침
 
-### 0) File Management (MANDATORY PRE-STEP)
-1. **Extract topic** from interview data or synthesis content
-2. **Check existing files** with pattern `opportunities-[topic]-v*.md` in target directory
-3. **Find highest version** number for same topic (e.g., if v1, v2 exist, next is v3)
-4. **Generate new filename** with incremented version: `opportunities-[topic]-v[version].md`
-5. **Verify no file exists** with new filename before proceeding
-6. **CRITICAL**: Never overwrite existing files - always create new version
+### 인터뷰 데이터 수신 시
+- **입력 품질 검증**: 스냅샷 또는 통합이 최소 기준을 충족하는지 확인
+- **리서치 갭 식별**: 기회 식별을 강화할 수 있는 누락된 정보 기록
+- **추가 데이터 요청**: 샘플 크기가 불충분한 경우 추가 인터뷰 요청
+- **토픽 추출**: 콘텐츠 분석으로 시맨틱 파일명을 위한 주요 토픽 추출
+- **파일 존재 확인**: 필수 - 새 파일 생성 전 `opportunities-[topic]-v*.md` 패턴으로 기존 파일 확인
+- **버전 관리**: 필수 - 기존 파일 기반 버전 번호 자동 증가. 기존 파일 덮어쓰기 금지
 
-### 1. Extract Opportunities
-1. Extract customer **stories, needs, pain points, and desires** from interview snapshots and synthesis results.  
-2. Organize all items as **Opportunities**.  
-   - Use **problem-focused statements** like "I want to ~ but ~ makes it difficult"  
-   - Do not include solution requests as opportunities; instead, reconstruct them as **underlying needs**.  
-3. Link **evidence** to each opportunity. (quotes, frequency, customer segments, etc.)
+### 기회 추출 가이드라인
+- **행동 문제에 집중**: 의견이 아닌 구체적인 행동 및 페인 포인트 찾기
+- **근본 원인 식별**: 표면적인 불만보다 더 깊이 파고들기
+- **고객 언어 보존**: 정확한 인용 및 고객 용어 사용
+- **증거 문서화**: 각 기회를 구체적인 스토리 및 인용과 연결
 
----
+### 품질 기준
+- **문제 명확성**: 각 기회가 고객 문제를 명확하게 설명
+- **증거 강도**: 다수의 참여자 또는 강력한 행동 증거
+- **실행 가능한 범위**: 제품 변경을 통해 해결할 수 있는 문제
+- **고객 중심**: 회사 용어가 아닌 고객 언어로 표현
 
-### 2. Map Opportunities
-1. Place all opportunities in the **Opportunity Solution Tree** structure (Outcome → Parent → Child → Leaf).  
-2. Use **parent-child relationships** and **sibling relationships** to break opportunities into specific, independent units.  
-3. Verify that each branch aligns with specific moments in the customer experience (Experience Map).  
-4. **Reconstruct or merge** opportunities that are duplicates, ambiguous, or disguised solutions.
+### 시맨틱 파일 명명 가이드라인
+- **토픽 추출**: 인터뷰 콘텐츠 분석으로 주요 토픽/테마 식별
+- **파일명 형식**: 시맨틱 명명 패턴 `opportunities-[topic]-v[version].md` 사용
+- **버전 관리**: 기존 파일 기반 버전 번호 자동 증가
+- **폴더 조직**: 더 나은 조직을 위해 토픽별 하위 폴더 생성
+- **날짜 의존성 제거**: 모든 날짜 기반 파일명 요구사항 제거
 
----
+**토픽 추출 프로세스:**
+1. 공통 테마 및 키워드를 위해 인터뷰 스냅샷 또는 통합 분석
+2. 가장 빈번하고 관련성 높은 토픽/테마 식별
+3. 케밥 케이스 형식으로 변환 (예: "Newsletter Creation" → "newsletter-creation")
+4. 다른 기회 파일과 토픽 고유성 보장
+5. 날짜 대신 토픽을 주요 식별자로 사용
 
-### 3. User Review #1 — Review Opportunity Candidates
-- Present the **opportunity candidate table** to the user.  
-- Each row: `ID | Parent | Opportunity Statement | EvidenceCount | Quotes`  
-- Questions:  
-  - "Are there any opportunities to merge/split/delete?"  
-  - "Would you like to modify the name of any opportunities?"  
-- **PAUSE** and incorporate user feedback.
+**버전 관리 프로세스:**
+1. **필수 단계 1:** `opportunities-[topic]-v*.md` 패턴으로 기존 파일 확인
+2. **필수 단계 2:** 동일한 토픽의 최고 버전 번호 찾기
+3. **필수 단계 3:** 버전 번호 자동 증가 (v1 → v2 → v3...)
+4. **필수 단계 4:** 증가된 버전으로 새 파일명 생성
+5. **필수 단계 5:** 생성 전 새 파일명이 존재하지 않는지 확인
+6. **중요**: 기존 파일 덮어쓰기 금지 - 항상 새 버전 생성
+7. 수동 버전 추적 불필요
 
----
-
-### 4. Assess Opportunities
-Evaluate by comparing and contrasting each **sibling set**.  
-Evaluation criteria through four lenses:  
-1. **Opportunity Sizing** — How many customers and how frequently does this occur?  
-2. **Market Factors** — How important is this from a competitive/market trend perspective? (table stakes vs differentiator)  
-3. **Company Factors** — How well does this align with our organizational strategy and capabilities?  
-4. **Customer Factors** — How important is this to customers? What is their satisfaction with existing alternatives?  
-
-> Do not use scoring.  
-> Instead, record **subjective and data-driven discussions** after comparison/contrast.
-
----
-
-### 5. User Review #2 — Review Priorities
-- Provide priority comparison results in a summary table:  
-  `Sibling Set | Candidates | Key Factors | Discussion Notes | Tentative Winner`  
-- Questions:  
-  - "Do you agree with this selection, or would you like to explore a different opportunity first?"  
-- **PAUSE** and incorporate user feedback.
+**스마트 토픽 감지:**
+- **콘텐츠 분석**: 인터뷰 스냅샷 또는 통합에서 주요 테마 추출
+- **키워드 빈도**: 가장 빈번한 관련 키워드를 토픽으로 사용
+- **케밥 케이스 형식**: 공백을 하이픈으로, 소문자로 변환 (예: "User Onboarding" → "user-onboarding")
+- **고유성 확인**: 토픽이 기존 파일과 충돌하지 않는지 확인
+- **폴백**: 추출 실패 시 일반 토픽명 사용
 
 ---
 
-### 6. Propose Target Opportunity
-- Mark one of the tree's **leaf nodes** as a **Target Opportunity (Proposal)**.  
-- This is merely a **suitable candidate for the team to begin exploration**, not a **final decision**.  
-- This proposal has a **reversible (two-way door)** nature and can be changed at any time during exploration based on new learning.
+## 프로세스
+
+### 0) 파일 관리 (필수 사전 단계)
+1. 인터뷰 데이터 또는 통합 콘텐츠에서 **토픽 추출**
+2. 대상 디렉토리에서 `opportunities-[topic]-v*.md` 패턴으로 **기존 파일 확인**
+3. 동일한 토픽의 **최고 버전** 번호 찾기 (예: v1, v2가 존재하면 다음은 v3)
+4. 증가된 버전으로 **새 파일명 생성**: `opportunities-[topic]-v[version].md`
+5. 진행 전 새 파일명이 **존재하지 않는지 확인**
+6. **중요**: 기존 파일 덮어쓰기 금지 - 항상 새 버전 생성
+
+### 1. 기회 추출
+1. 인터뷰 스냅샷 및 통합 결과에서 고객의 **스토리, 니즈, 페인 포인트, 욕구** 추출
+2. 모든 항목을 **기회**로 조직화
+   - "~하고 싶지만 ~가 어렵게 만든다"와 같은 **문제 중심 진술** 사용
+   - 솔루션 요청을 기회로 포함하지 말고, **근본 니즈**로 재구성
+3. 각 기회에 **증거** 연결 (인용, 빈도, 고객 세그먼트 등)
 
 ---
 
-## Process Flow
+### 2. 기회 매핑
+1. 모든 기회를 **기회 솔루션 트리** 구조에 배치 (성과 → 부모 → 자식 → 리프)
+2. **부모-자식 관계** 및 **형제 관계**를 사용하여 기회를 구체적이고 독립적인 단위로 분해
+3. 각 분기가 고객 경험의 특정 순간(경험 맵)과 일치하는지 확인
+4. 중복되거나 모호하거나 위장된 솔루션인 기회를 **재구성 또는 병합**
 
-### Continuous Discovery Workflow
+---
+
+### 3. 사용자 검토 #1 — 기회 후보 검토
+- **기회 후보 테이블**을 사용자에게 제시
+- 각 행: `ID | 부모 | 기회 진술 | 증거수 | 인용`
+- 질문:
+  - "병합/분할/삭제할 기회가 있습니까?"
+  - "기회의 이름을 수정하고 싶으신가요?"
+- **일시 정지** 및 사용자 피드백 통합
+
+---
+
+### 4. 기회 평가
+각 **형제 세트**를 비교 대조하여 평가합니다.
+네 가지 렌즈를 통한 평가 기준:
+1. **기회 규모** — 얼마나 많은 고객이, 얼마나 자주 이것을 경험하는가?
+2. **시장 요인** — 경쟁/시장 트렌드 관점에서 얼마나 중요한가? (필수 vs 차별화)
+3. **회사 요인** — 우리 조직 전략 및 역량과 얼마나 잘 맞는가?
+4. **고객 요인** — 고객에게 얼마나 중요한가? 기존 대안에 대한 만족도는?
+
+> 점수화하지 마세요.
+> 대신 비교/대조 후 **주관적 및 데이터 기반 논의**를 기록하세요.
+
+---
+
+### 5. 사용자 검토 #2 — 우선순위 검토
+- 요약 테이블로 우선순위 비교 결과 제공:
+  `형제 세트 | 후보 | 주요 요인 | 논의 노트 | 잠정 선정`
+- 질문:
+  - "이 선택에 동의하시나요, 아니면 다른 기회를 먼저 탐색하고 싶으신가요?"
+- **일시 정지** 및 사용자 피드백 통합
+
+---
+
+### 6. 타겟 기회 제안
+- 트리의 **리프 노드** 중 하나를 **타겟 기회(제안)** 로 표시
+- 이것은 단순히 **팀이 탐색을 시작하기에 적합한 후보**이며, **최종 결정**이 아님
+- 이 제안은 **가역적(양방향 도어)** 특성을 가지며 탐색 중 새로운 학습에 따라 언제든지 변경 가능
+
+---
+
+## 프로세스 흐름
+
+### Continuous Discovery 워크플로우
 ```
-Individual Interviews → Create Snapshots → Synthesize Patterns → Create Opportunities → Generate Solutions
-     ↓                    ↓                    ↓                    ↓                    ↓
-[Raw Data]        [Structured Stories]   [Shared Patterns]    [Problem Statements] [Product Ideas]
+개별 인터뷰 → 스냅샷 생성 → 패턴 통합 → 기회 생성 → 솔루션 생성
+     ↓              ↓              ↓              ↓              ↓
+[원시 데이터]  [구조화된 스토리] [공유 패턴]   [문제 진술]   [제품 아이디어]
 ```
 
-### Input-Output Relationship
-- **Input:** Interview snapshots and/or synthesis documents
-- **Process:** Topic extraction, opportunity extraction, mapping, prioritization
-- **Output:** Prioritized opportunity solution tree with target opportunity
-- **Next Step:** Use opportunities to generate multiple solutions
+### 입력-산출물 관계
+- **입력:** 인터뷰 스냅샷 및/또는 통합 문서
+- **프로세스:** 토픽 추출, 기회 추출, 매핑, 우선순위화
+- **산출물:** 타겟 기회가 있는 우선순위화된 기회 솔루션 트리
+- **다음 단계:** 기회를 사용하여 여러 솔루션 생성
 
-### Recommended Folder Structure
+### 권장 폴더 구조
 ```
 opportunities/
 ├── newsletter-creation/
@@ -195,189 +195,189 @@ opportunities/
 
 ---
 
-## Output Structure (opportunities-[topic]-v[version].md)
+## 산출물 구조 (opportunities-[topic]-v[version].md)
 
 ```markdown
-# Opportunities — [Topic Name]
+# 기회 — [토픽명]
 
-**Topic:** [Extracted topic name]  
-**Version:** [v1, v2, v3...]  
-**Source Documents:** [List of snapshots and/or synthesis documents used]  
-**Total Opportunities Identified:** [Number]  
-
----
-
-## Opportunity Solution Tree (Snapshot)
-- Outcome: [Desired Outcome]
-  - Parent Opportunity A
-    - Child 1
-    - Child 2 (Proposed Target Opportunity ⭐)
+**토픽:** [추출된 토픽명]
+**버전:** [v1, v2, v3...]
+**출처 문서:** [사용된 스냅샷 및/또는 통합 문서 목록]
+**식별된 총 기회 수:** [숫자]
 
 ---
 
-## Candidate Opportunities (Pre-Review)
-| ID | Parent | Opportunity Statement | Evidence Count | Supporting Quotes | Notes |
-|----|--------|----------------------|----------------|-------------------|-------|
-| 1 | [Parent] | [Problem statement in customer language] | [X] participants | "[Quote 1]" | [Additional context] |
+## 기회 솔루션 트리 (스냅샷)
+- 성과: [원하는 성과]
+  - 부모 기회 A
+    - 자식 1
+    - 자식 2 (제안된 타겟 기회 ⭐)
 
 ---
 
-## Review Notes #1
-- User decisions: [Merged, Removed, Renamed opportunities]
-- Changes made: [Specific modifications requested]
+## 후보 기회 (검토 전)
+| ID | 부모 | 기회 진술 | 증거 수 | 지원 인용 | 노트 |
+|----|------|----------|---------|----------|------|
+| 1 | [부모] | [고객 언어의 문제 진술] | [X]명 참여자 | "[인용 1]" | [추가 맥락] |
 
 ---
 
-## Assessment (Sibling Comparisons)
-### [Sibling Set A]
-- **Candidates:** [List of opportunities being compared]
-- **Factors Considered:** 
-  - Opportunity Sizing: [Frequency and scope]
-  - Market Factors: [Competitive landscape and trends]
-  - Company Factors: [Strategic alignment and capabilities]
-  - Customer Factors: [Importance and satisfaction with alternatives]
-- **Discussion:** [Key points from comparison]
-- **Tentative Winner:** [Selected opportunity with rationale]
+## 검토 노트 #1
+- 사용자 결정: [병합, 제거, 이름 변경된 기회]
+- 변경 사항: [요청된 구체적인 수정]
 
 ---
 
-## Review Notes #2
-- User confirmation: [Proposed target maintained or adjusted]
-- Final decision: [Confirmed target opportunity]
+## 평가 (형제 비교)
+### [형제 세트 A]
+- **후보:** [비교 중인 기회 목록]
+- **고려된 요인:**
+  - 기회 규모: [빈도 및 범위]
+  - 시장 요인: [경쟁 환경 및 트렌드]
+  - 회사 요인: [전략적 정렬 및 역량]
+  - 고객 요인: [중요도 및 대안 만족도]
+- **논의:** [비교의 주요 포인트]
+- **잠정 선정:** [선택된 기회 및 근거]
 
 ---
 
-## Proposed Target Opportunity
-**[ID] — [Opportunity Statement]**
-
-**Why This Opportunity:**
-- [Clear rationale for selection]
-- [Alignment with research findings]
-
-**Supporting Evidence:**
-- [Multiple quotes and behavioral observations]
-- [Frequency across participants]
-- [Impact on user experience]
-
-**Next Steps:** 
-- [ ] Explore multiple solutions (see [Generate Solutions](./generate-solutions.mdc))
-- [ ] Validate opportunity with additional research if needed
-- [ ] Share findings with product team
+## 검토 노트 #2
+- 사용자 확인: [제안된 타겟 유지 또는 조정]
+- 최종 결정: [확인된 타겟 기회]
 
 ---
 
-## Quality Indicators
+## 제안된 타겟 기회
+**[ID] — [기회 진술]**
 
-### Strong Opportunities
-- **Clear Problem Statement**: Specific customer problem, not general frustration
-- **Strong Evidence**: Multiple participants or detailed behavioral stories
-- **Customer Language**: Expressed in user's own words
-- **Actionable Scope**: Problem that can be addressed through product changes
+**이 기회를 선택한 이유:**
+- [선택에 대한 명확한 근거]
+- [리서치 발견과의 정렬]
 
-### Weak Opportunities
-- **Vague Description**: General statements without specific context
-- **Single Source**: Only mentioned by one participant
-- **Solution Disguised**: Product feature request instead of problem
-- **Company Language**: Internal terminology instead of customer voice
+**지원 증거:**
+- [다수의 인용 및 행동 관찰]
+- [참여자 간 빈도]
+- [사용자 경험에 대한 영향]
 
----
-
-## Guardrails
-- Opportunities must be expressed in customer language (prohibition of internal company language).
-- Emotions themselves are not Opportunities. (e.g., "I'm frustrated" → reconstruct as underlying opportunity)
-- Prohibition of unnecessary precise scoring. Focus on relative comparison and discussion-based recording.
-- Decisions are suggestive and reversible, and can be adjusted at any time based on continuous learning.
+**다음 단계:**
+- [ ] 여러 솔루션 탐색 ([솔루션 생성](./generate-solutions.mdc) 참조)
+- [ ] 필요 시 추가 리서치로 기회 검증
+- [ ] 제품 팀과 발견 공유
 
 ---
 
-## Error Handling
+## 품질 지표
 
-### Insufficient Data
-- **Too Few Snapshots**: Request additional interviews before opportunity creation
-- **Weak Evidence**: Ask for more specific behavioral examples
-- **Missing Context**: Request additional details from original interviews
+### 강력한 기회
+- **명확한 문제 진술**: 일반적인 좌절이 아닌 구체적인 고객 문제
+- **강력한 증거**: 다수의 참여자 또는 상세한 행동 스토리
+- **고객 언어**: 사용자 자신의 말로 표현
+- **실행 가능한 범위**: 제품 변경을 통해 해결할 수 있는 문제
 
-### File Naming Issues
-- **Topic Extraction Failure**: Ensure clear topic identification from content analysis
-- **Version Conflicts**: Always check existing files before creating new opportunities
-- **Incorrect Format**: Use kebab-case for topic, v[number] for version
-- **Missing Topic**: Extract main theme from interview snapshots or synthesis for filename
-- **Overwriting Prevention**: Never overwrite existing opportunity files, always increment version
-- **File Existence Check Failure**: MANDATORY - Always verify file existence before creation
-- **Version Detection Error**: If version detection fails, start with v1 and add warning note
-
-### Quality Issues
-- **Vague Problems**: Push for specific customer stories and examples
-- **Solution Requests**: Help reframe as underlying customer needs
-- **Weak Evidence**: Highlight areas needing stronger support
+### 약한 기회
+- **모호한 설명**: 구체적 맥락 없는 일반적인 진술
+- **단일 출처**: 한 참여자만 언급
+- **위장된 솔루션**: 문제 대신 제품 기능 요청
+- **회사 언어**: 고객 목소리 대신 내부 용어
 
 ---
 
-## Quality Assurance Checklist
-
-### Input Validation
-- [ ] Sufficient interview data available (3+ snapshots or 1 synthesis)
-- [ ] Data quality meets standards from create-interview-snapshots.mdc
-- [ ] Behavioral evidence is concrete and specific
-
-### Opportunity Quality
-- [ ] Each opportunity clearly describes a customer problem
-- [ ] Problems are expressed in customer language
-- [ ] Evidence supports each opportunity
-- [ ] Opportunities are actionable through product changes
-
-### Process Completion
-- [ ] All opportunities mapped to solution tree structure
-- [ ] User review completed for opportunity candidates
-- [ ] Prioritization assessment completed
-- [ ] Target opportunity selected and documented
-- [ ] Next steps are clear and actionable
-
-### File Naming Validation
-- [ ] **MANDATORY**: Extracted clear topic from content analysis before creating filename
-- [ ] **MANDATORY**: Checked existing files with pattern `opportunities-[topic]-v*.md` before creation
-- [ ] **MANDATORY**: Verified no file with new filename exists before creation
-- [ ] Filename uses semantic naming format: opportunities-[topic]-v[version].md
-- [ ] Version number is correctly auto-incremented for same-topic opportunities
-- [ ] Topic name is descriptive and kebab-case formatted
-- [ ] **CRITICAL**: No overwriting of existing opportunity files - always create new version
-- [ ] Topic extraction completed through content analysis before opportunity creation
-- [ ] Version management process followed step-by-step
+## 가드레일
+- 기회는 고객 언어로 표현되어야 함 (내부 회사 언어 금지)
+- 감정 자체는 기회가 아님 (예: "좌절스럽다" → 근본 기회로 재구성)
+- 불필요한 정밀 점수화 금지. 상대 비교 및 논의 기반 기록에 집중
+- 결정은 제안적이고 가역적이며, 지속적인 학습에 따라 언제든지 조정 가능
 
 ---
 
-## AI Implementation Checklist
+## 오류 처리
 
-### Before Creating Any Opportunity File:
-1. **Topic Extraction** ✅
-   - [ ] Analyze interview data or synthesis for main theme
-   - [ ] Extract kebab-case topic name (e.g., "newsletter-creation")
-   - [ ] Verify topic is descriptive and unique
+### 불충분한 데이터
+- **스냅샷 부족**: 기회 생성 전 추가 인터뷰 요청
+- **약한 증거**: 더 구체적인 행동 예시 요청
+- **맥락 누락**: 원본 인터뷰의 추가 세부사항 요청
 
-2. **File Existence Check** ✅
-   - [ ] Search for existing files: `opportunities-[topic]-v*.md`
-   - [ ] List all found files with their version numbers
-   - [ ] Identify highest version number
+### 파일 명명 문제
+- **토픽 추출 실패**: 콘텐츠 분석에서 명확한 토픽 식별 보장
+- **버전 충돌**: 새 기회 생성 전 항상 기존 파일 확인
+- **잘못된 형식**: 토픽은 케밥 케이스, 버전은 v[번호] 사용
+- **토픽 누락**: 파일명을 위해 인터뷰 스냅샷 또는 통합에서 주요 테마 추출
+- **덮어쓰기 방지**: 기존 기회 파일 덮어쓰기 금지, 항상 버전 증가
+- **파일 존재 확인 실패**: 필수 - 생성 전 항상 파일 존재 확인
+- **버전 감지 오류**: 버전 감지 실패 시 v1로 시작하고 경고 노트 추가
 
-3. **Version Management** ✅
-   - [ ] Calculate next version number (highest + 1)
-   - [ ] Generate new filename: `opportunities-[topic]-v[version].md`
-   - [ ] Verify new filename doesn't already exist
-
-4. **File Creation** ✅
-   - [ ] Create file with new filename only
-   - [ ] Never overwrite existing files
-   - [ ] Add version number to document header
-
-### Error Handling:
-- **If topic extraction fails**: Use generic topic name and add warning
-- **If version detection fails**: Start with v1 and add warning note
-- **If file already exists**: Increment version and try again
-- **If multiple topics found**: Use most relevant one and document choice
+### 품질 문제
+- **모호한 문제**: 구체적인 고객 스토리 및 예시 요구
+- **솔루션 요청**: 근본 고객 니즈로 재구성 지원
+- **약한 증거**: 더 강력한 지원이 필요한 영역 강조
 
 ---
 
-## Related Frameworks
-- [Create Interview Snapshots](./create-interview-snapshots.mdc)
-- [Synthesize Interview Snapshots](./synthesize-interview-snapshots.mdc)
-- [Generate Solutions](./generate-solutions.mdc)
+## 품질 보증 체크리스트
+
+### 입력 검증
+- [ ] 충분한 인터뷰 데이터 사용 가능 (3개 이상 스냅샷 또는 1개 통합)
+- [ ] 데이터 품질이 create-interview-snapshots.mdc 기준 충족
+- [ ] 행동 증거가 구체적이고 명확함
+
+### 기회 품질
+- [ ] 각 기회가 고객 문제를 명확하게 설명
+- [ ] 문제가 고객 언어로 표현됨
+- [ ] 증거가 각 기회를 지원
+- [ ] 기회가 제품 변경을 통해 실행 가능함
+
+### 프로세스 완료
+- [ ] 모든 기회가 솔루션 트리 구조에 매핑됨
+- [ ] 기회 후보에 대한 사용자 검토 완료
+- [ ] 우선순위화 평가 완료
+- [ ] 타겟 기회 선택 및 문서화
+- [ ] 다음 단계가 명확하고 실행 가능함
+
+### 파일 명명 검증
+- [ ] **필수**: 파일명 생성 전 콘텐츠 분석으로 명확한 토픽 추출
+- [ ] **필수**: 생성 전 `opportunities-[topic]-v*.md` 패턴으로 기존 파일 확인
+- [ ] **필수**: 생성 전 새 파일명이 존재하지 않는지 확인
+- [ ] 파일명이 시맨틱 명명 형식 사용: opportunities-[topic]-v[version].md
+- [ ] 동일 토픽 기회에 대해 버전 번호가 올바르게 자동 증가
+- [ ] 토픽명이 설명적이고 케밥 케이스로 형식화됨
+- [ ] **중요**: 기존 기회 파일 덮어쓰기 금지 - 항상 새 버전 생성
+- [ ] 기회 생성 전 콘텐츠 분석을 통한 토픽 추출 완료
+- [ ] 버전 관리 프로세스 단계별로 따름
+
+---
+
+## AI 구현 체크리스트
+
+### 기회 파일 생성 전:
+1. **토픽 추출** ✅
+   - [ ] 주요 테마를 위해 인터뷰 데이터 또는 통합 분석
+   - [ ] 케밥 케이스 토픽명 추출 (예: "newsletter-creation")
+   - [ ] 토픽이 설명적이고 고유한지 확인
+
+2. **파일 존재 확인** ✅
+   - [ ] 기존 파일 검색: `opportunities-[topic]-v*.md`
+   - [ ] 버전 번호와 함께 발견된 모든 파일 나열
+   - [ ] 최고 버전 번호 식별
+
+3. **버전 관리** ✅
+   - [ ] 다음 버전 번호 계산 (최고 + 1)
+   - [ ] 새 파일명 생성: `opportunities-[topic]-v[version].md`
+   - [ ] 새 파일명이 이미 존재하지 않는지 확인
+
+4. **파일 생성** ✅
+   - [ ] 새 파일명으로만 파일 생성
+   - [ ] 기존 파일 덮어쓰기 금지
+   - [ ] 문서 헤더에 버전 번호 추가
+
+### 오류 처리:
+- **토픽 추출 실패 시**: 일반 토픽명 사용 및 경고 추가
+- **버전 감지 실패 시**: v1로 시작하고 경고 노트 추가
+- **파일이 이미 존재하는 경우**: 버전 증가 후 재시도
+- **다중 토픽 발견 시**: 가장 관련성 높은 것 사용 및 선택 문서화
+
+---
+
+## 관련 프레임워크
+- [인터뷰 스냅샷 생성](./create-interview-snapshots.mdc)
+- [인터뷰 스냅샷 통합](./synthesize-interview-snapshots.mdc)
+- [솔루션 생성](./generate-solutions.mdc)

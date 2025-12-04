@@ -1,74 +1,74 @@
 # Product Analytics
 
-This folder contains data analysis, metrics tracking, and quantitative insights for this initiative.
+이 폴더는 이 initiative에 대한 데이터 분석, metrics 추적, 정량적 인사이트를 포함합니다.
 
-## 📁 Recommended Files
+## 📁 권장 파일
 
 ### baseline-metrics.md
-Current state metrics before initiative implementation.
+Initiative 구현 전 현재 상태 metrics
 
-**Include:**
+**포함:**
 - Key performance indicators (KPIs)
-- User behavior metrics
-- Business metrics
-- Technical performance metrics
-- Data collection timestamps
+- 사용자 행동 metrics
+- 비즈니스 metrics
+- 기술 성능 metrics
+- 데이터 수집 타임스탬프
 
 ### success-metrics.md
-Define what success looks like and how to measure it.
+성공이 무엇인지 정의하고 측정 방법 정의
 
-**Structure:**
+**구조:**
 ```markdown
 # Success Metrics
 
 ## Primary Success Metrics
-- [Metric 1]: [Current baseline] → [Target]
-- [Metric 2]: [Current baseline] → [Target]
+- [Metric 1]: [현재 baseline] → [타겟]
+- [Metric 2]: [현재 baseline] → [타겟]
 
 ## Secondary Metrics
-- [Supporting metric]: [Current] → [Target]
+- [보조 metric]: [현재] → [타겟]
 
 ## Counter-Metrics
-- [Metric to watch]: [Acceptable range]
+- [주시할 Metric]: [허용 범위]
 ```
 
 ### analysis/
-Folder for ongoing data analysis and insights.
+지속적인 데이터 분석 및 인사이트를 위한 폴더
 
-**Organize by:**
-- `weekly-reports/` - Regular metric updates
-- `deep-dives/` - Detailed analysis on specific topics
-- `experiments/` - A/B test results and learnings
+**다음으로 구성:**
+- `weekly-reports/` - 정기 metric 업데이트
+- `deep-dives/` - 특정 주제에 대한 상세 분석
+- `experiments/` - A/B 테스트 결과 및 학습사항
 
 ### dashboards/
-Links and screenshots of key dashboards and reports.
+주요 대시보드 및 리포트의 링크 및 스크린샷
 
-**Include:**
+**포함:**
 - Dashboard URLs
-- Key report schedules
-- Data sources and definitions
-- Access instructions
+- 주요 리포트 일정
+- 데이터 소스 및 정의
+- 액세스 지침
 
-## 📊 Analytics Framework
+## 📊 Analytics 프레임워크
 
-### Data Collection
-- [ ] Event tracking implemented
-- [ ] User segmentation defined
-- [ ] Baseline measurements captured
-- [ ] Dashboard access configured
+### 데이터 수집
+- [ ] 이벤트 추적 구현됨
+- [ ] 사용자 세그먼테이션 정의됨
+- [ ] Baseline 측정 캡처됨
+- [ ] Dashboard 액세스 구성됨
 
-### Measurement Cadence
-- **Daily**: [High-frequency metrics to monitor]
-- **Weekly**: [Regular progress indicators]
-- **Monthly**: [Strategic outcome metrics]
+### 측정 주기
+- **Daily**: [모니터링할 고빈도 metrics]
+- **Weekly**: [정기 진행 지표]
+- **Monthly**: [전략적 결과 metrics]
 
-### Analysis Process
-1. Collect baseline data
-2. Define success metrics and targets
-3. Implement tracking for new features
-4. Monitor daily/weekly progress
-5. Conduct monthly deep-dive analysis
-6. Share insights with stakeholders
+### 분석 프로세스
+1. Baseline 데이터 수집
+2. Success metrics 및 타겟 정의
+3. 새로운 기능에 대한 추적 구현
+4. 일일/주간 진행 상황 모니터링
+5. 월간 심층 분석 수행
+6. Stakeholders와 인사이트 공유
 
 ---
 *Combine quantitative data with qualitative insights from user research.*
