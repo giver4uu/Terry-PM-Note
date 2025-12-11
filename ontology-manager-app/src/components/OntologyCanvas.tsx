@@ -6,7 +6,8 @@ import ReactFlow, {
     NodeTypes,
     ReactFlowProvider,
     Panel,
-    ConnectionMode
+    ConnectionMode,
+    useReactFlow
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { useOntologyStore } from '../stores/useOntologyStore';
@@ -42,6 +43,7 @@ const OntologyCanvasInternal = () => {
     } = useOntologyStore();
 
     const { onLayout, onForceLayout } = useLayout();
+    const { fitView } = useReactFlow();
 
     const bgColor = theme === 'dark' ? '#334155' : '#cbd5e1'; // Slate-700 vs Slate-300
     // miniMapBg is handled by className (bg-slate-50 dark:bg-slate-900)
@@ -62,18 +64,30 @@ const OntologyCanvasInternal = () => {
 
     const handleAddNode = useCallback(() => {
         const id = `node_${Date.now()}`;
-        addNode({
+        const position = { x: Math.random() * 400 + 100, y: Math.random() * 400 + 100 };
+        const newNode = {
             id,
             type: viewMode === 'graph' ? 'graphNode' : 'classNode',
-            position: { x: Math.random() * 400 + 100, y: Math.random() * 400 + 100 },
+            position,
             data: {
                 label: 'New Class',
-                kind: 'class',
+                kind: 'class' as const,
                 properties: [],
                 rules: []
             }
-        });
-    }, [addNode, viewMode]);
+        };
+        addNode(newNode);
+
+        // Select the new node and focus on it
+        selectNode(id);
+        setTimeout(() => {
+            fitView({
+                nodes: [{ id, position, data: newNode.data }],
+                duration: 300,
+                padding: 0.5
+            });
+        }, 50);
+    }, [addNode, viewMode, selectNode, fitView]);
 
     const handleToggleView = useCallback(() => {
         const newMode = viewMode === 'schema' ? 'graph' : 'schema';

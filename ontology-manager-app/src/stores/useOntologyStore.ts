@@ -259,6 +259,61 @@ const initialNodes: Node<OntologyNodeData>[] = [
             ],
             rules: []
         }
+    },
+
+    // Tier 5: Extended Objects (Week 3)
+    {
+        id: 'offer',
+        type: 'classNode',
+        position: { x: 1450, y: 300 },
+        data: {
+            label: 'Offer',
+            kind: 'class',
+            description: '최종 합격 제안 (연봉 협상 및 수락/거절)',
+            properties: [
+                { id: 'o1', name: 'offer_amount', type: 'number', required: true, description: '제안 연봉' },
+                { id: 'o2', name: 'equity_options', type: 'text', required: false, description: '스톡옵션' },
+                { id: 'o3', name: 'start_date', type: 'date', required: true, description: '입사 예정일' },
+                { id: 'o4', name: 'response_deadline', type: 'date', required: true, description: '회신 기한' },
+                { id: 'o5', name: 'status', type: 'text', required: true, description: 'Pending, Accepted, Declined, Negotiating' },
+                { id: 'o6', name: 'negotiation_rounds', type: 'number', required: false, description: '협상 라운드 수' }
+            ],
+            rules: []
+        }
+    },
+    {
+        id: 'hiring_manager',
+        type: 'classNode',
+        position: { x: 450, y: -150 },
+        data: {
+            label: 'Hiring Manager',
+            kind: 'class',
+            description: '채용 의뢰 부서장 (실제 의사결정권자)',
+            properties: [
+                { id: 'hm1', name: 'name', type: 'text', required: true, description: '이름' },
+                { id: 'hm2', name: 'department_id', type: 'text', required: true, description: '소속 부서 ID' },
+                { id: 'hm3', name: 'approval_authority', type: 'boolean', required: true, description: '예산 승인 권한' },
+                { id: 'hm4', name: 'headcount_quota', type: 'number', required: false, description: '연간 채용 가능 인원' }
+            ],
+            rules: []
+        }
+    },
+    {
+        id: 'department',
+        type: 'classNode',
+        position: { x: 750, y: -150 },
+        data: {
+            label: 'Department',
+            kind: 'class',
+            description: '조직 부서',
+            properties: [
+                { id: 'd1', name: 'name', type: 'text', required: true, description: '부서명' },
+                { id: 'd2', name: 'headcount_budget', type: 'number', required: false, description: '연간 채용 예산' },
+                { id: 'd3', name: 'avg_hire_duration', type: 'number', required: false, description: '평균 채용 소요일' },
+                { id: 'd4', name: 'parent_department_id', type: 'text', required: false, description: '상위 부서 ID (계층)' }
+            ],
+            rules: []
+        }
     }
 ];
 
@@ -290,6 +345,11 @@ const initialEdges: Edge<OntologyEdgeData>[] = [
     // AI
     { id: 'e_ai_app', source: 'ai_recommendation', target: 'application', label: 'RECOMMENDS_FOR', data: { label: 'RECOMMENDS_FOR', cardinality: 'N:1', description: 'AI가 특정 지원 건에 대해 제안함' }, type: 'smoothstep', markerEnd: { type: MarkerType.ArrowClosed } },
     { id: 'e_ai_eval', source: 'ai_recommendation', target: 'evaluation', label: 'VALIDATED_BY', data: { label: 'VALIDATED_BY', cardinality: 'N:1', description: 'AI 제안이 실제 평가 결과로 검증됨' }, type: 'smoothstep', markerEnd: { type: MarkerType.ArrowClosed } },
+
+    // Extended Relationships (Week 3)
+    { id: 'e_eval_offer', source: 'evaluation', target: 'offer', label: 'RESULTS_IN', data: { label: 'RESULTS_IN', cardinality: '1:1', description: '평가 결과로 제안서 생성' }, type: 'smoothstep', markerEnd: { type: MarkerType.ArrowClosed } },
+    { id: 'e_hm_job', source: 'hiring_manager', target: 'job_posting', label: 'REQUESTS', data: { label: 'REQUESTS', cardinality: '1:N', description: '부서장이 공고 요청' }, type: 'smoothstep', markerEnd: { type: MarkerType.ArrowClosed } },
+    { id: 'e_dept_job', source: 'department', target: 'job_posting', label: 'OWNS', data: { label: 'OWNS', cardinality: '1:N', description: '부서가 공고 소유' }, type: 'smoothstep', markerEnd: { type: MarkerType.ArrowClosed } },
 ];
 
 interface OntologyState {
