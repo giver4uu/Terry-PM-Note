@@ -1,16 +1,17 @@
 import { Simulator } from './components/Simulator';
 import { useState, useEffect, useRef } from 'react';
-import { Network, Download, Globe, Sun, Moon, FlaskConical, ClipboardCheck, Settings2, FileText, HelpCircle } from 'lucide-react';
+import { Network, Download, Globe, Sun, Moon, FlaskConical, FileText, HelpCircle, Code, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useOntologyStore } from './stores/useOntologyStore';
 import { useThemeStore } from './stores/useThemeStore';
 import { useValidationStore } from './stores/useValidationStore';
 import OntologyCanvas from './components/OntologyCanvas';
 import PropertyEditor from './components/PropertyEditor';
-import { ValidationPanel } from './components/ValidationPanel';
 import { ValidationBadge } from './components/ValidationBadge';
 import { OnboardingTutorial } from './components/OnboardingTutorial';
 import { MarkdownGenerator } from './lib/generators/MarkdownGenerator';
+import { TypeScriptGenerator } from './lib/generators/TypeScriptGenerator';
+import { GraphQLGenerator } from './lib/generators/GraphQLGenerator';
 
 function App() {
   const { nodes, edges } = useOntologyStore();
@@ -18,8 +19,8 @@ function App() {
   const { validate, autoValidate } = useValidationStore();
   const { t, i18n } = useTranslation();
   const [isSimOpen, setIsSimOpen] = useState(false);
-  const [rightPanel, setRightPanel] = useState<'properties' | 'validation'>('properties');
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [showExportMenu, setShowExportMenu] = useState(false);
   const validationTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   // Initialize theme on mount
@@ -95,6 +96,38 @@ function App() {
     URL.revokeObjectURL(url);
   };
 
+  const handleExportTypeScript = () => {
+    const generator = new TypeScriptGenerator();
+    const code = generator.generate(nodes, edges);
+
+    const blob = new Blob([code], { type: 'text/typescript' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `ontology-types-${new Date().getTime()}.ts`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    setShowExportMenu(false);
+  };
+
+  const handleExportGraphQL = () => {
+    const generator = new GraphQLGenerator();
+    const schema = generator.generate(nodes, edges);
+
+    const blob = new Blob([schema], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `ontology-schema-${new Date().getTime()}.graphql`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    setShowExportMenu(false);
+  };
+
   return (
     <div className="flex flex-col h-screen bg-background text-foreground font-sans transition-colors duration-200">
       {/* Header */}
@@ -143,21 +176,51 @@ function App() {
             </select>
           </div>
 
-          <button
-            onClick={handleExport}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-card hover:bg-accent border border-border text-xs font-medium transition-colors text-foreground"
-          >
-            <Download className="w-3.5 h-3.5" />
-            {t('export_json')}
-          </button>
+          {/* Export Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setShowExportMenu(!showExportMenu)}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-card hover:bg-accent border border-border text-xs font-medium transition-colors text-foreground"
+            >
+              <Download className="w-3.5 h-3.5" />
+              Export
+              <ChevronDown className="w-3 h-3" />
+            </button>
 
-          <button
-            onClick={handleExportMarkdown}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-900/50 border border-green-200 dark:border-green-800 text-xs font-medium transition-colors"
-          >
-            <FileText className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Markdown</span>
-          </button>
+            {showExportMenu && (
+              <div className="absolute right-0 top-full mt-1 w-48 bg-card border border-border rounded-lg shadow-xl z-50 py-1">
+                <button
+                  onClick={() => { handleExport(); setShowExportMenu(false); }}
+                  className="w-full flex items-center gap-2 px-3 py-2 text-xs hover:bg-accent text-left text-foreground"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  {t('export_json')}
+                </button>
+                <button
+                  onClick={() => { handleExportMarkdown(); setShowExportMenu(false); }}
+                  className="w-full flex items-center gap-2 px-3 py-2 text-xs hover:bg-accent text-left text-foreground"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  Markdown
+                </button>
+                <div className="h-px bg-border my-1" />
+                <button
+                  onClick={handleExportTypeScript}
+                  className="w-full flex items-center gap-2 px-3 py-2 text-xs hover:bg-accent text-left text-blue-600 dark:text-blue-400"
+                >
+                  <Code className="w-3.5 h-3.5" />
+                  TypeScript
+                </button>
+                <button
+                  onClick={handleExportGraphQL}
+                  className="w-full flex items-center gap-2 px-3 py-2 text-xs hover:bg-accent text-left text-pink-600 dark:text-pink-400"
+                >
+                  <Code className="w-3.5 h-3.5" />
+                  GraphQL
+                </button>
+              </div>
+            )}
+          </div>
 
           <button
             onClick={() => setShowOnboarding(true)}
@@ -184,34 +247,9 @@ function App() {
           </div>
         </main>
 
-        {/* Right Panel (Properties or Validation) */}
-        <aside className="z-10 h-full bg-card transition-colors relative">
-          {rightPanel === 'properties' && <PropertyEditor />}
-          {rightPanel === 'validation' && <ValidationPanel />}
-
-          {/* Panel Toggle Buttons */}
-          <div className="absolute -left-12 top-4 flex flex-col gap-2">
-            <button
-              onClick={() => setRightPanel('properties')}
-              className={`p-2 rounded-lg transition-colors ${rightPanel === 'properties'
-                ? 'bg-primary text-primary-foreground'
-                : 'bg-card border border-border hover:bg-accent text-muted-foreground'
-                }`}
-              title="Properties"
-            >
-              <Settings2 className="w-4 h-4" />
-            </button>
-            <button
-              onClick={() => setRightPanel('validation')}
-              className={`p-2 rounded-lg transition-colors ${rightPanel === 'validation'
-                ? 'bg-primary text-primary-foreground'
-                : 'bg-card border border-border hover:bg-accent text-muted-foreground'
-                }`}
-              title="Validation"
-            >
-              <ClipboardCheck className="w-4 h-4" />
-            </button>
-          </div>
+        {/* Right Panel */}
+        <aside className="z-10 h-full bg-card transition-colors">
+          <PropertyEditor />
         </aside>
       </div>
 
