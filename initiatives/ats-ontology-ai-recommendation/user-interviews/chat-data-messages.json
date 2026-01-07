@@ -1,0 +1,2427 @@
+[
+    {
+        "id": 1910,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 51,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 181,
+        "role": "유저",
+        "content": {
+            "question": "그럼 2025년 12월에 1차 인터뷰의 포기 건 공고명과 인원 수를 알려줄래?",
+            "organization_id": 2354
+        },
+        "created_at": "2026-01-04T21:13:39+09:00",
+        "updated_at": "2026-01-04T21:13:39+09:00",
+        "display_name": 1910
+    },
+    {
+        "id": 1903,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 51,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 180,
+        "role": "유저",
+        "content": {
+            "question": "아니 나는 2026년 1월 내를 말하는 거야!",
+            "organization_id": 2354
+        },
+        "created_at": "2026-01-04T21:11:38+09:00",
+        "updated_at": "2026-01-04T21:11:38+09:00",
+        "display_name": 1903
+    },
+    {
+        "id": 1894,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 51,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 179,
+        "role": "유저",
+        "content": {
+            "question": "면접 단계에서 포기한 건은 몇 건이고 어떤 공고명이야?",
+            "organization_id": 2354
+        },
+        "created_at": "2026-01-04T21:10:35+09:00",
+        "updated_at": "2026-01-04T21:10:35+09:00",
+        "display_name": 1894
+    },
+    {
+        "id": 1883,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 51,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 178,
+        "role": "유저",
+        "content": {
+            "question": "2026년 1월 포기 건은 몇 건이야? 각 공고명과 해당 인원 수를 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2026-01-04T21:08:50+09:00",
+        "updated_at": "2026-01-04T21:08:50+09:00",
+        "display_name": 1883
+    },
+    {
+        "id": 1881,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 51,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 177,
+        "role": "유저",
+        "content": {
+            "question": "그로스마케터의 해당 인원 이름이 뭐야?",
+            "organization_id": 2354
+        },
+        "created_at": "2026-01-04T21:07:33+09:00",
+        "updated_at": "2026-01-04T21:07:33+09:00",
+        "display_name": 1881
+    },
+    {
+        "id": 1870,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 51,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 176,
+        "role": "유저",
+        "content": {
+            "question": "아 그러면 해당 기간 동안 1차 인터뷰를 합격한 인원의 포지션과 각 인원수를 알려줄래?",
+            "organization_id": 2354
+        },
+        "created_at": "2026-01-04T21:04:25+09:00",
+        "updated_at": "2026-01-04T21:04:25+09:00",
+        "display_name": 1870
+    },
+    {
+        "id": 1863,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 51,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 175,
+        "role": "유저",
+        "content": {
+            "question": "서류 평가 단계로 이동한 사람은 누구야?",
+            "organization_id": 2354
+        },
+        "created_at": "2026-01-04T21:03:07+09:00",
+        "updated_at": "2026-01-04T21:03:07+09:00",
+        "display_name": 1863
+    },
+    {
+        "id": 1856,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 51,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 174,
+        "role": "유저",
+        "content": {
+            "question": "12월 29일 ~ 1월 2일 중에 1차 인터뷰를 합격한 사람이 몇명이야?",
+            "organization_id": 2354
+        },
+        "created_at": "2026-01-04T21:00:22+09:00",
+        "updated_at": "2026-01-04T21:00:22+09:00",
+        "display_name": 1856
+    },
+    {
+        "id": 1839,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 173,
+        "role": "유저",
+        "content": {
+            "question": "12월 5주차 공고별 채용 진행현황 분석해줘. \n\n- 기간 : 12/27(토)~ 1/2(금)까지\n\n\n- 목적 : 한 주간의 공고별 지원자 및 서류/과제/면접 각 전형의 진행현황 파악\n\n- 표 양식 \n1. 필요한 공고 : QA, 아트, 사업개발, 중국어\n2. 필요한 정보\n a. 진행현황 요약 : 현재 진행중인 내용 간단 정리\n b. 서류검토중\n c. 과제중\n d. 면접중\n3. 기타 특이사항 : 이번 주 중 눈여겨볼만한 지원자 추이나 유입경로 등 (전 주 대비 변동사항 등)",
+            "organization_id": 2361
+        },
+        "created_at": "2026-01-02T14:12:48+09:00",
+        "updated_at": "2026-01-02T14:12:48+09:00",
+        "display_name": 1839
+    },
+    {
+        "id": 1828,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 172,
+        "role": "유저",
+        "content": {
+            "question": "서류 합격자 누구인지 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:52:48+09:00",
+        "updated_at": "2025-12-31T16:52:48+09:00",
+        "display_name": 1828
+    },
+    {
+        "id": 1823,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 171,
+        "role": "유저",
+        "content": {
+            "question": "유입경로 구분 없이도 해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:51:08+09:00",
+        "updated_at": "2025-12-31T16:51:08+09:00",
+        "display_name": 1823
+    },
+    {
+        "id": 1816,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 170,
+        "role": "유저",
+        "content": {
+            "question": "25년 11월, 12월의 \n{ job_id: 4035, title: 그로스 마케터 } { job_id: 4037, title: 데이터 엔지니어 } { job_id: 4036, title: 데이터 분석가 } 포지션별\n유입경로별 지원자수 / 서류 합격자 수 / 서류 합격율 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:48:54+09:00",
+        "updated_at": "2025-12-31T16:48:54+09:00",
+        "display_name": 1816
+    },
+    {
+        "id": 1811,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 169,
+        "role": "유저",
+        "content": {
+            "question": "아 내가 말한 합격자수는 서류 평가 통과 (면접으로 간 사람)을 의미한거였어",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:44:59+09:00",
+        "updated_at": "2025-12-31T16:44:59+09:00",
+        "display_name": 1811
+    },
+    {
+        "id": 1804,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 168,
+        "role": "유저",
+        "content": {
+            "question": "합격자수 기준은 뭐야? 왜 아무도 없어?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:43:07+09:00",
+        "updated_at": "2025-12-31T16:43:07+09:00",
+        "display_name": 1804
+    },
+    {
+        "id": 1799,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 167,
+        "role": "유저",
+        "content": {
+            "question": "아니 일자별로도 추가해줘\n지원일자 / 포지션 / 유입경로 / 지원자 수 / 합격자 수 이렇게",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:35:13+09:00",
+        "updated_at": "2025-12-31T16:35:13+09:00",
+        "display_name": 1799
+    },
+    {
+        "id": 1790,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 166,
+        "role": "유저",
+        "content": {
+            "question": "12월부터 일자별로 유입경로(ex.원티드, 리멤버)별 { job_id: 4035, title: 그로스 마케터 } { job_id: 4037, title: 데이터 엔지니어 } { job_id: 4036, title: 데이터 분석가 } 포지션별로 지원자수, 합격자수 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:33:45+09:00",
+        "updated_at": "2025-12-31T16:33:45+09:00",
+        "display_name": 1790
+    },
+    {
+        "id": 1783,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 165,
+        "role": "유저",
+        "content": {
+            "question": "서류 합격자 누구인지 리스트",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:26:55+09:00",
+        "updated_at": "2025-12-31T16:26:55+09:00",
+        "display_name": 1783
+    },
+    {
+        "id": 1767,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 164,
+        "role": "유저",
+        "content": {
+            "question": "25년 11월 12월의 그로스해킹팀 포지션 { job_id: 4035, title: 그로스 마케터 } { job_id: 4037, title: 데이터 엔지니어 } { job_id: 4036, title: 데이터 분석가 }  전체 현황 분석을 하고 싶어\n전체 지원자수 / 서류 합격자수 / SQL 테스트 / 1차 인터뷰 / 2차 인터뷰 / 최종합격자수 이렇게 숫자 알려줘\n각 포지션 별로 따로",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:24:15+09:00",
+        "updated_at": "2025-12-31T16:24:15+09:00",
+        "display_name": 1767
+    },
+    {
+        "id": 1765,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 163,
+        "role": "유저",
+        "content": {
+            "question": "25년 44주차가 며칠부터 며칠까지인데?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:22:05+09:00",
+        "updated_at": "2025-12-31T16:22:05+09:00",
+        "display_name": 1765
+    },
+    {
+        "id": 1752,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 50,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 162,
+        "role": "유저",
+        "content": {
+            "question": "그로스해킹팀 25년 11월부터 주차별 지원자수, 서류합격자수 데이터 \n{ job_id: 4035, title: 그로스 마케터 } { job_id: 4037, title: 데이터 엔지니어 } { job_id: 4036, title: 데이터 분석가 } 모두 합쳐서",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-31T16:20:18+09:00",
+        "updated_at": "2025-12-31T16:20:18+09:00",
+        "display_name": 1752
+    },
+    {
+        "id": 1731,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 161,
+        "role": "유저",
+        "content": {
+            "question": "12월 5주차 공고별 채용 진행현황 분석해줘. \n\n- 기간 : 12/27(토)~12/31(수) *추후 1/2(금)까지 추가예정\n\n\n- 목적 : 한 주간의 공고별 지원자 및 서류/과제/면접 각 전형의 진행현황 파악\n\n- 표 양식 \n1. 필요한 공고 : QA, 아트, 사업개발, 중국어\n2. 필요한 정보\n a. 진행현황 요약 : 현재 진행중인 내용 간단 정리\n b. 서류검토중\n c. 과제중\n d. 면접중\n3. 기타 특이사항 : 이번 주 중 눈여겨볼만한 지원자 추이나 유입경로 등 (전 주 대비 변동사항 등)",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-31T15:38:14+09:00",
+        "updated_at": "2025-12-31T15:38:14+09:00",
+        "display_name": 1731
+    },
+    {
+        "id": 1709,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 160,
+        "role": "유저",
+        "content": {
+            "question": "12월 5주차 주요 공고별 채용 진행현황 요약해줘.\n4주차에 요청한 것과 같은 양식이고, 공고는 캣히어로 아트, 게임아트, 사업개발, 중국어, QA 5개야",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-31T15:17:05+09:00",
+        "updated_at": "2025-12-31T15:17:05+09:00",
+        "display_name": 1709
+    },
+    {
+        "id": 1707,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 159,
+        "role": "유저",
+        "content": {
+            "question": "표 하단에 합계 행 추가해줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-26T17:50:03+09:00",
+        "updated_at": "2025-12-26T17:50:03+09:00",
+        "display_name": 1707
+    },
+    {
+        "id": 1692,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 158,
+        "role": "유저",
+        "content": {
+            "question": "12월 4주차(12/20,토~12/26,금)의 채용 진행현황 데이터 정리해줘\n\n- 목적 : 한 주간의 공고별 지원자 및 서류/과제/면접 각 전형의 진행현황 파악\n\n- 표 양식 \n1. 필요한 공고 : QA, 아트, 사업개발, 중국어\n2. 필요한 정보\n a. 진행현황 요약 : 현재 진행중인 내용 간단 정리\n b. 서류검토중\n c. 과제중\n d. 면접중\n3. 기타 특이사항 : 이번 주 중 눈여겨볼만한 지원자 추이나 유입경로 등 (전 주 대비 변동사항 등)",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-26T11:08:07+09:00",
+        "updated_at": "2025-12-26T11:08:07+09:00",
+        "display_name": 1692
+    },
+    {
+        "id": 1682,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 157,
+        "role": "유저",
+        "content": {
+            "question": "12월 4주차(12/22~12/26) 아트 공고 신규 접수된 지원자 중 서칭 경로로 유입된 사람 몇명이야?",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-24T12:16:31+09:00",
+        "updated_at": "2025-12-24T12:16:31+09:00",
+        "display_name": 1682
+    },
+    {
+        "id": 1664,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 155,
+        "role": "유저",
+        "content": {
+            "question": "QA, 아트, 사업개발, 중국어 4개 공고만 분석해주면 되고, 주말(12/20~12/21)의 데이터 포함해줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-23T18:14:58+09:00",
+        "updated_at": "2025-12-23T18:14:58+09:00",
+        "display_name": 1664
+    },
+    {
+        "id": 1653,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 154,
+        "role": "유저",
+        "content": {
+            "question": "왜 결과에 아무말이 없니",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-23T18:09:44+09:00",
+        "updated_at": "2025-12-23T18:09:44+09:00",
+        "display_name": 1653
+    },
+    {
+        "id": 1645,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 48,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 153,
+        "role": "유저",
+        "content": {
+            "question": "12월 4주차(12/22,월~12/26,금) 각 공고별 진행현황 분석해줘\n\n공고 / 진행현황(요약) / 4주차 내 신규 지원자 수/ 서류검토중 / 과제중 / 면접중 / \n\n이렇게 표 만들어주면 돼",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-23T18:01:08+09:00",
+        "updated_at": "2025-12-23T18:01:08+09:00",
+        "display_name": 1645
+    },
+    {
+        "id": 1634,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 47,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 152,
+        "role": "유저",
+        "content": {
+            "question": "공고별 지원 현황 표를 조금 더 세분화 해서 보여줘\n공고 / 지원자 수 / 진행현황(전형단계별 인원 및 전환율)",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-22T19:37:50+09:00",
+        "updated_at": "2025-12-22T19:37:50+09:00",
+        "display_name": 1634
+    },
+    {
+        "id": 1624,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 47,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 151,
+        "role": "유저",
+        "content": {
+            "question": "가급적 적어준 내용들 표, 보고서 형태로 보여줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-22T19:30:26+09:00",
+        "updated_at": "2025-12-22T19:30:26+09:00",
+        "display_name": 1624
+    }
+]
+[
+    {
+        "id": 1608,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 47,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 150,
+        "role": "유저",
+        "content": {
+            "question": "12월 3주차 (12/15~12/19) 채용진행현황 정리해줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-22T19:26:53+09:00",
+        "updated_at": "2025-12-22T19:26:53+09:00",
+        "display_name": 1608
+    },
+    {
+        "id": 1591,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 47,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 149,
+        "role": "유저",
+        "content": {
+            "question": "합격 3명은 2년전 합격자(재직자)들에 대한 기록이라 현재 진행중인 공고와는 무관해. \n합격 3명에 대한 데이터 제외하고 다시 분석해줘, 2025.11월 이후 기록만 포함해주면돼",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-22T19:24:14+09:00",
+        "updated_at": "2025-12-22T19:24:14+09:00",
+        "display_name": 1591
+    },
+    {
+        "id": 1575,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 47,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 148,
+        "role": "유저",
+        "content": {
+            "question": "중문 번역 포지션 채용현황 정리/분석해줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-22T19:20:38+09:00",
+        "updated_at": "2025-12-22T19:20:38+09:00",
+        "display_name": 1575
+    },
+    {
+        "id": 1567,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 147,
+        "role": "유저",
+        "content": {
+            "question": "이번 주 사전 미팅, 1차 인터뷰, 2차 인터뷰 미팅 완료된 건 \n가로 열: 사전 미팅, 1차 인터뷰, 2차 인터뷰\n세로 열: 총 인원 수, 포지션(인원 수)\n\n위와 같이 정리해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T18:22:30+09:00",
+        "updated_at": "2025-12-19T18:22:30+09:00",
+        "display_name": 1567
+    },
+    {
+        "id": 1548,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 146,
+        "role": "유저",
+        "content": {
+            "question": "이번 주와 다음 주 채용 진행 현황을 정리하려고 해.\n인터뷰 일정 기준으로 계산해줘 \n\n가로 열: 사전 미팅, 1차 인터뷰, 2차 인터뷰\n세로 열: 총 인원 수, 포지션(인원 수)\n\n이렇게 정리해줘\n\n참고로 이번 주 2차 인터뷰 총 인원은 2명이고, 어카운트 매니저(1명), 세일즈 매니저(1명)이야. \n\n이번 주에 2차 인터뷰 일정 잡힌 기록이 있는지 확인해보면 알 수 있어.\n\n다른 공고들도 다시 한번 데이터를 확인해서 정확하게 정리해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T18:14:42+09:00",
+        "updated_at": "2025-12-19T18:14:42+09:00",
+        "display_name": 1548
+    },
+    {
+        "id": 1541,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 145,
+        "role": "유저",
+        "content": {
+            "question": "이번주 월요일부터 오늘까지 사전미팅, 1차 인터뷰, 2차 인터뷰 진행한 인원이 몇명이야? 포지션 별로 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T18:10:30+09:00",
+        "updated_at": "2025-12-19T18:10:30+09:00",
+        "display_name": 1541
+    },
+    {
+        "id": 1519,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 144,
+        "role": "유저",
+        "content": {
+            "question": "이번 주 2차 인터뷰 총 인원은 2명이고, 어카운트 매니저(1명), 세일즈 매니저(1명)이야. \n\n이번 주에 2차 인터뷰 일정 잡힌 기록이 있는지 확인해보면 알 수 있어.\n\n다른 공고들도 다시 한번 데이터를 확인해서 정확하게 정리해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T18:06:02+09:00",
+        "updated_at": "2025-12-19T18:06:02+09:00",
+        "display_name": 1519
+    },
+    {
+        "id": 1505,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 143,
+        "role": "유저",
+        "content": {
+            "question": "이번 주와 다음 주 채용 진행 현황을 정리하려고 해.\n일정이 잡힌 기준으로 계산해줘 \n\n예) 이번 주 사전 미팅이 잡혀있었던 사람은?, 다음 주에 잡혀있는 사람은?\n\n가로 열: 사전 미팅, 1차 인터뷰, 2차 인터뷰\n세로 열: 총 인원 수, 포지션(인원 수)\n\n이렇게 정리해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T18:01:55+09:00",
+        "updated_at": "2025-12-19T18:01:55+09:00",
+        "display_name": 1505
+    },
+    {
+        "id": 1491,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 142,
+        "role": "유저",
+        "content": {
+            "question": "좋아, 그렇게 데이터를 확인하여 다시 표를 정리해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T17:48:14+09:00",
+        "updated_at": "2025-12-19T17:48:14+09:00",
+        "display_name": 1491
+    },
+    {
+        "id": 1475,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 141,
+        "role": "유저",
+        "content": {
+            "question": "'서울 세일즈 매니저, 어카운트 매니저' 공고이고 이번 주 2차 인터뷰 진행한 거 맞아.\n\n이번 주에 2차 인터뷰 일정 잡힌 기록이 있는지 확인해봐줄래?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T17:46:07+09:00",
+        "updated_at": "2025-12-19T17:46:07+09:00",
+        "display_name": 1475
+    },
+    {
+        "id": 1461,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 140,
+        "role": "유저",
+        "content": {
+            "question": "인터뷰 잡힌 일정 기준으로 이번 주, 인터뷰 예정인 기준으로 다음 주로 계산해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T17:29:55+09:00",
+        "updated_at": "2025-12-19T17:29:55+09:00",
+        "display_name": 1461
+    },
+    {
+        "id": 1449,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 139,
+        "role": "유저",
+        "content": {
+            "question": "데이터가 하나도 맞지 않아, 이번 주 2차 인터뷰 어카운트 매니저(1명), 세일즈 매니저(1명) 총 2명이야",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T17:28:54+09:00",
+        "updated_at": "2025-12-19T17:28:54+09:00",
+        "display_name": 1449
+    },
+    {
+        "id": 1433,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 138,
+        "role": "유저",
+        "content": {
+            "question": "미지정이 뭐야? 공고 이름으로 계산해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T17:25:52+09:00",
+        "updated_at": "2025-12-19T17:25:52+09:00",
+        "display_name": 1433
+    },
+    {
+        "id": 1423,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 137,
+        "role": "유저",
+        "content": {
+            "question": "이번 주, 다음 주 기준으로 일정이 잡힌 사람 기준으로 계산해줘 \n\n가로 열: 사전 미팅, 1차 인터뷰, 2차 인터뷰\n세로 열: 총 인원 수, 포지션(인원 수)\n\n이렇게 정리해줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T17:24:07+09:00",
+        "updated_at": "2025-12-19T17:24:07+09:00",
+        "display_name": 1423
+    },
+    {
+        "id": 1409,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 46,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 136,
+        "role": "유저",
+        "content": {
+            "question": "이번 주와 다음 주에 사전 미팅, 1차 인터뷰, 2차 인터뷰, 처우협의 단계의 포지션, 인원 수를 표로 정리해서 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-19T17:20:35+09:00",
+        "updated_at": "2025-12-19T17:20:35+09:00",
+        "display_name": 1409
+    },
+    {
+        "id": 1393,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 45,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 135,
+        "role": "유저",
+        "content": {
+            "question": "아트디자이너 포지션에서 지원경로가 '서칭'인 지원자와 '현장실습'인 인원 수 보여줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-19T11:42:40+09:00",
+        "updated_at": "2025-12-19T11:42:40+09:00",
+        "display_name": 1393
+    },
+    {
+        "id": 1385,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 45,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 134,
+        "role": "유저",
+        "content": {
+            "question": "지원경로 중 '서칭'했던 지원자 수 알려줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-19T11:41:22+09:00",
+        "updated_at": "2025-12-19T11:41:22+09:00",
+        "display_name": 1385
+    },
+    {
+        "id": 1376,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 45,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 133,
+        "role": "유저",
+        "content": {
+            "question": "불합격 86명의 주요 탈락 단계와 사유 보여줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-19T11:30:19+09:00",
+        "updated_at": "2025-12-19T11:30:19+09:00",
+        "display_name": 1376
+    },
+    {
+        "id": 1365,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 45,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 132,
+        "role": "유저",
+        "content": {
+            "question": "합격 1명은 누구야? 없는데 합격",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-19T11:28:21+09:00",
+        "updated_at": "2025-12-19T11:28:21+09:00",
+        "display_name": 1365
+    },
+    {
+        "id": 1349,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 45,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 131,
+        "role": "유저",
+        "content": {
+            "question": "과제 진행은 2명 보다 더 있었던 것 같은데, 11/19일자 이후 누적된 인원 수로 통계보여줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-19T11:26:07+09:00",
+        "updated_at": "2025-12-19T11:26:07+09:00",
+        "display_name": 1349
+    },
+    {
+        "id": 1343,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 45,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 130,
+        "role": "유저",
+        "content": {
+            "question": "92건의 '지원' 이 최근 1개월 내 유입된 수가 맞아?",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-19T11:24:42+09:00",
+        "updated_at": "2025-12-19T11:24:42+09:00",
+        "display_name": 1343
+    },
+    {
+        "id": 1323,
+        "organization_id": 2361,
+        "chat_data_conversation_id": 45,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 129,
+        "role": "유저",
+        "content": {
+            "question": "현재 진행중인 아트디자이너 공고 최근 1개월 현황 분석해줘",
+            "organization_id": 2361
+        },
+        "created_at": "2025-12-19T11:22:10+09:00",
+        "updated_at": "2025-12-19T11:22:10+09:00",
+        "display_name": 1323
+    },
+    {
+        "id": 1310,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 44,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 128,
+        "role": "유저",
+        "content": {
+            "question": "그럼 혹시 12월 내 인터뷰 포기 건은 몇 건이야?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-15T10:08:58+09:00",
+        "updated_at": "2025-12-15T10:08:58+09:00",
+        "display_name": 1310
+    },
+    {
+        "id": 1302,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 44,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 127,
+        "role": "유저",
+        "content": {
+            "question": "저번주에 2차 인터뷰 일정 조율을 진행한 사람이 몇명이야?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-15T10:07:07+09:00",
+        "updated_at": "2025-12-15T10:07:07+09:00",
+        "display_name": 1302
+    },
+    {
+        "id": 1300,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 42,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 126,
+        "role": "유저",
+        "content": {
+            "question": "그럼 누가 누군줄 알고 확인해",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-11T16:52:16+09:00",
+        "updated_at": "2025-12-11T16:52:16+09:00",
+        "display_name": 1300
+    },
+    {
+        "id": 1294,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 42,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 125,
+        "role": "유저",
+        "content": {
+            "question": "지원자 이름이 숫자라서 어떤 사람인지 알 수가 없어",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-11T16:50:31+09:00",
+        "updated_at": "2025-12-11T16:50:31+09:00",
+        "display_name": 1294
+    },
+    {
+        "id": 1282,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 42,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 124,
+        "role": "유저",
+        "content": {
+            "question": "TRM 후보자 말고 ATS 지원자 중에서 찾아줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-11T16:40:33+09:00",
+        "updated_at": "2025-12-11T16:40:33+09:00",
+        "display_name": 1282
+    },
+    {
+        "id": 1280,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 43,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 123,
+        "role": "유저",
+        "content": {
+            "question": "추출 기능을 어떻게 쓰는 건지 알려줘 어떤 버튼을 클릭해야 하는지 등",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-11T16:38:50+09:00",
+        "updated_at": "2025-12-11T16:38:50+09:00",
+        "display_name": 1280
+    },
+    {
+        "id": 1264,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 43,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 122,
+        "role": "유저",
+        "content": {
+            "question": "지원자 데이터를 추출하고 싶은데 어떻게 해?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-11T16:37:26+09:00",
+        "updated_at": "2025-12-11T16:37:26+09:00",
+        "display_name": 1264
+    },
+    {
+        "id": 1262,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 42,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 121,
+        "role": "유저",
+        "content": {
+            "question": "포지션 상관없이 AI 효율화, 데이터 분석, 자동화, 프로젝트 기획 및 운영 등의 역량을 좀 해줄 수 있는 그로스 마케터를 찾아보려고 해\n\n적합한 지원자 리스트를 뽑아줄 수 있을까?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-11T16:37:18+09:00",
+        "updated_at": "2025-12-11T16:37:18+09:00",
+        "display_name": 1262
+    }
+]
+[
+    {
+        "id": 1253,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 41,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 120,
+        "role": "유저",
+        "content": {
+            "question": "서류 평가에서 가장 많이 탈락하는 사유 뭐야?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-09T10:20:28+09:00",
+        "updated_at": "2025-12-09T10:20:28+09:00",
+        "display_name": 1253
+    },
+    {
+        "id": 1242,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 41,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 119,
+        "role": "유저",
+        "content": {
+            "question": "그로스해킹팀 일자별 지원자수, 합격율",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-09T10:18:49+09:00",
+        "updated_at": "2025-12-09T10:18:49+09:00",
+        "display_name": 1242
+    },
+    {
+        "id": 1236,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 40,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 118,
+        "role": "유저",
+        "content": {
+            "question": "지금 2차 인터뷰 단계에 있는 사람 누구야?",
+            "organization_id": 2354
+        },
+        "created_at": "2025-12-08T10:44:10+09:00",
+        "updated_at": "2025-12-08T10:44:10+09:00",
+        "display_name": 1236
+    },
+    {
+        "id": 1223,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 39,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 117,
+        "role": "유저",
+        "content": {
+            "question": "요즘 게임산업 영상제작자는 연봉시장 금액이 년차별로 어떻게돼?",
+            "organization_id": 1928
+        },
+        "created_at": "2025-12-05T17:19:47+09:00",
+        "updated_at": "2025-12-05T17:19:47+09:00",
+        "display_name": 1223
+    },
+    {
+        "id": 1207,
+        "organization_id": 1,
+        "chat_data_conversation_id": 38,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 116,
+        "role": "유저",
+        "content": {
+            "question": "두 평가자 점수 차이가 가장 큰 지원자들의 공통 특징 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-11-27T18:23:40+09:00",
+        "updated_at": "2025-11-27T18:23:40+09:00",
+        "display_name": 1207
+    },
+    {
+        "id": 1196,
+        "organization_id": 1,
+        "chat_data_conversation_id": 38,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 115,
+        "role": "유저",
+        "content": {
+            "question": "임현태 평가자는 { job_id: 2666, title: B2B 콘텐츠&CRM 마케터 }  1차 평가 시 얼마나 엄격한지 다른 평가자의 평가 결과와 비교해서 분석해줘. 그리고 그 다음 액션 아이템을 추천해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-11-27T18:21:57+09:00",
+        "updated_at": "2025-11-27T18:21:57+09:00",
+        "display_name": 1196
+    },
+    {
+        "id": 1146,
+        "organization_id": 1,
+        "chat_data_conversation_id": 36,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 112,
+        "role": "유저",
+        "content": {
+            "question": "두 평가자가 모두 합격 판정한 지원자들의 2차 면접 통과율 비교해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-11-27T18:13:37+09:00",
+        "updated_at": "2025-11-27T18:13:37+09:00",
+        "display_name": 1146
+    },
+    {
+        "id": 1129,
+        "organization_id": 1,
+        "chat_data_conversation_id": 36,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 111,
+        "role": "유저",
+        "content": {
+            "question": "임현태 평가자는 { job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 1차 평가 시 얼마나 엄격한지 다른 평가자의 평가 결과와 비교해서 분석해줘. 그리고 그 다음 액션 아이템을 추천해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-11-27T18:11:04+09:00",
+        "updated_at": "2025-11-27T18:11:04+09:00",
+        "display_name": 1129
+    },
+    {
+        "id": 1119,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 28,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 110,
+        "role": "유저",
+        "content": {
+            "question": "이번 주 지원자 어떤 포지션이 가장 많았는지, 지원 경로는 어딘지 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-11-27T15:43:39+09:00",
+        "updated_at": "2025-11-27T15:43:39+09:00",
+        "display_name": 1119
+    },
+    {
+        "id": 1105,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 35,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 109,
+        "role": "유저",
+        "content": {
+            "question": "1차 인터뷰에 도착한 사람 말고, 1차 인터뷰 본 사람 맞지? \n1차 인터뷰 일정 기준으로 세어줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-11-21T12:27:00+09:00",
+        "updated_at": "2025-11-21T12:27:00+09:00",
+        "display_name": 1105
+    },
+    {
+        "id": 1098,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 35,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 108,
+        "role": "유저",
+        "content": {
+            "question": "이번 주 1차 인터뷰 몇명이야, 포지션도 같이 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-11-21T12:25:30+09:00",
+        "updated_at": "2025-11-21T12:25:30+09:00",
+        "display_name": 1098
+    },
+    {
+        "id": 1092,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 34,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 107,
+        "role": "유저",
+        "content": {
+            "question": "2024년 11월에 가장 많은 지원자를 받은 채용공고 알려줘",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-19T14:52:00+09:00",
+        "updated_at": "2025-11-19T14:52:00+09:00",
+        "display_name": 1092
+    },
+    {
+        "id": 1089,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 34,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 106,
+        "role": "유저",
+        "content": {
+            "question": "아 작년  지원자수가 가장 많았던 달이 언제야?",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-19T14:51:35+09:00",
+        "updated_at": "2025-11-19T14:51:35+09:00",
+        "display_name": 1089
+    },
+    {
+        "id": 1079,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 34,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 104,
+        "role": "유저",
+        "content": {
+            "question": "6월에 지원자가 급증한 주요 채용공고 알려줘",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-19T14:49:43+09:00",
+        "updated_at": "2025-11-19T14:49:43+09:00",
+        "display_name": 1079
+    },
+    {
+        "id": 1076,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 34,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 103,
+        "role": "유저",
+        "content": {
+            "question": "우리회사 올해 지원자수가 가장 많았던 달이 언제야?",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-19T14:49:07+09:00",
+        "updated_at": "2025-11-19T14:49:07+09:00",
+        "display_name": 1076
+    },
+    {
+        "id": 1066,
+        "organization_id": 2354,
+        "chat_data_conversation_id": 33,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 102,
+        "role": "유저",
+        "content": {
+            "question": "이번 주 면접자 데이터 알려줘",
+            "organization_id": 2354
+        },
+        "created_at": "2025-11-13T15:43:25+09:00",
+        "updated_at": "2025-11-13T15:43:25+09:00",
+        "display_name": 1066
+    },
+    {
+        "id": 1057,
+        "organization_id": 1,
+        "chat_data_conversation_id": 32,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 101,
+        "role": "유저",
+        "content": {
+            "question": "면접 단계별 소요 시간 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-11-12T16:23:12+09:00",
+        "updated_at": "2025-11-12T16:23:12+09:00",
+        "display_name": 1057
+    },
+    {
+        "id": 1050,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 31,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 100,
+        "role": "유저",
+        "content": {
+            "question": "2025년 5~6월 지원자 급증의 주요 유입 채널 알려줘",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-10T18:52:36+09:00",
+        "updated_at": "2025-11-10T18:52:36+09:00",
+        "display_name": 1050
+    },
+    {
+        "id": 1029,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 31,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 99,
+        "role": "유저",
+        "content": {
+            "question": "2024년과 2025년의 전형 단계별 탈락률 비교해줘",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-10T18:37:42+09:00",
+        "updated_at": "2025-11-10T18:37:42+09:00",
+        "display_name": 1029
+    },
+    {
+        "id": 1021,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 31,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 98,
+        "role": "유저",
+        "content": {
+            "question": "2024년과 2025년의 합격률 차이 보여줘",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-10T18:33:10+09:00",
+        "updated_at": "2025-11-10T18:33:10+09:00",
+        "display_name": 1021
+    },
+    {
+        "id": 1014,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 31,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 97,
+        "role": "유저",
+        "content": {
+            "question": "공고별로도 알려줘 \n2024년 공고별 지원자수\n2025년 공고별 지원자수",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-10T18:31:19+09:00",
+        "updated_at": "2025-11-10T18:31:19+09:00",
+        "display_name": 1014
+    },
+    {
+        "id": 1007,
+        "organization_id": 1928,
+        "chat_data_conversation_id": 31,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 96,
+        "role": "유저",
+        "content": {
+            "question": "2024년도 지원자 수와 2025년 지원자수 비교해줘",
+            "organization_id": 1928
+        },
+        "created_at": "2025-11-10T18:30:23+09:00",
+        "updated_at": "2025-11-10T18:30:23+09:00",
+        "display_name": 1007
+    },
+    {
+        "id": 992,
+        "organization_id": 1986,
+        "chat_data_conversation_id": 30,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 95,
+        "role": "유저",
+        "content": {
+            "question": "작년과 올해 지원자 수를 비교해줘. 현재 활성화된 공고와 보관된 공고 모두 포함해서",
+            "organization_id": 1986
+        },
+        "created_at": "2025-11-10T18:13:57+09:00",
+        "updated_at": "2025-11-10T18:13:57+09:00",
+        "display_name": 992
+    },
+    {
+        "id": 981,
+        "organization_id": 1986,
+        "chat_data_conversation_id": 23,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 94,
+        "role": "유저",
+        "content": {
+            "question": "9월 지원자 3명의 지원 경로별 분포 알려줘",
+            "organization_id": 1986
+        },
+        "created_at": "2025-10-28T16:10:20+09:00",
+        "updated_at": "2025-10-28T16:10:20+09:00",
+        "display_name": 981
+    },
+    {
+        "id": 966,
+        "organization_id": 1986,
+        "chat_data_conversation_id": 29,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 93,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 1366, title: B2B 마케터 } 공고의 최근 한달간 지원자 추이, 패턴을 분석해줘",
+            "organization_id": 1986
+        },
+        "created_at": "2025-10-28T16:08:49+09:00",
+        "updated_at": "2025-10-28T16:08:49+09:00",
+        "display_name": 966
+    },
+    {
+        "id": 928,
+        "organization_id": 1,
+        "chat_data_conversation_id": 27,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 90,
+        "role": "유저",
+        "content": {
+            "question": "서울 지역 대학 출신의 면접 통과율이 높은 이유 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-17T16:02:37+09:00",
+        "updated_at": "2025-10-17T16:02:37+09:00",
+        "display_name": 928
+    },
+    {
+        "id": 911,
+        "organization_id": 1,
+        "chat_data_conversation_id": 27,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 89,
+        "role": "유저",
+        "content": {
+            "question": "서울 지역 대학 출신과 비서울 출신의 전형 통과율 비교해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-17T15:59:04+09:00",
+        "updated_at": "2025-10-17T15:59:04+09:00",
+        "display_name": 911
+    },
+    {
+        "id": 899,
+        "organization_id": 1,
+        "chat_data_conversation_id": 27,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 88,
+        "role": "유저",
+        "content": {
+            "question": "서울 대학출신 지원자는 몇명이야?",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-17T15:56:23+09:00",
+        "updated_at": "2025-10-17T15:56:23+09:00",
+        "display_name": 899
+    },
+    {
+        "id": 891,
+        "organization_id": 1,
+        "chat_data_conversation_id": 27,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 87,
+        "role": "유저",
+        "content": {
+            "question": "희망 연봉 정보가 있는 지원자들의 평균 연봉 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-17T15:50:15+09:00",
+        "updated_at": "2025-10-17T15:50:15+09:00",
+        "display_name": 891
+    },
+    {
+        "id": 884,
+        "organization_id": 1,
+        "chat_data_conversation_id": 27,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 86,
+        "role": "유저",
+        "content": {
+            "question": "전체 지원자 중 희망 연봉 정보 입력률 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-17T14:13:15+09:00",
+        "updated_at": "2025-10-17T14:13:15+09:00",
+        "display_name": 884
+    }
+]
+[
+    {
+        "id": 874,
+        "organization_id": 1,
+        "chat_data_conversation_id": 27,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 85,
+        "role": "유저",
+        "content": {
+            "question": "합격자 희망 연봉 정리해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-17T14:03:43+09:00",
+        "updated_at": "2025-10-17T14:03:43+09:00",
+        "display_name": 874
+    },
+    {
+        "id": 857,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 84,
+        "role": "유저",
+        "content": {
+            "question": "임현태가 10일 이상 소요한 모호한 평가 케이스들의 공통점 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T15:33:19+09:00",
+        "updated_at": "2025-10-16T15:33:19+09:00",
+        "display_name": 857
+    },
+    {
+        "id": 844,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 83,
+        "role": "유저",
+        "content": {
+            "question": "임현태는 왜 긍정 평가를 더 빨리 완료할까? 패턴 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T15:25:40+09:00",
+        "updated_at": "2025-10-16T15:25:40+09:00",
+        "display_name": 844
+    },
+    {
+        "id": 832,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 82,
+        "role": "유저",
+        "content": {
+            "question": "다른 평가자들도 긍정 평가 시 완료 시간이 더 오래 걸릴까?",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T15:22:59+09:00",
+        "updated_at": "2025-10-16T15:22:59+09:00",
+        "display_name": 832
+    },
+    {
+        "id": 820,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 81,
+        "role": "유저",
+        "content": {
+            "question": "김재영의 면접 평가 중 1주 이상 소요된 10건의 공통점 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T15:20:05+09:00",
+        "updated_at": "2025-10-16T15:20:05+09:00",
+        "display_name": 820
+    },
+    {
+        "id": 812,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 80,
+        "role": "유저",
+        "content": {
+            "question": "김재영의 평가 완료까지 평균 소요 시간 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T15:17:31+09:00",
+        "updated_at": "2025-10-16T15:17:31+09:00",
+        "display_name": 812
+    },
+    {
+        "id": 803,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 79,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 공고에 9/14에 지원한 지원자에 대한 평가 단계별 평가 내역을 정리해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T15:16:05+09:00",
+        "updated_at": "2025-10-16T15:16:05+09:00",
+        "display_name": 803
+    },
+    {
+        "id": 784,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 78,
+        "role": "유저",
+        "content": {
+            "question": "면접 진행 중인 2명의 경력과 스킬 정보 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T15:12:49+09:00",
+        "updated_at": "2025-10-16T15:12:49+09:00",
+        "display_name": 784
+    },
+    {
+        "id": 772,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 77,
+        "role": "유저",
+        "content": {
+            "question": "최근 한달간 지원한 8명의 최근 학력 리스트를 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T15:04:42+09:00",
+        "updated_at": "2025-10-16T15:04:42+09:00",
+        "display_name": 772
+    },
+    {
+        "id": 756,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 76,
+        "role": "유저",
+        "content": {
+            "question": "최근 한달간 지원자를 분석하고 서류 합격자들의 특징을 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T14:59:04+09:00",
+        "updated_at": "2025-10-16T14:59:04+09:00",
+        "display_name": 756
+    },
+    {
+        "id": 737,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 75,
+        "role": "유저",
+        "content": {
+            "question": "최근 { job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 공고의 지원자의 특성을 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T14:49:23+09:00",
+        "updated_at": "2025-10-16T14:49:23+09:00",
+        "display_name": 737
+    },
+    {
+        "id": 715,
+        "organization_id": 1,
+        "chat_data_conversation_id": 26,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 74,
+        "role": "유저",
+        "content": {
+            "question": "최근 { job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 공고의 지원자의 특성을 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-16T14:39:31+09:00",
+        "updated_at": "2025-10-16T14:39:31+09:00",
+        "display_name": 715
+    },
+    {
+        "id": 701,
+        "organization_id": 1,
+        "chat_data_conversation_id": 25,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 73,
+        "role": "유저",
+        "content": {
+            "question": "서류 통과한 27명의 면접 불합격 사유 상세히 보여줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-02T19:08:50+09:00",
+        "updated_at": "2025-10-02T19:08:50+09:00",
+        "display_name": 701
+    },
+    {
+        "id": 685,
+        "organization_id": 1,
+        "chat_data_conversation_id": 25,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 72,
+        "role": "유저",
+        "content": {
+            "question": "최근 지원자 특이점 분석",
+            "organization_id": 1
+        },
+        "created_at": "2025-10-02T19:06:35+09:00",
+        "updated_at": "2025-10-02T19:06:35+09:00",
+        "display_name": 685
+    },
+    {
+        "id": 679,
+        "organization_id": 1986,
+        "chat_data_conversation_id": 24,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 71,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 1366, title: B2B 마케터 } 공고 지원자들의 학력별 기준으로 분류해줘",
+            "organization_id": 1986
+        },
+        "created_at": "2025-10-02T16:51:47+09:00",
+        "updated_at": "2025-10-02T16:51:47+09:00",
+        "display_name": 679
+    },
+    {
+        "id": 669,
+        "organization_id": 1986,
+        "chat_data_conversation_id": 23,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 70,
+        "role": "유저",
+        "content": {
+            "question": "최근 3개월 동안 월별 지원자 수 변화 분석해줘",
+            "organization_id": 1986
+        },
+        "created_at": "2025-10-01T11:38:39+09:00",
+        "updated_at": "2025-10-01T11:38:39+09:00",
+        "display_name": 669
+    },
+    {
+        "id": 663,
+        "organization_id": 1,
+        "chat_data_conversation_id": 22,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 69,
+        "role": "유저",
+        "content": {
+            "question": "6월 지원자 급증의 주요 유입 채널 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-26T08:43:50+09:00",
+        "updated_at": "2025-09-26T08:43:50+09:00",
+        "display_name": 663
+    },
+    {
+        "id": 654,
+        "organization_id": 1,
+        "chat_data_conversation_id": 22,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 68,
+        "role": "유저",
+        "content": {
+            "question": "최근 지원자 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-26T08:38:23+09:00",
+        "updated_at": "2025-09-26T08:38:23+09:00",
+        "display_name": 654
+    },
+    {
+        "id": 648,
+        "organization_id": 2298,
+        "chat_data_conversation_id": 21,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 67,
+        "role": "유저",
+        "content": {
+            "question": "raw data를 줘",
+            "organization_id": 2298
+        },
+        "created_at": "2025-09-19T19:53:15+09:00",
+        "updated_at": "2025-09-19T19:53:15+09:00",
+        "display_name": 648
+    },
+    {
+        "id": 632,
+        "organization_id": 2298,
+        "chat_data_conversation_id": 21,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 66,
+        "role": "유저",
+        "content": {
+            "question": "전체 포지션 전형별 리드타임 분석해줘",
+            "organization_id": 2298
+        },
+        "created_at": "2025-09-19T19:51:17+09:00",
+        "updated_at": "2025-09-19T19:51:17+09:00",
+        "display_name": 632
+    },
+    {
+        "id": 574,
+        "organization_id": 1,
+        "chat_data_conversation_id": 19,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 60,
+        "role": "유저",
+        "content": {
+            "question": "IT/테크 출신과 마케팅/광고 출신 지원자들의 합격률 차이 보여줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-05T16:39:28+09:00",
+        "updated_at": "2025-09-05T16:39:28+09:00",
+        "display_name": 574
+    },
+    {
+        "id": 565,
+        "organization_id": 1,
+        "chat_data_conversation_id": 19,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 59,
+        "role": "유저",
+        "content": {
+            "question": "이전 직장이 같은 경우도 있어?",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-05T16:33:26+09:00",
+        "updated_at": "2025-09-05T16:33:26+09:00",
+        "display_name": 565
+    },
+    {
+        "id": 554,
+        "organization_id": 1,
+        "chat_data_conversation_id": 19,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 58,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 지원자들의 이전 직장의 분포를 비교해보고 싶어",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-05T16:31:52+09:00",
+        "updated_at": "2025-09-05T16:31:52+09:00",
+        "display_name": 554
+    },
+    {
+        "id": 544,
+        "organization_id": 1,
+        "chat_data_conversation_id": 18,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 57,
+        "role": "유저",
+        "content": {
+            "question": "프론트 개발자 불합격자중에 다시 고용할만한 사람이 있어, 평가 정보 데이터를 기반으로 고민해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-03T14:24:37+09:00",
+        "updated_at": "2025-09-03T14:24:37+09:00",
+        "display_name": 544
+    },
+    {
+        "id": 539,
+        "organization_id": 1,
+        "chat_data_conversation_id": 18,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 56,
+        "role": "유저",
+        "content": {
+            "question": "서류 불합격률이 높은 특정 포지션이나 공고 있을까?",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-03T14:23:09+09:00",
+        "updated_at": "2025-09-03T14:23:09+09:00",
+        "display_name": 539
+    },
+    {
+        "id": 532,
+        "organization_id": 1,
+        "chat_data_conversation_id": 18,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 55,
+        "role": "유저",
+        "content": {
+            "question": "불합격자 불합격 사유 별로 정리해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-03T14:22:31+09:00",
+        "updated_at": "2025-09-03T14:22:31+09:00",
+        "display_name": 532
+    },
+    {
+        "id": 525,
+        "organization_id": 1,
+        "chat_data_conversation_id": 17,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 54,
+        "role": "유저",
+        "content": {
+            "question": "최근 3개월 월별 지원자수 분석",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-03T11:16:41+09:00",
+        "updated_at": "2025-09-03T11:16:41+09:00",
+        "display_name": 525
+    },
+    {
+        "id": 523,
+        "organization_id": 1,
+        "chat_data_conversation_id": 17,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 53,
+        "role": "유저",
+        "content": {
+            "question": "최근 3개월 동안 월별 지원자 수 변화 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-03T10:24:53+09:00",
+        "updated_at": "2025-09-03T10:24:53+09:00",
+        "display_name": 523
+    },
+    {
+        "id": 518,
+        "organization_id": 2096,
+        "chat_data_conversation_id": 16,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 52,
+        "role": "유저",
+        "content": {
+            "question": "HR 교육/커뮤니티 매니저 공고의 합격률이 다른 공고들과 비교해서 어떤지 알려줘",
+            "organization_id": 2096
+        },
+        "created_at": "2025-09-03T10:18:00+09:00",
+        "updated_at": "2025-09-03T10:18:00+09:00",
+        "display_name": 518
+    },
+    {
+        "id": 513,
+        "organization_id": 2096,
+        "chat_data_conversation_id": 16,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 51,
+        "role": "유저",
+        "content": {
+            "question": "지원단계에서 66일이나 걸린 케이스는 어떤 상황인지 보여줘",
+            "organization_id": 2096
+        },
+        "created_at": "2025-09-03T10:17:23+09:00",
+        "updated_at": "2025-09-03T10:17:23+09:00",
+        "display_name": 513
+    }
+]
+[
+    {
+        "id": 504,
+        "organization_id": 2096,
+        "chat_data_conversation_id": 16,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 50,
+        "role": "유저",
+        "content": {
+            "question": "현재 포지션 중 가장 오래 오픈되어 있는 포지션이 무엇인지 알려주고 어떤 단계에서 가장 소요시간이 길었는지 알려줘",
+            "organization_id": 2096
+        },
+        "created_at": "2025-09-03T10:15:29+09:00",
+        "updated_at": "2025-09-03T10:15:29+09:00",
+        "display_name": 504
+    },
+    {
+        "id": 483,
+        "organization_id": 2096,
+        "chat_data_conversation_id": 16,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 49,
+        "role": "유저",
+        "content": {
+            "question": "주관식 내용을 바탕으로 확인해줘",
+            "organization_id": 2096
+        },
+        "created_at": "2025-09-03T10:12:34+09:00",
+        "updated_at": "2025-09-03T10:12:34+09:00",
+        "display_name": 483
+    },
+    {
+        "id": 482,
+        "organization_id": 2096,
+        "chat_data_conversation_id": 16,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 48,
+        "role": "유저",
+        "content": {
+            "question": "주관식 내용을 바탕으로 확인해줘",
+            "organization_id": 2096
+        },
+        "created_at": "2025-09-03T10:12:34+09:00",
+        "updated_at": "2025-09-03T10:12:34+09:00",
+        "display_name": 482
+    },
+    {
+        "id": 471,
+        "organization_id": 2096,
+        "chat_data_conversation_id": 16,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 47,
+        "role": "유저",
+        "content": {
+            "question": "자바 개발자 1차 면접 본 사람들 중에서 불합격 평가 받은 사람들 중 공통적인 내용이 뭐야?",
+            "organization_id": 2096
+        },
+        "created_at": "2025-09-03T10:11:19+09:00",
+        "updated_at": "2025-09-03T10:11:19+09:00",
+        "display_name": 471
+    },
+    {
+        "id": 458,
+        "organization_id": 2096,
+        "chat_data_conversation_id": 16,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 46,
+        "role": "유저",
+        "content": {
+            "question": "가독성이 떨어지잖아 가독성있게 다시 정리해줘야지?",
+            "organization_id": 2096
+        },
+        "created_at": "2025-09-03T10:08:57+09:00",
+        "updated_at": "2025-09-03T10:08:57+09:00",
+        "display_name": 458
+    },
+    {
+        "id": 445,
+        "organization_id": 2096,
+        "chat_data_conversation_id": 16,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 45,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2434, title: 자바 개발자 [AI플랫폼팀] } 리멤버 지원자들 과제 수준 확인해줘",
+            "organization_id": 2096
+        },
+        "created_at": "2025-09-03T10:07:01+09:00",
+        "updated_at": "2025-09-03T10:07:01+09:00",
+        "display_name": 445
+    },
+    {
+        "id": 439,
+        "organization_id": 1,
+        "chat_data_conversation_id": 14,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 44,
+        "role": "유저",
+        "content": {
+            "question": "두 평가자의 월별 평가 점수 변화 추이 보여줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-02T17:10:02+09:00",
+        "updated_at": "2025-09-02T17:10:02+09:00",
+        "display_name": 439
+    },
+    {
+        "id": 427,
+        "organization_id": 1,
+        "chat_data_conversation_id": 15,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 43,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 지원자들의 출신회사를 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-01T14:55:54+09:00",
+        "updated_at": "2025-09-01T14:55:54+09:00",
+        "display_name": 427
+    },
+    {
+        "id": 420,
+        "organization_id": 1,
+        "chat_data_conversation_id": 14,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 42,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 면접관별 평가 패턴을 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-09-01T14:51:03+09:00",
+        "updated_at": "2025-09-01T14:51:03+09:00",
+        "display_name": 420
+    },
+    {
+        "id": 409,
+        "organization_id": 1,
+        "chat_data_conversation_id": 13,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 41,
+        "role": "유저",
+        "content": {
+            "question": "면접관별 지원자 평가 점수 배분을 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-29T12:20:22+09:00",
+        "updated_at": "2025-08-29T12:20:22+09:00",
+        "display_name": 409
+    },
+    {
+        "id": 403,
+        "organization_id": 1,
+        "chat_data_conversation_id": 12,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 40,
+        "role": "유저",
+        "content": {
+            "question": "분포 패턴의 로우데이터를 표로 보여줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-26T16:42:16+09:00",
+        "updated_at": "2025-08-26T16:42:16+09:00",
+        "display_name": 403
+    },
+    {
+        "id": 395,
+        "organization_id": 1,
+        "chat_data_conversation_id": 12,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 39,
+        "role": "유저",
+        "content": {
+            "question": "평가자별 점수 패턴을 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-26T16:39:56+09:00",
+        "updated_at": "2025-08-26T16:39:56+09:00",
+        "display_name": 395
+    },
+    {
+        "id": 391,
+        "organization_id": 1,
+        "chat_data_conversation_id": 12,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 38,
+        "role": "유저",
+        "content": {
+            "question": "6월 지원자 급증 시기의 주별 분포 패턴 보여줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-26T16:39:01+09:00",
+        "updated_at": "2025-08-26T16:39:01+09:00",
+        "display_name": 391
+    },
+    {
+        "id": 384,
+        "organization_id": 1,
+        "chat_data_conversation_id": 12,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 37,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 최근 3개월간 지원자 수 추이를 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-26T16:38:09+09:00",
+        "updated_at": "2025-08-26T16:38:09+09:00",
+        "display_name": 384
+    },
+    {
+        "id": 372,
+        "organization_id": 1,
+        "chat_data_conversation_id": 11,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 36,
+        "role": "유저",
+        "content": {
+            "question": "현재 서류 통과자 뿐만 아니라 최근 4개월 동안 { job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 공고의 모든 서류 통과자를 기준으로 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-26T15:52:30+09:00",
+        "updated_at": "2025-08-26T15:52:30+09:00",
+        "display_name": 372
+    },
+    {
+        "id": 360,
+        "organization_id": 1,
+        "chat_data_conversation_id": 11,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 35,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 공고 지원자들의 특징을 알고 싶어\n특히 서류 통과한 사람들은 어떤 특징이나 패턴이 있는지 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-26T15:40:22+09:00",
+        "updated_at": "2025-08-26T15:40:22+09:00",
+        "display_name": 360
+    },
+    {
+        "id": 352,
+        "organization_id": 1,
+        "chat_data_conversation_id": 10,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 34,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 공고에서 두 평가자의 평가 패턴을 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-25T14:56:37+09:00",
+        "updated_at": "2025-08-25T14:56:37+09:00",
+        "display_name": 352
+    },
+    {
+        "id": 344,
+        "organization_id": 1,
+        "chat_data_conversation_id": 10,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 33,
+        "role": "유저",
+        "content": {
+            "question": "평가자별 평가 점수 분포 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-25T14:55:21+09:00",
+        "updated_at": "2025-08-25T14:55:21+09:00",
+        "display_name": 344
+    },
+    {
+        "id": 337,
+        "organization_id": 1,
+        "chat_data_conversation_id": 9,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 32,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 공고에서 두 평가자의 평가 패턴을 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-25T14:52:31+09:00",
+        "updated_at": "2025-08-25T14:52:31+09:00",
+        "display_name": 337
+    },
+    {
+        "id": 329,
+        "organization_id": 1,
+        "chat_data_conversation_id": 9,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 31,
+        "role": "유저",
+        "content": {
+            "question": "평가자별 평가 점수 분포 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-25T14:50:58+09:00",
+        "updated_at": "2025-08-25T14:50:58+09:00",
+        "display_name": 329
+    },
+    {
+        "id": 316,
+        "organization_id": 1,
+        "chat_data_conversation_id": 8,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 30,
+        "role": "유저",
+        "content": {
+            "question": "각 전형 단계별 통과율 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-25T14:49:00+09:00",
+        "updated_at": "2025-08-25T14:49:00+09:00",
+        "display_name": 316
+    },
+    {
+        "id": 304,
+        "organization_id": 1,
+        "chat_data_conversation_id": 7,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 29,
+        "role": "유저",
+        "content": {
+            "question": "81점 이상 고득점자 중 처우 협의에서 탈락한 이유 보여줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-22T18:25:27+09:00",
+        "updated_at": "2025-08-22T18:25:27+09:00",
+        "display_name": 304
+    },
+    {
+        "id": 289,
+        "organization_id": 1,
+        "chat_data_conversation_id": 7,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 28,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 }  최종 평가 점수별 퍼널 전환율을 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-22T18:22:57+09:00",
+        "updated_at": "2025-08-22T18:22:57+09:00",
+        "display_name": 289
+    },
+    {
+        "id": 282,
+        "organization_id": 1,
+        "chat_data_conversation_id": 6,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 27,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 의 최근 3개월간 지원자 추이와 지원경로를 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-22T18:02:09+09:00",
+        "updated_at": "2025-08-22T18:02:09+09:00",
+        "display_name": 282
+    },
+    {
+        "id": 274,
+        "organization_id": 1,
+        "chat_data_conversation_id": 6,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 26,
+        "role": "유저",
+        "content": {
+            "question": "최근 3개월 동안 월별 지원자 수 변화는 어떻게 되나요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-22T18:01:11+09:00",
+        "updated_at": "2025-08-22T18:01:11+09:00",
+        "display_name": 274
+    },
+    {
+        "id": 266,
+        "organization_id": 1,
+        "chat_data_conversation_id": 5,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 25,
+        "role": "유저",
+        "content": {
+            "question": "면접 후 지원자 만족도는 어떤 수준인가요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-21T12:41:12+09:00",
+        "updated_at": "2025-08-21T12:41:12+09:00",
+        "display_name": 266
+    },
+    {
+        "id": 259,
+        "organization_id": 1,
+        "chat_data_conversation_id": 4,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 24,
+        "role": "유저",
+        "content": {
+            "question": "7월과 8월의 지원자 감소가 모든 채널에 동일하게 나타났을까?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-21T11:59:00+09:00",
+        "updated_at": "2025-08-21T11:59:00+09:00",
+        "display_name": 259
+    },
+    {
+        "id": 252,
+        "organization_id": 1,
+        "chat_data_conversation_id": 4,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 23,
+        "role": "유저",
+        "content": {
+            "question": "최근 3개월 동안 월별 지원자 수 변화는 어떻게 되나요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-21T11:50:45+09:00",
+        "updated_at": "2025-08-21T11:50:45+09:00",
+        "display_name": 252
+    },
+    {
+        "id": 246,
+        "organization_id": 1,
+        "chat_data_conversation_id": 3,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 22,
+        "role": "유저",
+        "content": {
+            "question": "처우 협의까지 진행된 3명 중 최종 합격자는 몇 명인가요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T11:28:01+09:00",
+        "updated_at": "2025-08-19T11:28:01+09:00",
+        "display_name": 246
+    },
+    {
+        "id": 240,
+        "organization_id": 1,
+        "chat_data_conversation_id": 3,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 21,
+        "role": "유저",
+        "content": {
+            "question": "25년도의 { job_id: 2666, title: B2B 콘텐츠&CRM 마케터 } 공고 지원자의 채용 퍼널을 그래프로 그려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T11:27:15+09:00",
+        "updated_at": "2025-08-19T11:27:15+09:00",
+        "display_name": 240
+    }
+]
+[
+    {
+        "id": 232,
+        "organization_id": 1,
+        "chat_data_conversation_id": 3,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 20,
+        "role": "유저",
+        "content": {
+            "question": "원티드에서 서류를 통과한 2명의 지원자는 어떤 포지션에 지원했나요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T11:25:56+09:00",
+        "updated_at": "2025-08-19T11:25:56+09:00",
+        "display_name": 232
+    },
+    {
+        "id": 223,
+        "organization_id": 1,
+        "chat_data_conversation_id": 3,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 19,
+        "role": "유저",
+        "content": {
+            "question": "원티드 지원자들의 전형 통과율은 다른 채널과 비교해 어떤가요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T11:24:32+09:00",
+        "updated_at": "2025-08-19T11:24:32+09:00",
+        "display_name": 223
+    },
+    {
+        "id": 217,
+        "organization_id": 1,
+        "chat_data_conversation_id": 3,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 18,
+        "role": "유저",
+        "content": {
+            "question": "외부 플랫폼을 좀 더 세분화해서 분석해줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T11:23:18+09:00",
+        "updated_at": "2025-08-19T11:23:18+09:00",
+        "display_name": 217
+    },
+    {
+        "id": 209,
+        "organization_id": 1,
+        "chat_data_conversation_id": 3,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 17,
+        "role": "유저",
+        "content": {
+            "question": "지원자 감소가 모든 지원 경로에서 동일하게 나타났나요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T11:22:04+09:00",
+        "updated_at": "2025-08-19T11:22:04+09:00",
+        "display_name": 209
+    },
+    {
+        "id": 201,
+        "organization_id": 1,
+        "chat_data_conversation_id": 3,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 16,
+        "role": "유저",
+        "content": {
+            "question": "최근 3개월 동안 월별 지원자 수 변화는 어떻게 되나요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T11:20:57+09:00",
+        "updated_at": "2025-08-19T11:20:57+09:00",
+        "display_name": 201
+    },
+    {
+        "id": 189,
+        "organization_id": 1,
+        "chat_data_conversation_id": 2,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 15,
+        "role": "유저",
+        "content": {
+            "question": "직군별 면접본 횟수 분포",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T10:29:10+09:00",
+        "updated_at": "2025-08-19T10:29:10+09:00",
+        "display_name": 189
+    },
+    {
+        "id": 178,
+        "organization_id": 1,
+        "chat_data_conversation_id": 2,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 14,
+        "role": "유저",
+        "content": {
+            "question": "서류 평가에서 탈락한 76명의 주요 불합격 사유는 무엇인가요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T09:51:05+09:00",
+        "updated_at": "2025-08-19T09:51:05+09:00",
+        "display_name": 178
+    },
+    {
+        "id": 169,
+        "organization_id": 1,
+        "chat_data_conversation_id": 2,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 13,
+        "role": "유저",
+        "content": {
+            "question": "{ job_id: 2666, title: B2B 콘텐츠&CRM 마케터 }  최종 합격자를 선발하지 못한 이유에 대해서 알려줘",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T08:52:44+09:00",
+        "updated_at": "2025-08-19T08:52:44+09:00",
+        "display_name": 169
+    },
+    {
+        "id": 153,
+        "organization_id": 1,
+        "chat_data_conversation_id": 2,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 12,
+        "role": "유저",
+        "content": {
+            "question": "Backend Developer 공고에서 1차 면접 탈락자들의 주요 불합격 사유는 무엇인가요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T08:51:30+09:00",
+        "updated_at": "2025-08-19T08:51:30+09:00",
+        "display_name": 153
+    },
+    {
+        "id": 138,
+        "organization_id": 1,
+        "chat_data_conversation_id": 2,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 11,
+        "role": "유저",
+        "content": {
+            "question": "Backend Developer 공고의 높은 합격률 요인을 단계별 전환율에서 확인할 수 있나요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T00:12:46+09:00",
+        "updated_at": "2025-08-19T00:12:46+09:00",
+        "display_name": 138
+    },
+    {
+        "id": 127,
+        "organization_id": 1,
+        "chat_data_conversation_id": 2,
+        "message_able_type": "ChatDataUser",
+        "message_able_id": 10,
+        "role": "유저",
+        "content": {
+            "question": "공고별 합격률 차이가 있나요?",
+            "organization_id": 1
+        },
+        "created_at": "2025-08-19T00:10:35+09:00",
+        "updated_at": "2025-08-19T00:10:35+09:00",
+        "display_name": 127
+    }
+]

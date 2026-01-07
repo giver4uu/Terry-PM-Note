@@ -1,10 +1,11 @@
 # ATS 온톨로지 기반 AI 추천 시스템: PM 실행 전략
 
-**문서 버전:** v2.0
+**문서 버전:** v3.0
 **작성일:** 2025-12-03
-**최종 수정:** 2025-12-03
+**최종 수정:** 2026-01-07
 **담당 PM:** Terry
 **온톨로지 아키텍트:** Forry (포리)
+**주요 변경:** 온톨로지 적용 범위 명확화, Use Case 4 추가, MVP Objects 9개로 확장
 
 ---
 
@@ -79,6 +80,69 @@
 - [ ] **학습 루프**: 사용자 행동(수락/거부)이 온톨로지에 기록되는가?
 - [ ] **명명**: "자동", "추천" 대신 "분석 제공", "알림" 등의 용어 사용
 - [ ] **최종 결정권**: 사용자가 AI 없이도 워크플로우를 완료할 수 있는가?
+
+---
+
+### 0.6 온톨로지 적용 범위 및 경계
+
+#### 0.6.1 온톨로지 vs 일반 시스템 구분
+
+**온톨로지가 필요한 영역 (이 문서의 범위):**
+- 복잡한 관계 추론 (3-hop 이상 조인)
+- 맥락 기반 AI 분석
+- 유사도 계산 및 패턴 추론
+- AI 의사결정 지원
+
+**일반 시스템으로 충분한 영역 (이 문서 범위 밖):**
+- 단순 조회/집계 (SELECT, COUNT, SUM)
+- 반복 쿼리 (Query Template)
+- 대화형 수정 (Conversation Context)
+- 권한 제어 (RBAC)
+
+#### 0.6.2 고객 질문 92개 분석 결과
+
+실제 고객 질문 분석 결과:
+- **온톨로지 필요**: 15-20% (diagnosis, recommendation, 복잡한 analysis)
+- **일반 DB 충분**: 80-85% (lookup, monitor, identification, 단순 comparison)
+
+**전략적 방향:**
+- 온톨로지는 **"AI 의사결정 지원"에만 집중**
+- 단순 조회/모니터링은 별도 시스템으로 처리
+- 온톨로지의 진짜 가치를 증명하는 Use Case 우선
+
+#### 0.6.3 시스템 아키텍처 레이어
+
+```
+┌─────────────────────────────────────┐
+│   프론트엔드 (공통 UI)              │
+└─────────────┬───────────────────────┘
+              │
+       ┌──────┴──────┐
+       │             │
+       ▼             ▼
+┌─────────────┐ ┌──────────────────┐
+│ 일반 시스템  │ │ 온톨로지 시스템   │
+│ (80-85%)    │ │ (15-20%)         │
+├─────────────┤ ├──────────────────┤
+│ Query       │ │ Candidate        │
+│ Template    │ │ Application      │
+│ Privacy     │ │ StageTransition  │
+│ RBAC        │ │ AI_Recommend     │
+│ Conversation│ │ Skill (유사도)   │
+└─────────────┘ └──────────────────┘
+       │             │
+       └──────┬──────┘
+              ▼
+       ┌─────────────┐
+       │ 데이터 레이어│
+       │ (PostgreSQL)│
+       └─────────────┘
+```
+
+**핵심 원칙:**
+- 온톨로지는 **복잡도가 정당화되는 Use Case만**
+- 나머지는 일반 시스템으로 빠르게 구현
+- MVP는 온톨로지 가치를 증명하는 데 집중
 
 ---
 
@@ -433,21 +497,84 @@ Recruiter → COMMUNICATES_WITH → Candidate
 
 ---
 
+#### **Use Case 4: 위험 시그널 조기 감지 (신규)**
+
+**고객 문제:**
+"이 후보자, 과거 비슷한 케이스에서 최종 단계 탈락 패턴 있는데 괜찮을까?" - diagnosis intent
+
+**온톨로지 필요성:**
+- 복잡한 관계 추론: Candidate → Similar Profiles → Past Evaluations → Pattern
+- 유사도 계산 (3-hop 이상 조인)
+- AI 추론 필요
+
+**온톨로지 활용:**
+```
+Query Pattern:
+Candidate A → Skill Profile
+  → SIMILAR_TO → Candidate B, C, D (유사 프로필)
+    → Application → StageTransition → "offer" stage dropout
+      → Evaluation → feedback_text (탈락 이유 분석)
+        → AI_Recommendation 생성: "위험 시그널 감지"
+```
+
+**AI 철학 체크리스트:**
+- ✅ **투명성**: "유사 프로필 3명이 레퍼런스 체크에서 탈락" (구체적 근거 제시)
+- ✅ **오버라이드**: "이 경고 무시하기" 버튼 제공
+- ✅ **학습 루프**: user_action 기록 → AI_Recommendation.user_action에 저장 → 정확도 개선
+- ✅ **명명**: "위험 시그널 감지" 사용 (자동 거부가 아님)
+- ✅ **최종 결정권**: 알림만 제공, 실제 진행 여부는 사용자가 결정
+
+**UI 예시:**
+```
+⚠️ 위험 시그널 감지
+
+후보자: 김OO (Backend Developer)
+패턴 발견: 유사 프로필 3명이 최종 단계에서 탈락
+
+상세 근거:
+- 후보자 A (2024-08): Python/Django 3년 경력, 레퍼런스 체크 탈락
+- 후보자 B (2024-09): 동일 스킬셋, 문화 적합성 이슈
+- 후보자 C (2024-11): 실무 경험 과장 의심
+
+💡 제안: 레퍼런스 체크 강화 및 실무 경험 깊이 검증 권장
+
+[근거 보기] [제안 적용] [무시하기] [피드백 남기기]
+```
+
+**비즈니스 임팩트:**
+- 최종 단계 탈락률 15% 감소 (목표)
+- 채용 ROI 향상
+- **온톨로지의 진짜 가치 증명** (일반 DB로는 불가능)
+
+**MVP 범위:**
+- Object: Candidate, Skill, Evaluation, AI_Recommendation
+- Link: HAS_SKILL, SIMILAR_TO (파생), EVALUATES, RECOMMENDS_FOR
+- 유사도 계산: Phase 1은 단순 규칙 (skill 매칭), Phase 2는 ML 기반
+
+**측정 지표:**
+- 위험 시그널 정확도 (실제 탈락 예측 정확도 70%+)
+- 알림 후 실제 조치 비율 (60%+)
+- 최종 단계 탈락률 감소 (15% 목표)
+- AI 제안 수락률 (60% 이상)
+
+---
+
 ### 2.2 MVP 최소 온톨로지 범위
 
 **Phase 1 (MVP): 프로세스 가시화 및 AI 의사결정 지원**
 
 최소한의 객체와 관계로 즉시 가치를 제공합니다.
 
-**포함 Objects (8개):**
+**포함 Objects (9개):**
 1. Candidate
 2. Job Posting
 3. Application
 4. Recruitment Stage
-5. Stage Transition
-6. Interview
+5. Stage Transition (+ temporal_reference 속성 추가)
+6. Interview (+ temporal_reference 속성 추가)
 7. Evaluation
 8. **AI_Recommendation** ← AI 철학 구현을 위한 핵심 객체
+9. **Skill** ← Phase 3에서 MVP로 승격 (Use Case 4 필수)
 
 **AI_Recommendation Object 상세:**
 ```
@@ -467,23 +594,117 @@ AI_Recommendation {
 }
 ```
 
-**포함 Links (6개):**
+**Skill Object 상세:**
+```
+Skill {
+  skill_id: "skill_001"
+  name: "Python"  // 또는 "Django", "Backend Architecture" 등
+  category: "technical" | "soft" | "domain"
+  proficiency_levels: ["beginner", "intermediate", "advanced", "expert"]
+  related_skills: ["skill_002", "skill_003"]  // 연관 스킬 (예: Python과 Django)
+  description: "프로그래밍 언어 Python"
+}
+```
+
+**temporal_reference 속성 추가 (Interview, StageTransition):**
+
+데이터 정확성을 위해 "계획된 시점" vs "실제 시점"을 구분합니다.
+
+```
+Interview {
+  interview_id: "int_001"
+  scheduled_date: "2025-12-05T14:00:00Z"  // 일정 잡힌 시간
+  actual_date: "2025-12-05T14:15:00Z"     // 실제 진행 시간
+  completion_status: "completed" | "scheduled" | "cancelled"
+  type: "phone" | "video" | "onsite"
+  duration_minutes: 60
+}
+
+StageTransition {
+  transition_id: "st_001"
+  application_id: "app_123"
+  from_stage: "phone_screen"
+  to_stage: "technical_interview"
+  scheduled_timestamp: "2025-12-01T10:00:00Z"  // 계획된 전환 시점
+  actual_timestamp: "2025-12-01T10:30:00Z"     // 실제 전환 시점
+  duration_in_prev_stage_hours: 48
+  triggered_by: "recruiter_456"
+  completion_status: "completed" | "scheduled" | "cancelled"
+}
+```
+
+**temporal_reference 활용 예시:**
+- Use Case 1 (리드타임 분석): "계획 대비 실제 지연 시간" 측정
+- Use Case 4 (위험 시그널): "일정 지연이 탈락과 상관관계" 패턴 분석
+
+**포함 Links (9개):**
 1. APPLIES_TO (Candidate → Job Posting)
 2. CREATES (Application → Candidate)
 3. PROGRESSES_TO (Stage Transition → Recruitment Stage)
 4. SCHEDULES (Interview → Application)
 5. EVALUATES (Interviewer → Candidate)
 6. **RECOMMENDS_FOR** (AI_Recommendation → Target Entity) ← 학습 루프 구현
+7. **HAS_SKILL** (Candidate → Skill) ← Use Case 4 필수
+8. **REQUIRES_SKILL** (Job Posting → Skill) ← Use Case 4 필수
+9. **SIMILAR_TO** (Candidate → Candidate, 파생) ← Use Case 2, 4 필수
+
+**새로운 Links 상세:**
+
+```
+HAS_SKILL (Candidate → Skill)
+  Properties:
+    - proficiency_level: "beginner" | "intermediate" | "advanced" | "expert"
+    - years_of_experience: number
+    - verified: boolean  // 실제 검증 여부
+    - source: "resume" | "interview" | "test"
+
+REQUIRES_SKILL (Job Posting → Skill)
+  Properties:
+    - required_level: "beginner" | "intermediate" | "advanced" | "expert"
+    - is_mandatory: boolean  // 필수 vs 우대
+    - priority: number  // 우선순위 (1-10)
+
+SIMILAR_TO (Candidate → Candidate, 파생 Link)
+  Properties:
+    - similarity_score: 0.0 - 1.0  // 유사도 점수
+    - matching_skills: [Skill.skill_id]  // 매칭된 스킬 목록
+    - calculation_method: "skill_overlap" | "ml_embedding"
+  Note: 자동 계산되는 파생 Link
+```
 
 **이 범위로 가능한 것:**
 - Use Case 1: 리드타임 예측 ✅
-- Use Case 2: 유사 후보자 추천 (제한적) ⚠️
+- Use Case 2: 유사 후보자 분석 ✅ (Skill 기반 유사도)
 - Use Case 3: 커뮤니케이션 품질 ❌ (Phase 2)
+- Use Case 4: 위험 시그널 조기 감지 ✅ (신규)
 
-**MVP 성공 기준:**
-- 3개월 내 배포
-- 최소 1개 Use Case의 측정 가능한 개선
-- PM이 스키마 변경 없이 새 쿼리 생성 가능
+**MVP 성공 기준 (온톨로지 가치 증명):**
+
+**목표:** "온톨로지가 왜 필요한지" 명확히 증명
+
+**성공 지표:**
+1. **배포 타임라인**
+   - 3개월 내 배포
+
+2. **온톨로지 필요 Use Case 검증**
+   - Use Case 1, 2, 4 중 **최소 2개의 측정 가능한 개선**
+   - Use Case 1: 병목 알림 정확도 ±3일 이내
+   - Use Case 2 or 4: AI 추천 수락률 60% 이상
+
+3. **온톨로지 vs 일반 DB 비교 증명**
+   - 복잡한 관계 쿼리 (3-hop 이상): 일반 DB 대비 **2배 이상 빠름**
+   - 유사도 계산 정확도: 사용자 검증 **70% 이상**
+   - 맥락 기반 분석: 일반 SQL로는 구현 **불가능** 증명
+
+4. **PM 자율성**
+   - PM이 스키마 변경 없이 새 쿼리 생성 가능
+
+**비교 대상 (일반 시스템):**
+- Query Template 시스템 (PostgreSQL jsonb)
+- 단순 조회/모니터링 (일반 SQL)
+- 반복 쿼리 자동화
+
+→ MVP는 **"온톨로지가 왜 필요한지"를 데이터로 증명**
 
 ---
 
@@ -513,26 +734,26 @@ AI_Recommendation {
 #### **Phase 3: 지식 그래프 및 AI 통합 (MVP + 6개월)**
 
 **추가 Objects:**
-- Skill
 - Assessment Template
 - Task
 - Department
+- Historical Performance (과거 채용 성공 사례 패턴)
 
 **추가 Links:**
-- HAS_SKILL (Candidate ↔ Skill)
-- REQUIRES_SKILL (Job Posting ↔ Skill)
 - ASSIGNS (Recruiter → Application)
 - BELONGS_TO (Job Posting → Department)
+- USES_TEMPLATE (Interview → Assessment Template)
 
 **새로운 Use Cases:**
-- Use Case 6: 스킬 기반 자동 매칭
-- Use Case 7: 부서별 채용 효율성 벤치마킹
-- Use Case 8: 자동 작업 우선순위 제안
+- Use Case 6: 부서별 채용 효율성 벤치마킹
+- Use Case 7: 자동 작업 우선순위 제안
+- Use Case 8: 평가 템플릿 최적화 추천
 
-**AI 통합:**
+**AI 통합 고도화:**
 - LLM이 면접 스크립트에서 Skill 자동 추출
 - 평가 피드백에서 감정 분석
 - 지식 그래프 임베딩으로 의미론적 검색
+- ML 기반 유사도 계산 (MVP는 규칙 기반)
 
 ---
 
@@ -1226,6 +1447,65 @@ UI 텍스트: "AI가 자동으로 부적합 후보자를 걸러냈습니다"
 - [ ] AI_Recommendation Object가 MVP 스키마에 포함되었나?
 - [ ] 개발팀에게 "AI는 지원, 자동화 아님" 철학을 공유했나?
 - [ ] 마케팅 메시지에 "자동", "추천" 대신 "분석", "알림" 사용하는가?
+
+---
+
+#### **실수 6: 온톨로지를 모든 문제에 적용 (Over-Engineering)**
+
+**증상:**
+- 단순 조회도 온톨로지 쿼리로 구현
+- QueryTemplate, Privacy 같은 일반 기능까지 온톨로지 Objects로 설계
+- 복잡도만 증가, 성능 저하, 개발 속도 감소
+
+**실제 사례 (타 프로젝트):**
+```
+잘못된 접근:
+"이번 주 몇 명?" 같은 단순 COUNT 쿼리에 Graph DB 사용
+
+결과:
+- 쿼리 응답 시간: 0.5초 → 3초 (6배 느림)
+- 개발 공수: 일반 SQL 1일 vs 온톨로지 설계 1주
+- 유지보수: 온톨로지 전문가만 수정 가능
+```
+
+**올바른 접근:**
+
+**1. 온톨로지 적용 기준 명확화**
+   - 복잡한 관계 추론 (3-hop 이상 조인)
+   - 맥락 기반 AI 분석
+   - 유사도 계산 및 패턴 추론
+
+**2. 일반 DB로 충분한 것은 일반 DB 사용**
+   - 단순 조회/집계 (SELECT, COUNT, SUM)
+   - 반복 쿼리 템플릿 (PostgreSQL jsonb)
+   - 권한 제어 (RBAC - Keycloak/Auth0)
+   - 대화 상태 관리 (Redis)
+
+**3. MVP는 온톨로지 가치 증명에 집중**
+   - Use Case 1, 2, 4 (온톨로지 필요)
+   - 나머지 80-85%는 일반 시스템
+
+**PM 가이드 (새 Use Case 추가 시):**
+```
+질문 체크리스트:
+1. "일반 SQL로 안 되나?" → Yes면 일반 DB
+2. "3-hop 이상 조인 필요한가?" → No면 일반 DB
+3. "유사도/패턴 추론 필요한가?" → No면 일반 DB
+4. "AI 맥락 분석 필요한가?" → No면 일반 DB
+
+→ 온톨로지 필요성 3가지 조건 중 1개 이상 충족 시에만 추가
+```
+
+**경고 신호 (Over-Engineering 징후):**
+- [ ] 온톨로지 Objects가 20개 이상 (MVP 단계)
+- [ ] 단순 조회 쿼리가 3초 이상 걸림
+- [ ] PM이 새 쿼리 작성 못함 (너무 복잡)
+- [ ] 개발팀이 "이거 왜 온톨로지로 하나요?" 질문 반복
+
+**해결책:**
+- 분기마다 "온톨로지 범위 리뷰" 미팅
+- 성능 벤치마크: 온톨로지 vs 일반 DB 비교
+- 사용 빈도 낮은 Objects 삭제 또는 일반 DB 이동
 
 ---
 
